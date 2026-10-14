@@ -28,11 +28,15 @@ def main() -> int:
     from huggingface_hub import snapshot_download
     path = snapshot_download(
         MODEL_ID,
-        # the PyTorch weights and the tokeniser, not the ONNX, OpenVINO,
-        # TensorFlow or Rust copies the repository also carries
-        allow_patterns=["*.json", "*.txt", "pytorch_model.bin", "*.safetensors",
+        # The ONNX graph and the tokeniser, and nothing else. The deployed
+        # application runs this graph under onnxruntime rather than PyTorch:
+        # the weights are the same 86 MB either way, but torch brings a runtime
+        # that does not fit in a free instance alongside them.
+        allow_patterns=["*.json", "*.txt", "onnx/model.onnx",
                         "1_Pooling/*", "2_Normalize/*"],
-        ignore_patterns=["onnx/*", "openvino/*", "*.h5", "*.ot", "*.msgpack"],
+        ignore_patterns=["onnx/model_O*", "onnx/*qint8*", "onnx/*quint8*",
+                         "openvino/*", "*.h5", "*.ot", "*.msgpack",
+                         "*.bin", "*.safetensors"],
     )
     print(f"[PASS] {MODEL_ID} cached at {path}")
     total = sum(f.stat().st_size for f in __import__("pathlib").Path(path)

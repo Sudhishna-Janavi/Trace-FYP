@@ -472,14 +472,17 @@ def how_page(request: Request, user: User = Depends(require_user),
     })
 
 
-# Measured in Unit 4.5 on the deployed cascade; see results/unit4_5.log.
+# Measured on the deployed cascade. The model row is re-measured against ONNX
+# Runtime rather than quoting the PyTorch figure from Unit 4.5 (31 ms median),
+# because the engine the application actually runs is the one a reader should
+# be told about. See results/unit4_5.log and scripts/verify_onnx.py.
 EXPLANATION_COST = [
     {"layer": "Rule", "method": "The phrase that matched",
      "exact": True, "cost": "under 1 ms"},
     {"layer": "Merchant memory", "method": "Your own history at the merchant",
      "exact": True, "cost": "under 1 ms"},
     {"layer": "Model", "method": "Shapley values over the terms",
-     "exact": False, "cost": "31 ms median, 125 ms worst"},
+     "exact": False, "cost": "51 ms median, 113 ms worst"},
 ]
 
 

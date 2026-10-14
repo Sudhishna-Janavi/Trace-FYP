@@ -8,7 +8,8 @@ ENV PYTHONUNBUFFERED=1 \
     HF_HOME=/opt/hf \
     HF_HUB_DISABLE_TELEMETRY=1 \
     TOKENIZERS_PARALLELISM=false \
-    OMP_NUM_THREADS=1
+    OMP_NUM_THREADS=1 \
+    ONNX_THREADS=1
 
 WORKDIR /app
 
@@ -16,8 +17,8 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# The encoder is baked in: the application is offline at runtime, and a missing
-# model should fail the build rather than the first user request.
+# The ONNX graph is baked in: the application is offline at runtime, and a
+# missing model should fail the build rather than the first user request.
 COPY scripts/fetch_model.py scripts/fetch_model.py
 RUN python scripts/fetch_model.py
 

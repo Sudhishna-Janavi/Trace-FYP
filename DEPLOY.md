@@ -2,26 +2,40 @@
 
 ## What the measurements say
 
-Memory, measured locally with the encoder loaded and inference run:
+The application runs the encoder as an **ONNX graph under onnxruntime, not
+PyTorch**. Measured locally, with the encoder loaded and inference run:
 
-| Stage | Resident |
-|---|---:|
-| Application imported | 67 MB |
-| Merchant memory loaded | 72 MB |
-| **Encoder loaded** | **401 MB** |
-| After inference | 401 MB |
+| Stage | PyTorch | ONNX Runtime |
+|---|---:|---:|
+| Application imported | 67 MB | 66 MB |
+| Merchant memory loaded | 72 MB | 71 MB |
+| Encoder loaded | 401 MB | 107 MB |
+| Peak, under explanation workload | 401 MB | **314 MB** |
 
-Limiting torch to one thread did not help (408 MB), so the encoder's ~330 MB is
-structural rather than an allocator artefact.
+The weights are the same 86 MB either way. PyTorch was the cost: inference here
+is a fixed sequence of matrix multiplications with no training, no autograd and
+no dynamic graph, so its runtime was paying rent it did not earn. Removing it
+also strips roughly a gigabyte of wheels from the build.
 
-**This rules out a 512 MB instance as a safe target.** Render's free and
-Starter tiers are both 512 MB, which leaves roughly 110 MB for uvicorn, the
-Postgres driver and concurrent requests. It might hold; it might be killed by
-the OOM reaper on the first click your marker makes, which is the worst
-possible moment to find out. Pick a host with at least 1 GB.
+**This was verified before it was adopted.** `scripts/verify_onnx.py` compares
+both engines on 1,500 held-out transactions:
 
-The build context is 5 MB and the model artefacts are 304 KB; the encoder is
-~90 MB and is baked into the image at build time by `scripts/fetch_model.py`.
+- embeddings: minimum cosine similarity 0.99999988, maximum absolute
+  difference 2.5e-07 — float32 rounding, nothing more
+- class probabilities: maximum absolute difference 2.7e-06
+- **predicted category differs on 0 of 1,500; accept-or-review differs on 0**
+- accuracy identical to six decimal places
+
+Re-importing the full demonstration set through the live cascade changed the
+category or review flag on **0 of 772** transactions. Every figure the report
+quotes still describes the system that is deployed.
+
+Explanation latency was re-measured rather than carried over: Shapley values
+take a median of 51 ms under ONNX against 31 ms under PyTorch. The "How it
+works" page quotes the ONNX figure, since that is what runs.
+
+314 MB leaves roughly 200 MB of headroom on a 512 MB instance, which is enough
+to be safe. The build context is 5 MB and the model artefacts 304 KB.
 
 ## Before anything else
 

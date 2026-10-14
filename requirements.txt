@@ -1,10 +1,14 @@
 # Trace — deployment dependencies.
 #
-# The CPU index is not optional. The default Linux torch wheel bundles CUDA
-# and weighs roughly 2.5 GB, which exhausts the build disk on every free tier
-# and installs GPU libraries this application can never use. The CPU wheel is
-# a few hundred megabytes and is what actually runs here.
---extra-index-url https://download.pytorch.org/whl/cpu
+# PyTorch is deliberately absent. The encoder runs as an ONNX graph under
+# onnxruntime instead, which was verified to produce identical predictions on
+# every one of 1,500 held-out transactions (scripts/verify_onnx.py) while
+# reducing peak resident memory from 401 MB to 292 MB. That difference is what
+# makes a 512 MB instance viable, and it removes roughly a gigabyte of wheels
+# from the build.
+#
+# Training still uses PyTorch; see requirements-training.txt. Nothing in the
+# deployed application does.
 
 # --- web
 fastapi==0.143.0
@@ -21,10 +25,10 @@ psycopg[binary]==3.2.3
 bcrypt==5.0.0
 itsdangerous==2.2.0
 
-# --- the model
-torch==2.14.1
-sentence-transformers==6.1.0
-transformers==5.19.0
-scikit-learn==1.9.1
+# --- inference
+onnxruntime==1.31.0
+tokenizers==0.23.3
+huggingface-hub==1.33.0     # build-time model download only
+scikit-learn==1.9.1         # the classifier head and LIME's surrogate
 numpy==2.5.4
 scipy==1.18.1
