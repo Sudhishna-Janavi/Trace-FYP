@@ -33,7 +33,11 @@ class DeployedModel:
     """Encoder plus head, with the batching interface the cascade expects."""
 
     def __init__(self):
-        from models.minilm_embeddings import load_encoder
+        # ONNX Runtime rather than PyTorch. Verified to produce the same
+        # predictions on every one of 1,500 held-out transactions
+        # (scripts/verify_onnx.py), at a quarter of the resident memory, which
+        # is what makes a free instance viable.
+        from models.onnx_encoder import load_encoder
         with (ARTIFACTS / "head.pkl").open("rb") as handle:
             bundle = pickle.load(handle)
         self.encoder = load_encoder()
@@ -45,7 +49,9 @@ class DeployedModel:
         return self._classes
 
     def predict_proba(self, texts):
-        vectors = self.encoder.encode(list(texts), batch_size=256,
+        # 32 rather than 256: a wide batch raised peak memory by roughly 20 MB
+        # for a few hundred milliseconds saved on an import that happens once.
+        vectors = self.encoder.encode(list(texts), batch_size=32,
                                       convert_to_numpy=True,
                                       normalize_embeddings=True,
                                       show_progress_bar=False)

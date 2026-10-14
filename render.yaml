@@ -1,0 +1,23 @@
+# Trace on Render. Importing this from the repository sets the service up
+# without clicking through the dashboard.
+services:
+  - type: web
+    name: trace-fyp
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free              # 512 MB; peak measured at 314 MB, see DEPLOY.md
+    region: singapore
+    healthCheckPath: /healthz
+    envVars:
+      - key: TRACE_ENV
+        value: production
+      - key: PORT
+        value: 10000        # Render's convention for a Docker service
+      - key: TRACE_SECRET_KEY
+        generateValue: true # Render generates and stores it; never in the repo
+      - key: TRACE_DEMO_EMAIL
+        value: demo@trace.app
+      - key: TRACE_DEMO_PASSWORD
+        sync: false         # set by hand in the dashboard
+      - key: DATABASE_URL
+        sync: false         # paste the Neon connection string here

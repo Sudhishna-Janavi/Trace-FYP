@@ -1,0 +1,12 @@
+# Reproducing the experiments, not running the application.
+#
+# The deployed service needs none of this: it loads a fitted head and an ONNX
+# graph. These are the packages that produced them.
+-r requirements.txt
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+torch==2.14.1
+sentence-transformers==6.1.0
+transformers==5.19.0
+matplotlib==3.10.7
+pandas==2.3.3
