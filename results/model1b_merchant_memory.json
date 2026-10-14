@@ -1,0 +1,37 @@
+{
+  "model": "Merchant memory (lookup)",
+  "machine_learning": false,
+  "merchants_memorised": 6156,
+  "results": {
+    "stratified (validation)": {
+      "n": 4780,
+      "accuracy": 0.8140167364016736,
+      "macro_f1": 0.8499899461522717,
+      "coverage": 0.8217573221757322,
+      "precision_when_fired": 0.9905804480651731
+    },
+    "merchant held out (validation)": {
+      "n": 4812,
+      "accuracy": 0.03740648379052369,
+      "macro_f1": 0.07515551871815802,
+      "coverage": 0.038029925187032416,
+      "precision_when_fired": 0.9836065573770492
+    },
+    "  of which strictly novel": {
+      "n": 2457,
+      "accuracy": 0.001628001628001628,
+      "macro_f1": 0.015561502626623055,
+      "coverage": 0.002849002849002849,
+      "precision_when_fired": 0.5714285714285714
+    }
+  },
+  "cascade_on_stratified": {
+    "rule_only": 33,
+    "memory_only": 3133,
+    "both": 795,
+    "neither": 819,
+    "total": 4780,
+    "combined_coverage": 0.8286610878661088,
+    "combined_precision": 0.993436001009846
+  }
+}

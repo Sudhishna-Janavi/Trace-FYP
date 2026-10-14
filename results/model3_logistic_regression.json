@@ -1,0 +1,326 @@
+{
+  "model": "TF-IDF + Logistic Regression",
+  "machine_learning": true,
+  "train_seconds": 3.967,
+  "n_features": 23864,
+  "results": {
+    "stratified (validation)": {
+      "n": 4780,
+      "accuracy": 0.9972803347280335,
+      "macro_f1": 0.9976046948501844,
+      "coverage": 1.0,
+      "precision_when_fired": 0.9972803347280335
+    },
+    "merchant held out (validation)": {
+      "n": 4812,
+      "accuracy": 0.6022443890274314,
+      "macro_f1": 0.5979836051598817,
+      "coverage": 1.0,
+      "precision_when_fired": 0.6022443890274314
+    },
+    "  of which strictly novel": {
+      "n": 2457,
+      "accuracy": 0.455026455026455,
+      "macro_f1": 0.463603384131034,
+      "coverage": 1.0,
+      "precision_when_fired": 0.455026455026455
+    }
+  },
+  "calibration": {
+    "stratified": {
+      "ece": 0.05816274040585789,
+      "mce": 0.6497944233341235,
+      "brier": 0.014720737705182115,
+      "mean_confidence": 0.9392538385192527,
+      "accuracy": 0.9972803347280335,
+      "overconfidence": -0.05802649620878075
+    },
+    "merchant": {
+      "ece": 0.040562598238482336,
+      "mce": 0.13157017383969827,
+      "brier": 0.4964802944199838,
+      "mean_confidence": 0.5743663402442792,
+      "accuracy": 0.6022443890274314,
+      "overconfidence": -0.027878048783152143
+    },
+    "strictly_novel": {
+      "ece": 0.05085562682727939,
+      "mce": 0.2613307056963705,
+      "brier": 0.647994270955485,
+      "mean_confidence": 0.4961347497012829,
+      "accuracy": 0.455026455026455,
+      "overconfidence": 0.041108294674827905
+    }
+  },
+  "per_class_f1": {
+    "labels": [
+      "Education",
+      "Entertainment",
+      "Fees",
+      "Groceries",
+      "Healthcare",
+      "Income",
+      "Insurance",
+      "Mortgage",
+      "Personal Care",
+      "Rent",
+      "Restaurants",
+      "Shopping",
+      "Subscription",
+      "Transfer",
+      "Transportation",
+      "Travel",
+      "Utilities"
+    ],
+    "stratified": [
+      1.0,
+      1.0,
+      1.0,
+      0.9974554707379135,
+      0.9929824561403509,
+      0.9969230769230769,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.9978586723768736,
+      0.9888579387186629,
+      0.9938080495356038,
+      0.9913941480206541,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "merchant": [
+      0.15037593984962405,
+      0.40869565217391307,
+      0.9690140845070423,
+      0.6169354838709677,
+      0.8197278911564626,
+      0.3511450381679389,
+      0.5890652557319224,
+      0.9612403100775194,
+      0.5265486725663717,
+      0.9839228295819936,
+      0.5740072202166066,
+      0.3034300791556728,
+      0.6049237983587339,
+      0.7422402159244265,
+      0.4805914972273567,
+      0.23626373626373626,
+      0.8475935828877005
+    ]
+  },
+  "largest_confusions": [
+    {
+      "true": "Income",
+      "predicted": "Transfer",
+      "share": 0.7371,
+      "rows": 129
+    },
+    {
+      "true": "Personal Care",
+      "predicted": "Shopping",
+      "share": 0.2006,
+      "rows": 63
+    },
+    {
+      "true": "Entertainment",
+      "predicted": "Restaurants",
+      "share": 0.1922,
+      "rows": 54
+    },
+    {
+      "true": "Travel",
+      "predicted": "Subscription",
+      "share": 0.1866,
+      "rows": 53
+    },
+    {
+      "true": "Shopping",
+      "predicted": "Groceries",
+      "share": 0.1855,
+      "rows": 69
+    },
+    {
+      "true": "Groceries",
+      "predicted": "Restaurants",
+      "share": 0.1721,
+      "rows": 69
+    },
+    {
+      "true": "Education",
+      "predicted": "Restaurants",
+      "share": 0.1707,
+      "rows": 42
+    },
+    {
+      "true": "Travel",
+      "predicted": "Shopping",
+      "share": 0.169,
+      "rows": 48
+    },
+    {
+      "true": "Education",
+      "predicted": "Shopping",
+      "share": 0.1626,
+      "rows": 40
+    },
+    {
+      "true": "Transportation",
+      "predicted": "Groceries",
+      "share": 0.1621,
+      "rows": 53
+    },
+    {
+      "true": "Shopping",
+      "predicted": "Subscription",
+      "share": 0.1613,
+      "rows": 60
+    },
+    {
+      "true": "Shopping",
+      "predicted": "Restaurants",
+      "share": 0.1452,
+      "rows": 54
+    }
+  ],
+  "learned_evidence": {
+    "Mortgage": [
+      [
+        "mortgage",
+        3.077
+      ],
+      [
+        "cu",
+        2.7147
+      ],
+      [
+        "mtg",
+        2.6491
+      ],
+      [
+        "escrow",
+        2.5257
+      ],
+      [
+        "num web",
+        2.2962
+      ],
+      [
+        "mortgage num",
+        2.2811
+      ],
+      [
+        "payment",
+        1.9099
+      ],
+      [
+        "principal pmt",
+        1.8331
+      ]
+    ],
+    "Restaurants": [
+      [
+        "tst",
+        2.4924
+      ],
+      [
+        "king",
+        2.4241
+      ],
+      [
+        "house",
+        2.4112
+      ],
+      [
+        "el",
+        2.3864
+      ],
+      [
+        "debit tst",
+        2.3706
+      ],
+      [
+        "wok",
+        2.3611
+      ],
+      [
+        "garden",
+        2.0998
+      ],
+      [
+        "sushi",
+        2.0927
+      ]
+    ],
+    "Income": [
+      [
+        "payment from",
+        3.779
+      ],
+      [
+        "credit zelle",
+        3.779
+      ],
+      [
+        "zelle",
+        2.9678
+      ],
+      [
+        "zelle payment",
+        2.9678
+      ],
+      [
+        "payroll",
+        2.851
+      ],
+      [
+        "credit",
+        2.7887
+      ],
+      [
+        "id num",
+        2.4182
+      ],
+      [
+        "from",
+        2.3046
+      ]
+    ],
+    "Shopping": [
+      [
+        "amazon com",
+        2.9845
+      ],
+      [
+        "tiktok shop",
+        2.8883
+      ],
+      [
+        "mercari",
+        2.7153
+      ],
+      [
+        "target",
+        2.5124
+      ],
+      [
+        "offerup",
+        2.4992
+      ],
+      [
+        "debit offerup",
+        2.4791
+      ],
+      [
+        "store",
+        2.4769
+      ],
+      [
+        "debit mercari",
+        2.4431
+      ]
+    ]
+  }
+}

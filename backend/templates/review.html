@@ -1,0 +1,92 @@
+{% extends "app.html" %}
+{% block title %}Review · Trace{% endblock %}
+{% block heading %}Review{% endblock %}
+{% block subheading %}
+  <span data-remaining>{{ rows|length }}</span> transactions the model was not
+  confident enough to decide on its own
+{% endblock %}
+{% block content %}
+
+<div class="card explainer">
+  <h3>Why these are here</h3>
+  <p>
+    Trace categorises a transaction only when it is at least
+    <b>{{ (threshold * 100)|round|int }}%</b> confident. Below that it declines
+    and asks you, rather than filing the transaction somewhere plausible and
+    leaving you to find out later. A model that knows when it does not know is
+    more useful than one that is confident all the time.
+  </p>
+  <p class="when">
+    You have reviewed {{ reviewed }} transaction{{ '' if reviewed == 1 else 's' }}
+    so far{% if corrections %}, teaching Trace
+    {{ corrections|length }} merchant{{ '' if corrections|length == 1 else 's' }}{% endif %}.
+  </p>
+</div>
+
+<div class="empty card" data-queue-empty {{ 'hidden' if rows }}>
+  <h3>Nothing left to review</h3>
+  <p>Every transaction has either cleared the confidence gate or been
+     checked by you. New ones will appear here as they arrive.</p>
+</div>
+
+{% for row in rows %}
+<div class="card qrow" data-id="{{ row.id }}">
+  <div class="qmain">
+    <div class="qwho">
+      <div class="mono">{{ row.raw_description[:70] }}</div>
+      <div class="when">
+        {{ row.booking_date.strftime('%d %b %Y') }} · {{ row.account.bank }} ·
+        decided by {{ layer_labels.get(row.decided_by, row.decided_by)|lower }}
+      </div>
+    </div>
+    <div class="qamt">
+      <div class="amt {{ 'in' if row.amount > 0 }}">{{ row.amount | money }}</div>
+      <div class="when">{{ (row.confidence * 100)|round|int }}% confident</div>
+    </div>
+  </div>
+  <div class="qact">
+    <span class="tag rev">{{ row.category }}</span>
+    <button class="ghost" onclick="explain({{ row.id }})">Why this?</button>
+    <span class="grow"></span>
+    <select id="q-{{ row.id }}" aria-label="Category for this transaction">
+      {% for name in categories %}
+      <option value="{{ name }}" {{ 'selected' if name == row.category }}>{{ name }}</option>
+      {% endfor %}
+    </select>
+    <button class="ghost" onclick="quickCorrect({{ row.id }})">Save</button>
+    <button class="primary" onclick="confirmCategory({{ row.id }})">Confirm</button>
+  </div>
+</div>
+{% endfor %}
+
+{% if corrections %}
+<div class="card">
+  <h3>What you have taught Trace</h3>
+  <p class="when">These are checked before any rule or model, for your account only.</p>
+  <table>
+    <thead><tr><th>Merchant</th><th>Your category</th><th class="amt">Applied to</th></tr></thead>
+    <tbody>
+    {% for c in corrections %}
+      <tr><td class="mono">{{ c.merchant_fingerprint }}</td>
+          <td><span class="tag">{{ c.category }}</span></td>
+          <td class="amt">{{ c.times_applied }} transaction{{ '' if c.times_applied == 1 else 's' }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
+
+{% include "_panel.html" %}
+<script>
+// the queue has its own inline dropdown, so it can correct without opening the panel
+async function quickCorrect(id) {
+  const chosen = document.getElementById(`q-${id}`).value;
+  const response = await fetch(`/api/transactions/${id}/category`, {
+    method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: 'category=' + encodeURIComponent(chosen),
+  });
+  if (!response.ok) { toast('That could not be saved.'); return; }
+  afterReview(await response.json(), 'Recategorised');
+}
+</script>
+{% endblock %}

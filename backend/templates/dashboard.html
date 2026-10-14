@@ -1,0 +1,93 @@
+{% extends "app.html" %}
+{% block title %}Dashboard · Trace{% endblock %}
+{% block heading %}{{ greeting }}, {{ user.display_name.split()[0] }}{% endblock %}
+{% block subheading %}
+  {{ t.accounts }} accounts · {{ t.transactions }} transactions ·
+  {{ t.first.strftime('%b %Y') }} – {{ t.last.strftime('%b %Y') }}
+{% endblock %}
+{% block content %}
+
+<div class="kpis">
+  <div class="kpi"><div class="k">Net cash flow</div>
+    <div class="v num {{ 'pos' if t.net >= 0 else 'neg' }}">{{ t.net | money0 }}</div>
+    <div class="d">over {{ months|length }} months</div></div>
+  <div class="kpi"><div class="k">Total spending</div>
+    <div class="v num">{{ t.spending | money0 }}</div>
+    <div class="d">{{ (t.spending / months|length) | money0 }} / month</div></div>
+  <div class="kpi"><div class="k">Total income</div>
+    <div class="v num">{{ t.income | money0 }}</div>
+    <div class="d">transfers excluded</div></div>
+  <div class="kpi"><div class="k">Needs review</div>
+    <div class="v num">{{ t.needs_review }}</div>
+    <div class="d">{{ 'low confidence' if t.needs_review else 'all confirmed' }}</div></div>
+</div>
+
+<div class="grid-2">
+<div>
+  <div class="card">
+    <h2>Monthly cash flow</h2>
+    <div class="hint">Transfers between your own accounts are excluded.</div>
+    <div class="legend">
+      <span><i style="background:var(--income)"></i>Income</span>
+      <span><i style="background:var(--spend)"></i>Spending</span>
+    </div>
+    {{ chart | safe }}
+  </div>
+
+  <div class="card">
+    <h2>Recent transactions</h2>
+    <div class="hint">Select a row to see why it was categorised that way.</div>
+    <table>
+      <thead><tr><th>Date</th><th>Description</th><th>Category</th>
+        <th class="amt">Amount</th></tr></thead>
+      <tbody>
+      {% for row in recent %}
+        <tr data-id="{{ row.id }}" onclick="explain({{ row.id }})"
+          tabindex="0" role="button"
+          onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();explain({{ row.id }})}"
+          aria-label="Why {{ row.raw_description[:40] }} was categorised as {{ row.category }}">
+          <td class="when">{{ row.booking_date.strftime('%d %b') }}</td>
+          <td><div class="mono">{{ row.raw_description[:54] }}</div>
+              <div class="when" style="margin-top:3px">{{ row.account.bank }}</div></td>
+          <td><span class="tag {{ 'rev' if row.needs_review and not row.reviewed_at }}">{{ row.category }}</span></td>
+          <td class="amt {{ 'in' if row.amount > 0 }}">{{ row.amount | money }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    <div class="count-note"><a href="/transactions">See all {{ t.transactions }} transactions →</a></div>
+  </div>
+</div>
+
+<div>
+  <div class="card">
+    <h2>Spending by category</h2>
+    <div class="hint">Transfers are neutral and excluded.</div>
+    {% for row in categories[:8] %}
+    <div>
+      <div class="brk"><span>{{ row.category }}<span class="pc">{{ row.share|round(1) }}%</span></span>
+        <b>{{ row.amount | money0 }}</b></div>
+      <div class="track"><i style="width:{{ (row.amount / categories[0].amount * 100)|round(1) }}%"></i></div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="card">
+    <h2>Recurring</h2>
+    <div class="hint">{{ recurring|length }} merchants on a monthly cadence.</div>
+    {% for row in recurring[:6] %}
+    <div class="item">
+      <div class="t"><span>{{ row.merchant|title }}
+        <span class="tag" style="margin-left:5px">{{ row.category }}</span></span>
+        <span class="v">{{ row.average | money }}</span></div>
+      <div class="d">{{ row.occurrences }} payments · about {{ row.annual | money0 }} a year</div>
+    </div>
+    {% else %}
+    <div class="note">No recurring merchants detected yet.</div>
+    {% endfor %}
+  </div>
+</div>
+</div>
+
+{% include "_panel.html" %}
+{% endblock %}

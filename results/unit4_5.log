@@ -1,0 +1,47 @@
+==============================================================================
+PART 1  Validating LIME and SHAP where the truth is computable
+==============================================================================
+
+60 transactions, compared against exact contributions
+  method     Spearman   sign agree   top-3 Jaccard
+  lime         0.7383       0.6188          0.6633
+  shap         0.7971       0.7225          0.7683
+
+  SHAP additivity residual   2.24e-16  (exact Shapley satisfies this to machine precision)
+  LIME surrogate fidelity    0.7733  (how well its own surrogate fits)
+
+==============================================================================
+PART 2  Cost and stability on the deployed model
+==============================================================================
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 7372.37it/s]
+
+which layer decided, in the demonstration data
+  rule         6 of 60  (10%)
+  memory      35 of 60  (58%)
+  model       19 of 60  (32%)
+
+  SHAP on the model layer: median 31 ms, max 125 ms, 66 encoder passes
+
+  LIME on the model layer: median 16 ms, max 108 ms, 66 encoder passes
+
+stability: explaining the same transaction five times
+  shap   top-3 agreement across runs: 1.0000
+  lime   top-3 agreement across runs: 1.0000
+
+==============================================================================
+PART 3  What a user actually sees, per layer
+==============================================================================
+
+  [rule]  [debit] TST* SAKURA SUSHI - RALEIGH
+     -> Restaurants  (matched_phrase, exact, 1 ms)
+     The description contains “SUSHI”, which always indicates Restaurants.
+
+  [memory]  [debit] RALPH'S - SAN DIEGO
+     -> Groceries  (merchant_history, exact, 0 ms)
+     You have 2 previous transactions at “RALPH SAN”, 2 of which were Groceries.
+
+  [model]  [debit] PARAMOUNT+* Monthly
+     -> Subscription  (shap, approximate, 19 ms)
+     The terms “MONTHLY”, “DEBIT” pushed this towards Subscription. This explanation is reconstructed after the fact and is an approximation of the model's
+
+[PASS] wrote /Users/sudhishna/Desktop/FYP_Final_ver2/oct14/results/unit4_5_explainability.json

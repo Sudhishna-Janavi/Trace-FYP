@@ -1,0 +1,77 @@
+{
+  "model": "rule baseline",
+  "machine_learning": false,
+  "results": {
+    "stratified (validation)": {
+      "n": 4780,
+      "accuracy": 0.1700836820083682,
+      "macro_f1": 0.2924383401284065,
+      "coverage": 0.17322175732217573,
+      "precision_when_fired": 0.9818840579710145
+    },
+    "merchant held out (validation)": {
+      "n": 4812,
+      "accuracy": 0.16708229426433915,
+      "macro_f1": 0.28489447618026237,
+      "coverage": 0.16812136325852037,
+      "precision_when_fired": 0.9938195302843016
+    },
+    "  of which strictly novel": {
+      "n": 2457,
+      "accuracy": 0.15791615791615793,
+      "macro_f1": 0.3067695039886653,
+      "coverage": 0.15791615791615793,
+      "precision_when_fired": 1.0
+    }
+  },
+  "per_rule_fires": {
+    "Mortgage": {
+      "fired": 107,
+      "precision": 1.0
+    },
+    "Fees": {
+      "fired": 73,
+      "precision": 1.0
+    },
+    "Utilities": {
+      "fired": 93,
+      "precision": 1.0
+    },
+    "Transfer": {
+      "fired": 117,
+      "precision": 0.9401709401709402
+    },
+    "Groceries": {
+      "fired": 18,
+      "precision": 1.0
+    },
+    "Education": {
+      "fired": 30,
+      "precision": 1.0
+    },
+    "Rent": {
+      "fired": 92,
+      "precision": 1.0
+    },
+    "Restaurants": {
+      "fired": 51,
+      "precision": 0.9803921568627451
+    },
+    "Income": {
+      "fired": 89,
+      "precision": 1.0
+    },
+    "Healthcare": {
+      "fired": 100,
+      "precision": 0.93
+    },
+    "Transportation": {
+      "fired": 39,
+      "precision": 1.0
+    },
+    "Insurance": {
+      "fired": 19,
+      "precision": 1.0
+    }
+  }
+}

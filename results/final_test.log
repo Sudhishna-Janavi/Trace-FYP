@@ -1,0 +1,24 @@
+loading the frozen encoder ...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 7977.20it/s]
+
+=== in_distribution ===
+   encoding 4,786 texts (norm_strat_test) ...
+   macro-F1 0.9681   accuracy 0.9636   review 5.2%   accepted accuracy 0.9896
+   layers: rule 17% / memory 67% / model 16%
+
+=== unseen_merchant ===
+   encoding 4,780 texts (norm_merch_test) ...
+   macro-F1 0.6808   accuracy 0.6544   review 33.8%   accepted accuracy 0.8291
+   layers: rule 17% / memory 3% / model 80%
+   strictly novel subset: n=2,245  macro-F1 0.5636  accuracy 0.5555
+
+======================================================================================
+FINAL TEST-SET RESULT - cascade with MiniLM, threshold 0.6
+These sets were untouched until now and are not reused.
+======================================================================================
+protocol                     n   accuracy   macro-F1    review  accepted acc
+in_distribution          4,786     0.9636     0.9681      5.2%        0.9896
+unseen_merchant          4,780     0.6544     0.6808     33.8%        0.8291
+strictly_novel           2,245     0.5555     0.5636     42.8%        0.7689
+======================================================================================
+[PASS] wrote /Users/sudhishna/Desktop/FYP_Final_ver2/oct14/results/unit2_final_test.json

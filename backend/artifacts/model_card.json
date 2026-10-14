@@ -1,0 +1,51 @@
+{
+  "model": "all-MiniLM-L6-v2 (frozen) + logistic regression",
+  "cascade": "user corrections -> rules -> merchant memory -> model",
+  "threshold": 0.6,
+  "fitted_on": "stratified train + validation",
+  "fitted_rows": 27077,
+  "classes": [
+    "Education",
+    "Entertainment",
+    "Fees",
+    "Groceries",
+    "Healthcare",
+    "Income",
+    "Insurance",
+    "Mortgage",
+    "Personal Care",
+    "Rent",
+    "Restaurants",
+    "Shopping",
+    "Subscription",
+    "Transfer",
+    "Transportation",
+    "Travel",
+    "Utilities"
+  ],
+  "merchants_memorised": 6927,
+  "performance": {
+    "in_distribution": {
+      "n": 4786,
+      "accuracy": 0.963643961554534,
+      "macro_f1": 0.9680905556575944,
+      "review_rate": 0.05244463017133305,
+      "accepted_accuracy": 0.9896361631753032
+    },
+    "unseen_merchant": {
+      "n": 4780,
+      "accuracy": 0.6543933054393305,
+      "macro_f1": 0.6808179482708075,
+      "review_rate": 0.33786610878661083,
+      "accepted_accuracy": 0.8290679304897315
+    },
+    "strictly_novel": {
+      "n": 2245,
+      "accuracy": 0.555456570155902,
+      "macro_f1": 0.5636239020828206,
+      "review_rate": 0.4276169265033407,
+      "accepted_accuracy": 0.7688715953307393
+    }
+  },
+  "note": "the application's demonstration data is drawn from the test split, which was excluded from fitting"
+}

@@ -1,0 +1,188 @@
+{
+  "model": "TF-IDF + Linear SVM (calibrated)",
+  "machine_learning": true,
+  "train_seconds": 2.619,
+  "n_features": 23864,
+  "results": {
+    "stratified (validation)": {
+      "n": 4780,
+      "accuracy": 0.9981171548117155,
+      "macro_f1": 0.9983790582594109,
+      "coverage": 1.0,
+      "precision_when_fired": 0.9981171548117155
+    },
+    "merchant held out (validation)": {
+      "n": 4812,
+      "accuracy": 0.6169991687448046,
+      "macro_f1": 0.6393423969049113,
+      "coverage": 1.0,
+      "precision_when_fired": 0.6169991687448046
+    },
+    "  of which strictly novel": {
+      "n": 2457,
+      "accuracy": 0.4481074481074481,
+      "macro_f1": 0.514567148654846,
+      "coverage": 1.0,
+      "precision_when_fired": 0.4481074481074481
+    }
+  },
+  "calibration": {
+    "stratified": {
+      "ece": 0.0067709164329930035,
+      "mce": 0.5242459643599922,
+      "brier": 0.002798417135008575,
+      "mean_confidence": 0.9923010211516975,
+      "accuracy": 0.9981171548117155,
+      "overconfidence": -0.005816133660017986
+    },
+    "merchant": {
+      "ece": 0.14524391310635756,
+      "mce": 0.37000352388209,
+      "brier": 0.5326784257599775,
+      "mean_confidence": 0.7622430818511622,
+      "accuracy": 0.6169991687448046,
+      "overconfidence": 0.14524391310635754
+    },
+    "strictly_novel": {
+      "ece": 0.23724338859640182,
+      "mce": 0.4639435832547736,
+      "brier": 0.748715911019918,
+      "mean_confidence": 0.6853508367038499,
+      "accuracy": 0.4481074481074481,
+      "overconfidence": 0.23724338859640176
+    }
+  },
+  "per_class_f1": {
+    "labels": [
+      "Education",
+      "Entertainment",
+      "Fees",
+      "Groceries",
+      "Healthcare",
+      "Income",
+      "Insurance",
+      "Mortgage",
+      "Personal Care",
+      "Rent",
+      "Restaurants",
+      "Shopping",
+      "Subscription",
+      "Transfer",
+      "Transportation",
+      "Travel",
+      "Utilities"
+    ],
+    "stratified": [
+      1.0,
+      1.0,
+      1.0,
+      0.9974554707379135,
+      0.9912434325744308,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.9989281886387996,
+      0.9916897506925207,
+      1.0,
+      0.993127147766323,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "merchant": [
+      0.4064516129032258,
+      0.4965197215777262,
+      0.9971014492753624,
+      0.6093888396811338,
+      0.7616,
+      0.39823008849557523,
+      0.7104622871046229,
+      0.9881422924901185,
+      0.484304932735426,
+      0.9902912621359223,
+      0.6938775510204082,
+      0.2561576354679803,
+      0.6295793758480326,
+      0.7818696883852692,
+      0.5641025641025641,
+      0.24043715846994534,
+      0.8603042876901799
+    ]
+  },
+  "largest_confusions": [
+    {
+      "true": "Income",
+      "predicted": "Transfer",
+      "share": 0.7371,
+      "rows": 129
+    },
+    {
+      "true": "Travel",
+      "predicted": "Shopping",
+      "share": 0.493,
+      "rows": 140
+    },
+    {
+      "true": "Personal Care",
+      "predicted": "Shopping",
+      "share": 0.4586,
+      "rows": 144
+    },
+    {
+      "true": "Education",
+      "predicted": "Shopping",
+      "share": 0.4309,
+      "rows": 106
+    },
+    {
+      "true": "Education",
+      "predicted": "Groceries",
+      "share": 0.2358,
+      "rows": 58
+    },
+    {
+      "true": "Transportation",
+      "predicted": "Groceries",
+      "share": 0.2324,
+      "rows": 76
+    },
+    {
+      "true": "Entertainment",
+      "predicted": "Shopping",
+      "share": 0.2171,
+      "rows": 61
+    },
+    {
+      "true": "Shopping",
+      "predicted": "Groceries",
+      "share": 0.2097,
+      "rows": 78
+    },
+    {
+      "true": "Entertainment",
+      "predicted": "Restaurants",
+      "share": 0.1495,
+      "rows": 42
+    },
+    {
+      "true": "Transportation",
+      "predicted": "Shopping",
+      "share": 0.1468,
+      "rows": 48
+    },
+    {
+      "true": "Insurance",
+      "predicted": "Shopping",
+      "share": 0.1446,
+      "rows": 35
+    },
+    {
+      "true": "Restaurants",
+      "predicted": "Shopping",
+      "share": 0.1435,
+      "rows": 65
+    }
+  ]
+}

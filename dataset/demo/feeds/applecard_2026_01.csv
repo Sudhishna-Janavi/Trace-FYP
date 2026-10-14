@@ -1,0 +1,23 @@
+Transaction Date,Clearing Date,Description,Merchant,Category,Type,Amount (USD)
+01/02/2026,01/03/2026,[debit] PAYMENT TO: ONO HAWAIIAN BBQ,ONO,Dining,Purchase,15.55
+01/03/2026,01/03/2026,[debit] RALLY'S,RALLY,Dining,Purchase,9.73
+01/05/2026,01/05/2026,[debit] AMZN MKTP US*2G42U8JKMHI,AMZN,Merchandise,Purchase,22.44
+01/06/2026,01/08/2026,[debit] NATIONWIDE 9777 INDUSTRIAL CT NEWARK07101 NJ USA,NATIONWIDE,Insurance,Purchase,95.60
+01/06/2026,01/09/2026,[debit] Go Kart*erjxj6qayt,KART,Entertainment,Purchase,13.58
+01/07/2026,01/10/2026,[debit] PORTILLO'S 1499 BROADWAY ST UNION CITY 94587 CA USA,PORTILLO,Dining,Purchase,34.67
+01/08/2026,01/11/2026,[debit] AMERICAS TIRE,AMERICAS,Gas/Automotive,Purchase,136.34
+01/09/2026,01/11/2026,[debit] Ladder 4953 Broadway Ct Phoenix 85001-4410az Usa,LADDER,Insurance,Purchase,119.37
+01/09/2026,01/09/2026,[debit] Dental365 1791 Center Dr Houston 77001-4819tx Usa,HOUSTON,Health Care,Purchase,248.93
+01/09/2026,01/11/2026,[debit] OFFERUP 7832 MARKET LN AUSTIN78701 TX USA,OFFERUP,Merchandise,Purchase,22.74
+01/11/2026,01/11/2026,[debit] 99 RANCH*L07I5LJOVYG,RANCH,Groceries,Purchase,79.85
+01/12/2026,01/13/2026,[debit] APPLE.COM/BILL 8959 CENTER LN SEATTLE 98101 WA USA,APPLE,Internet,Purchase,26.69
+01/13/2026,01/15/2026,[debit] Betmgm 5747 Elm Blvd Tampa 33601 Fl Usa,BETMGM,Entertainment,Purchase,27.71
+01/19/2026,01/21/2026,[debit] lyft *trip boston iu6f7n,LYFT,Gas/Automotive,Purchase,29.99
+01/20/2026,01/21/2026,[debit] VENMO PAYMENT TO DONNA NGUYEN,VENMO,Payment/Credit,Purchase,462.34
+01/21/2026,01/23/2026,[debit] T-mobile 3197 Market Way Houston 77001-1108tx Usa,MOBILE,Utilities,Purchase,119.88
+01/21/2026,01/22/2026,[debit] 365 market 5041 university st pittsburgh15201 pa usa,UNIVERSITY,Groceries,Purchase,32.78
+01/22/2026,01/23/2026,[debit] PAYPAL *Orangetheory,ORANGETHEORY,Other Services,Purchase,59.44
+01/26/2026,01/26/2026,[debit] PAYPAL *FATBURGER ZCWH0G4GTD,FATBURGER,Dining,Purchase,12.11
+01/26/2026,01/28/2026,[debit] WOK EXPRESS - NEW YORK,WOK,Dining,Purchase,16.88
+01/31/2026,02/03/2026,[debit] Lion Supermarket 1305 Industrial Dr Denver 80201-4704co Usa,LION,Groceries,Purchase,39.91
+01/31/2026,02/01/2026,[debit] Express Checkout Payment: LIVENATION,LIVENATION,Entertainment,Purchase,140.47

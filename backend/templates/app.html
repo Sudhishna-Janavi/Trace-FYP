@@ -1,0 +1,36 @@
+{#- The shell every signed-in page extends. -#}
+{% extends "base.html" %}
+{% block body %}
+{#- Six navigation links sit before the content on every page; a keyboard or
+    screen-reader user should be able to step over them. -#}
+<a class="skip" href="#main">Skip to content</a>
+<div class="shell">
+  <nav class="side">
+    <div class="brand"><i></i>Trace</div>
+    {% for href, label, key in nav_items %}
+    <a href="{{ href }}" {% if key == active %}aria-current="page"{% endif %}>
+      {{ label }}
+      {% if key == 'review' %}<span class="count" data-review-count
+        {{ 'hidden' if not review_count }}>{{ review_count }}</span>{% endif %}
+    </a>
+    {% endfor %}
+    <div class="spacer"></div>
+    <div class="foot">
+      <div class="who">{{ user.display_name }}<br>{{ user.email }}</div>
+      <button class="ghost" onclick="toggleTheme()"><span data-theme-label>Dark</span> theme</button>
+      <form method="post" action="/signout"><button class="ghost" type="submit" style="width:100%">Sign out</button></form>
+    </div>
+  </nav>
+
+  <main class="page" id="main" tabindex="-1">
+    <div class="page-head">
+      <div>
+        <h1>{% block heading %}{% endblock %}</h1>
+        <div class="sub">{% block subheading %}{% endblock %}</div>
+      </div>
+      {% block head_actions %}{% endblock %}
+    </div>
+    {% block content %}{% endblock %}
+  </main>
+</div>
+{% endblock %}

@@ -1,0 +1,162 @@
+{
+  "model": "TF-IDF + Multinomial Naive Bayes",
+  "machine_learning": true,
+  "train_seconds": 0.579,
+  "n_features": 23864,
+  "results": {
+    "stratified (validation)": {
+      "n": 4780,
+      "accuracy": 0.9782426778242678,
+      "macro_f1": 0.9808730705645715,
+      "coverage": 1.0,
+      "precision_when_fired": 0.9782426778242678
+    },
+    "merchant held out (validation)": {
+      "n": 4812,
+      "accuracy": 0.5939318370739817,
+      "macro_f1": 0.5902594558123923,
+      "coverage": 1.0,
+      "precision_when_fired": 0.5939318370739817
+    },
+    "  of which strictly novel": {
+      "n": 2457,
+      "accuracy": 0.44607244607244606,
+      "macro_f1": 0.4656733828680861,
+      "coverage": 1.0,
+      "precision_when_fired": 0.44607244607244606
+    }
+  },
+  "per_class_f1": {
+    "labels": [
+      "Education",
+      "Entertainment",
+      "Fees",
+      "Groceries",
+      "Healthcare",
+      "Income",
+      "Insurance",
+      "Mortgage",
+      "Personal Care",
+      "Rent",
+      "Restaurants",
+      "Shopping",
+      "Subscription",
+      "Transfer",
+      "Transportation",
+      "Travel",
+      "Utilities"
+    ],
+    "stratified": [
+      0.9871794871794872,
+      0.9837251356238698,
+      0.987012987012987,
+      0.9833119383825417,
+      0.984070796460177,
+      1.0,
+      0.9670781893004116,
+      1.0,
+      1.0,
+      1.0,
+      0.9848484848484849,
+      0.9590973201692524,
+      0.914616497829233,
+      0.9775474956822107,
+      0.9867452135493373,
+      0.9756944444444444,
+      0.9839142091152815
+    ],
+    "merchant": [
+      0.23003194888178913,
+      0.43010752688172044,
+      0.8883116883116883,
+      0.6762246117084827,
+      0.7928802588996764,
+      0.3448275862068966,
+      0.4459308807134894,
+      0.9541984732824428,
+      0.50682261208577,
+      0.930379746835443,
+      0.7004716981132075,
+      0.25,
+      0.6005221932114883,
+      0.6593137254901961,
+      0.3951890034364261,
+      0.41150442477876104,
+      0.8176943699731903
+    ]
+  },
+  "largest_confusions": [
+    {
+      "true": "Income",
+      "predicted": "Transfer",
+      "share": 0.7486,
+      "rows": 131
+    },
+    {
+      "true": "Education",
+      "predicted": "Insurance",
+      "share": 0.3333,
+      "rows": 82
+    },
+    {
+      "true": "Entertainment",
+      "predicted": "Insurance",
+      "share": 0.21,
+      "rows": 59
+    },
+    {
+      "true": "Education",
+      "predicted": "Transportation",
+      "share": 0.1911,
+      "rows": 47
+    },
+    {
+      "true": "Travel",
+      "predicted": "Insurance",
+      "share": 0.1761,
+      "rows": 50
+    },
+    {
+      "true": "Shopping",
+      "predicted": "Subscription",
+      "share": 0.1667,
+      "rows": 62
+    },
+    {
+      "true": "Transportation",
+      "predicted": "Insurance",
+      "share": 0.156,
+      "rows": 51
+    },
+    {
+      "true": "Utilities",
+      "predicted": "Insurance",
+      "share": 0.1323,
+      "rows": 50
+    },
+    {
+      "true": "Personal Care",
+      "predicted": "Insurance",
+      "share": 0.1306,
+      "rows": 41
+    },
+    {
+      "true": "Shopping",
+      "predicted": "Groceries",
+      "share": 0.1156,
+      "rows": 43
+    },
+    {
+      "true": "Shopping",
+      "predicted": "Transportation",
+      "share": 0.1102,
+      "rows": 41
+    },
+    {
+      "true": "Transportation",
+      "predicted": "Groceries",
+      "share": 0.1009,
+      "rows": 33
+    }
+  ]
+}

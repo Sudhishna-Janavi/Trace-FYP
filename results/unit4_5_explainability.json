@@ -1,0 +1,42 @@
+{
+  "validation_on_linear_model": {
+    "lime": {
+      "spearman": 0.7383,
+      "sign_agreement": 0.6188,
+      "jaccard_top3": 0.6633
+    },
+    "shap": {
+      "spearman": 0.7971,
+      "sign_agreement": 0.7225,
+      "jaccard_top3": 0.7683
+    },
+    "shap_additivity_residual": 2.238949766327399e-16,
+    "lime_surrogate_r2": 0.7732716666666666,
+    "n": 60
+  },
+  "cost": {
+    "shap": {
+      "median_ms": 30.725874996278435,
+      "mean_ms": 48.67082252167165,
+      "max_ms": 124.57329203607515,
+      "mean_model_calls": 66.26315789473684,
+      "n": 19
+    },
+    "lime": {
+      "median_ms": 15.854333993047476,
+      "mean_ms": 34.63798474005767,
+      "max_ms": 107.9831249662675,
+      "mean_model_calls": 66.26315789473684,
+      "n": 19
+    }
+  },
+  "layer_shares": {
+    "memory": 0.5833333333333334,
+    "model": 0.31666666666666665,
+    "rule": 0.1
+  },
+  "stability_top3": {
+    "shap": 1.0,
+    "lime": 1.0
+  }
+}

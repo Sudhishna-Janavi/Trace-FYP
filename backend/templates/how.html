@@ -1,0 +1,139 @@
+{% extends "app.html" %}
+{% block title %}How it works · Trace{% endblock %}
+{% block heading %}How it works{% endblock %}
+{% block subheading %}The four layers, and how accurate they actually are{% endblock %}
+{% block content %}
+
+{# ------------------------------------------------------- the cascade ----- #}
+<div class="card">
+  <h3>Four layers, cheapest first</h3>
+  <p class="when">
+    Each layer answers only what it is certain about and passes the rest on.
+    These are your {{ total }} transactions.
+  </p>
+  <div class="cascade">
+    {% for layer in layers %}
+    <div class="lyr {{ 'empty-lyr' if not layer.count }}">
+      <div class="lyr-n">{{ layer.count }}</div>
+      <div class="lyr-bar"><i style="width:{{ layer.share|round(1) }}%"></i></div>
+      <div class="lyr-t">
+        {% if layer.layer == 'correction' %}<b>Your corrections</b>
+          <span>Categories you set yourself. Checked first and never overridden.</span>
+        {% elif layer.layer == 'rule' %}<b>Rules</b>
+          <span>Unambiguous phrases such as “RENT PMT”. Exact and instant.</span>
+        {% elif layer.layer == 'memory' %}<b>Merchant memory</b>
+          <span>Merchants seen before, looked up rather than predicted.</span>
+        {% else %}<b>The model</b>
+          <span>A sentence encoder for merchants nothing else recognises.</span>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+    <div class="lyr gate">
+      <div class="lyr-n">{{ flagged }}</div>
+      <div class="lyr-bar"><i class="warn" style="width:{{ observed_rate|round(1) }}%"></i></div>
+      <div class="lyr-t"><b>Confidence gate</b>
+        <span>The model declines below
+          {{ (card.threshold * 100)|round|int }}% rather than guessing, and
+          sends the transaction to your review queue.</span></div>
+    </div>
+  </div>
+  <p class="footnote-inline">
+    Order matters. Three of the four layers are exact, free and able to state
+    their own reason, so reaching the model at all is the exception rather than
+    the rule.
+  </p>
+</div>
+
+{# ------------------------------------------------------- the numbers ----- #}
+<div class="card">
+  <h3>How accurate, honestly</h3>
+  <p>
+    A single accuracy figure would be true and misleading at once, because the
+    answer depends entirely on whether the merchant has been seen before. The
+    model is measured three ways.
+  </p>
+  {{ chart | safe }}
+  <div class="scroll-x"><table class="protocols">
+    <thead><tr><th>Protocol</th><th class="amt">Macro F1</th>
+      <th class="amt">Accuracy</th><th class="amt">Review</th>
+      <th class="amt">Once accepted</th></tr></thead>
+    <tbody>
+    {% for key, block in performance.items() %}
+      <tr>
+        <td><b>{{ labels[key] }}</b></td>
+        <td class="amt num">{{ '%.3f' % block.macro_f1 }}</td>
+        <td class="amt num">{{ '%.3f' % block.accuracy }}</td>
+        <td class="amt num">{{ '%.1f' % (block.review_rate * 100) }}%</td>
+        <td class="amt num">{{ '%.3f' % block.accepted_accuracy }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table></div>
+  <dl class="protodef">
+    {% for key in performance %}
+    <div><dt>{{ labels[key] }}</dt><dd>{{ means[key] }}</dd></div>
+    {% endfor %}
+  </dl>
+  <p class="footnote-inline">
+    The score falling and the review rate rising across the three protocols is
+    one finding, not two: as the problem gets harder the model becomes less
+    certain, which is the behaviour the confidence gate depends on. The last
+    column is what matters to a user — of the transactions Trace is willing to
+    decide on its own, even at a cold start, {{ '%.0f' % (performance.strictly_novel.accepted_accuracy * 100) }}%
+    are right.
+  </p>
+</div>
+
+{# ------------------------------------------------------- corroboration --- #}
+<div class="card">
+  <h3>Does that hold here?</h3>
+  <p>
+    Your data is holding <b>{{ flagged }}</b> of <b>{{ total }}</b> transactions
+    for review, or <b>{{ '%.1f' % observed_rate }}%</b>. The offline evaluation
+    measured <b>{{ '%.1f' % (performance.in_distribution.review_rate * 100) }}%</b>
+    under the matching protocol, on {{ '{:,}'.format(performance.in_distribution.n) }}
+    held-out transactions. The running application reproduces the measurement
+    rather than merely quoting it.
+  </p>
+</div>
+
+{# ------------------------------------------------------- explanations ---- #}
+<div class="card">
+  <h3>What an explanation costs</h3>
+  <p class="when">
+    Measured on the deployed cascade. Only one layer needs approximating.
+  </p>
+  <table>
+    <thead><tr><th>Layer</th><th>Explanation</th><th>Kind</th>
+      <th class="amt">Time</th></tr></thead>
+    <tbody>
+    {% for row in explain_cost %}
+      <tr><td><b>{{ row.layer }}</b></td><td class="when">{{ row.method }}</td>
+        <td><span class="badge {{ 'exact' if row.exact else 'approx' }}">
+          {{ '✓ Exact' if row.exact else '⚠ Approximate' }}</span></td>
+        <td class="amt when">{{ row.cost }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <p class="footnote-inline">
+    The cascade was built to improve accuracy on unfamiliar merchants. It also
+    reduced what explanation costs: most decisions are made by a layer that
+    knows its own reason exactly, so no approximation is needed at all.
+  </p>
+</div>
+
+{# ------------------------------------------------------- the model ------- #}
+<div class="card">
+  <h3>The model</h3>
+  <div class="acct-grid">
+    <div><span class="when">Architecture</span><b>{{ card.model }}</b></div>
+    <div><span class="when">Trained on</span>
+      <b>{{ '{:,}'.format(card.fitted_rows) }} transactions</b></div>
+    <div><span class="when">Merchants memorised</span>
+      <b>{{ '{:,}'.format(card.merchants_memorised) }}</b></div>
+    <div><span class="when">Categories</span><b>{{ card.classes|length }}</b></div>
+  </div>
+  <p class="footnote-inline">{{ card.note|capitalize }}.</p>
+</div>
+{% endblock %}

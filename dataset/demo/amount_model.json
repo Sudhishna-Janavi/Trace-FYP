@@ -1,0 +1,213 @@
+{
+  "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Survey 2024 (released 19 December 2025)",
+  "url": "https://www.bls.gov/news.release/cesan.nr0.htm",
+  "guarantee": "amounts, dates and accounts are never model features; every Unit 2 metric comes from text and labels alone",
+  "drawn_from": "stratified_test.csv, held out from all model fitting",
+  "distribution": "log-normal, sigma 0.55",
+  "period": {
+    "from": "2025-10",
+    "to": "2026-09",
+    "months": 12
+  },
+  "household_share_adjustment": "BLS category averages include households spending nothing in that category. Rent and Mortgage are divided by the share of households that rent (0.35) or own (0.65) so the figure reflects a participating household rather than the population mean.",
+  "assumptions": "every transactions-per-year figure is this project's assumption, not BLS",
+  "categories": {
+    "Restaurants": {
+      "annual": 3945,
+      "per_year": 150,
+      "source": "bls",
+      "line": "Food away from home",
+      "mean_per_transaction": 26.3,
+      "rows_emitted": 150,
+      "observed_median": 22.6
+    },
+    "Groceries": {
+      "annual": 6224,
+      "per_year": 100,
+      "source": "bls",
+      "line": "Food at home",
+      "mean_per_transaction": 62.24,
+      "rows_emitted": 100,
+      "observed_median": 52.56
+    },
+    "Transportation": {
+      "annual": 13318,
+      "per_year": 120,
+      "source": "bls",
+      "line": "Transportation",
+      "mean_per_transaction": 110.98,
+      "rows_emitted": 120,
+      "observed_median": 101.0
+    },
+    "Healthcare": {
+      "annual": 6197,
+      "per_year": 24,
+      "source": "bls",
+      "line": "Healthcare",
+      "mean_per_transaction": 258.21,
+      "rows_emitted": 24,
+      "observed_median": 227.38
+    },
+    "Entertainment": {
+      "annual": 3609,
+      "per_year": 90,
+      "source": "bls",
+      "line": "Entertainment",
+      "mean_per_transaction": 40.1,
+      "rows_emitted": 90,
+      "observed_median": 38.89
+    },
+    "Personal Care": {
+      "annual": 978,
+      "per_year": 24,
+      "source": "bls",
+      "line": "Personal care products and services",
+      "mean_per_transaction": 40.75,
+      "rows_emitted": 24,
+      "observed_median": 37.33
+    },
+    "Education": {
+      "annual": 1569,
+      "per_year": 6,
+      "source": "bls",
+      "line": "Education",
+      "mean_per_transaction": 261.5,
+      "rows_emitted": 6,
+      "observed_median": 353.09
+    },
+    "Shopping": {
+      "annual": 2001,
+      "per_year": 80,
+      "source": "bls",
+      "line": "Apparel and services",
+      "mean_per_transaction": 25.01,
+      "rows_emitted": 80,
+      "observed_median": 22.41
+    },
+    "Mortgage": {
+      "annual": 9310,
+      "per_year": 12,
+      "source": "bls",
+      "line": "Owned dwellings",
+      "share": 0.65,
+      "mean_per_transaction": 1193.59,
+      "rows_emitted": 0,
+      "observed_median": null
+    },
+    "Rent": {
+      "annual": 5660,
+      "per_year": 12,
+      "source": "bls",
+      "line": "Rented dwellings",
+      "share": 0.35,
+      "mean_per_transaction": 1347.62,
+      "rows_emitted": 12,
+      "observed_median": 1356.45
+    },
+    "Travel": {
+      "annual": 1347,
+      "per_year": 4,
+      "source": "bls",
+      "line": "Other lodging",
+      "mean_per_transaction": 336.75,
+      "rows_emitted": 4,
+      "observed_median": 218.84
+    },
+    "Insurance": {
+      "annual": 2568,
+      "per_year": 12,
+      "source": "bls",
+      "line": "Vehicle insurance 1,993 + life and other personal insurance 575",
+      "mean_per_transaction": 214.0,
+      "rows_emitted": 24,
+      "observed_median": 106.76
+    },
+    "Income": {
+      "annual": 104207,
+      "per_year": 24,
+      "source": "bls",
+      "line": "Average income before taxes",
+      "after_tax": true,
+      "mean_per_transaction": 3747.59,
+      "rows_emitted": 24,
+      "observed_median": 3755.07
+    },
+    "Utilities": {
+      "annual": 4736,
+      "per_year": 36,
+      "source": "assumed",
+      "line": "Utilities, fuels and public services; not itemised in Table A",
+      "mean_per_transaction": 131.56,
+      "rows_emitted": 36,
+      "observed_median": 124.06
+    },
+    "Subscription": {
+      "annual": 1200,
+      "per_year": 36,
+      "source": "assumed",
+      "line": "no BLS line; streaming and software subscriptions",
+      "mean_per_transaction": 33.33,
+      "rows_emitted": 48,
+      "observed_median": 24.63
+    },
+    "Fees": {
+      "annual": 240,
+      "per_year": 6,
+      "source": "assumed",
+      "line": "no BLS line; bank charges",
+      "mean_per_transaction": 40.0,
+      "rows_emitted": 6,
+      "observed_median": 39.84
+    },
+    "Transfer": {
+      "annual": 12000,
+      "per_year": 24,
+      "source": "assumed",
+      "line": "not an expenditure; movement between the user's own accounts",
+      "mean_per_transaction": 500.0,
+      "rows_emitted": 24,
+      "observed_median": 412.44
+    }
+  },
+  "accounts": [
+    {
+      "id": "acc-chase",
+      "bank": "Chase",
+      "name": "Current Account",
+      "format": "ach"
+    },
+    {
+      "id": "acc-capitalone",
+      "bank": "Capital One",
+      "name": "Savings Account",
+      "format": "prose"
+    },
+    {
+      "id": "acc-applecard",
+      "bank": "Apple Card",
+      "name": "Credit Card",
+      "format": "address"
+    }
+  ],
+  "recurring_categories": [
+    "Income",
+    "Insurance",
+    "Mortgage",
+    "Rent",
+    "Subscription",
+    "Utilities"
+  ],
+  "recurring_merchants_per_category": {
+    "Rent": 1,
+    "Mortgage": 1,
+    "Utilities": 3,
+    "Insurance": 2,
+    "Subscription": 4,
+    "Income": 1
+  },
+  "fortnightly_categories": [
+    "Income"
+  ],
+  "tenure": "rent",
+  "tenure_note": "a household rents or owns, not both; emitting Rent and Mortgage together gave a housing share of 44% against the BLS figure of 33%. Mortgage is therefore empty."
+}

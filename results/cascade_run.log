@@ -1,0 +1,58 @@
+
+=== protocol: stratified (22,297 train / 4,780 eval) ===
+    memory holds 6,156 merchants
+  Logistic regression    cascade macro-F1 0.9928  accuracy 0.9931   layers: rule 17% / memory 66% / model 17%
+  Linear SVM             cascade macro-F1 0.9930  accuracy 0.9933   layers: rule 17% / memory 66% / model 17%
+  MiniLM embeddings      cascade macro-F1 0.9683  accuracy 0.9642   layers: rule 17% / memory 66% / model 17%
+  Naive Bayes            cascade macro-F1 0.9885  accuracy 0.9883   layers: rule 17% / memory 66% / model 17%
+
+=== protocol: merchant (22,271 train / 4,812 eval) ===
+    memory holds 4,776 merchants
+  Logistic regression    cascade macro-F1 0.6281  accuracy 0.6207   layers: rule 17% / memory 1% / model 82%
+  Linear SVM             cascade macro-F1 0.6613  accuracy 0.6351   layers: rule 17% / memory 1% / model 82%
+  MiniLM embeddings      cascade macro-F1 0.6632  accuracy 0.6444   layers: rule 17% / memory 1% / model 82%
+  Naive Bayes            cascade macro-F1 0.6189  accuracy 0.6143   layers: rule 17% / memory 1% / model 82%
+
+============================================================================================
+CASCADE AGAINST THE MODEL ALONE (validation)
+============================================================================================
+model                 protocol           alone   in cascade     diff
+Logistic regression   stratified        0.9976       0.9928  -0.0048
+Linear SVM            stratified        0.9984       0.9930  -0.0054
+MiniLM embeddings     stratified        0.9167       0.9683  +0.0516
+Naive Bayes           stratified        0.9809       0.9885  +0.0077
+Logistic regression   merchant          0.5980       0.6281  +0.0302
+Linear SVM            merchant          0.6393       0.6613  +0.0220
+MiniLM embeddings     merchant          0.6479       0.6632  +0.0153
+Naive Bayes           merchant          0.5903       0.6189  +0.0287
+
+============================================================================================
+REVIEW BURDEN: how the confidence threshold trades accuracy for human effort
+merchant-held-out protocol, which is what a new user meets
+============================================================================================
+model                   threshold  sent to review   auto-accepted acc
+Logistic regression          0.00           0.0%              0.6207
+Logistic regression          0.50          45.4%              0.8965
+Logistic regression          0.60          50.7%              0.9322
+Logistic regression          0.70          55.3%              0.9596
+Logistic regression          0.80          61.0%              0.9728
+
+Linear SVM                   0.00           0.0%              0.6351
+Linear SVM                   0.50          19.9%              0.7335
+Linear SVM                   0.60          28.4%              0.7747
+Linear SVM                   0.70          35.0%              0.8242
+Linear SVM                   0.80          40.8%              0.8676
+
+MiniLM embeddings            0.00           0.0%              0.6444
+MiniLM embeddings            0.50          31.6%              0.7867
+MiniLM embeddings            0.60          40.5%              0.8323
+MiniLM embeddings            0.70          48.0%              0.8764
+MiniLM embeddings            0.80          55.7%              0.9212
+
+Naive Bayes                  0.00           0.0%              0.6143
+Naive Bayes                  0.50          11.4%              0.6725
+Naive Bayes                  0.60          17.6%              0.7066
+Naive Bayes                  0.70          23.6%              0.7422
+Naive Bayes                  0.80          29.7%              0.7823
+
+[PASS] wrote /Users/sudhishna/Desktop/FYP_Final_ver2/oct14/results/unit2_cascade.json

@@ -1,0 +1,89 @@
+{
+  "note": "validation scores only; test sets untouched",
+  "models": {
+    "1. Rule baseline": {
+      "macro_f1": {
+        "Stratified": 0.2924383401284065,
+        "Merchant held out": 0.28489447618026237,
+        "Strictly novel": 0.3067695039886653
+      },
+      "merchant_ece": null,
+      "train_seconds": null,
+      "stratified_coverage": 0.17322175732217573,
+      "explanation": "exact",
+      "explanation_note": "the matched phrase is the explanation",
+      "abstains": true
+    },
+    "1b. Merchant memory": {
+      "macro_f1": {
+        "Stratified": 0.8499899461522717,
+        "Merchant held out": 0.07515551871815802,
+        "Strictly novel": 0.015561502626623055
+      },
+      "merchant_ece": null,
+      "train_seconds": null,
+      "stratified_coverage": 0.8217573221757322,
+      "explanation": "exact",
+      "explanation_note": "the remembered merchant is the explanation",
+      "abstains": true
+    },
+    "2. Naive Bayes": {
+      "macro_f1": {
+        "Stratified": 0.9808730705645715,
+        "Merchant held out": 0.5902594558123923,
+        "Strictly novel": 0.4656733828680861
+      },
+      "merchant_ece": null,
+      "train_seconds": 0.579,
+      "stratified_coverage": 1.0,
+      "explanation": "exact",
+      "explanation_note": "per-token log probabilities, read directly",
+      "abstains": false
+    },
+    "3. Logistic regression": {
+      "macro_f1": {
+        "Stratified": 0.9976046948501844,
+        "Merchant held out": 0.5979836051598817,
+        "Strictly novel": 0.463603384131034
+      },
+      "merchant_ece": 0.040562598238482336,
+      "train_seconds": 3.967,
+      "stratified_coverage": 1.0,
+      "explanation": "exact",
+      "explanation_note": "weight times value; no extra inference",
+      "abstains": false
+    },
+    "4. Linear SVM": {
+      "macro_f1": {
+        "Stratified": 0.9983790582594109,
+        "Merchant held out": 0.6393423969049113,
+        "Strictly novel": 0.514567148654846
+      },
+      "merchant_ece": 0.14524391310635756,
+      "train_seconds": 2.619,
+      "stratified_coverage": 1.0,
+      "explanation": "partial",
+      "explanation_note": "an ensemble of calibrated folds, so there is no single weight vector to read",
+      "abstains": false
+    },
+    "5. MiniLM embeddings": {
+      "macro_f1": {
+        "Stratified": 0.9167033548574912,
+        "Merchant held out": 0.6478941989755731,
+        "Strictly novel": 0.5935659250958164
+      },
+      "merchant_ece": 0.035995819594274434,
+      "train_seconds": 1.244,
+      "stratified_coverage": 1.0,
+      "explanation": "approximate",
+      "explanation_note": "384 abstract dimensions; needs LIME or SHAP, about 96 encoder passes",
+      "abstains": false
+    }
+  },
+  "figures": [
+    "unit2_all_models.png",
+    "unit2_calibration.png",
+    "unit2_deterministic_coverage.png",
+    "unit2_tradeoff.png"
+  ]
+}

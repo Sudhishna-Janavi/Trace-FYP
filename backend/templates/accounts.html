@@ -1,0 +1,68 @@
+{% extends "app.html" %}
+{% block title %}Accounts · Trace{% endblock %}
+{% block heading %}Accounts{% endblock %}
+{% block subheading %}
+  {{ detail|length }} institutions, {{ total }} transactions in one ledger
+{% endblock %}
+{% block content %}
+
+<div class="card explainer">
+  <h3>Why aggregation is the hard part</h3>
+  <p>
+    No two banks export the same file. One writes a single signed amount,
+    another splits debits and credits into separate columns, a third issues a
+    fresh file every month and records purchases as positive. Each is read by
+    its own adapter and normalised into one ledger.
+  </p>
+  <p>
+    Every adapter also <b>discards the bank's own category column</b>. Three
+    banks disagree about what a category is and none of them agrees with the
+    others across institutions, so a category that holds across all of a
+    person's accounts has to be worked out from the description. That is the
+    reason the classifier exists.
+  </p>
+</div>
+
+{% for d in detail %}
+<div class="card acct">
+  <div class="acct-head">
+    <div>
+      <h3>{{ d.account.bank }}</h3>
+      <div class="when">{{ d.account.name }} · {{ d.account.currency }}</div>
+    </div>
+    <div class="amt">
+      <div><b>{{ d.spend | money0 }}</b></div>
+      <div class="when">{{ d.share|round(1) }}% of your spending</div>
+    </div>
+  </div>
+  <div class="acct-grid">
+    <div><span class="when">Transactions</span><b>{{ d.rows }}</b></div>
+    <div><span class="when">First</span>
+      <b>{{ d.first.strftime('%d %b %Y') if d.first else '—' }}</b></div>
+    <div><span class="when">Last</span>
+      <b>{{ d.last.strftime('%d %b %Y') if d.last else '—' }}</b></div>
+  </div>
+  <div class="fmt">
+    <span class="lbl">Export format reconciled</span>
+    {{ d.account.source_format }}
+  </div>
+</div>
+{% endfor %}
+
+<div class="card">
+  <h3>Add or refresh data</h3>
+  <p class="when">
+    Reconnecting replaces the imported transactions and keeps every correction
+    you have made, because those are your decisions rather than imported data.
+  </p>
+  <div class="row">
+    <a href="/connect" class="btnlink">Connect or upload again</a>
+  </div>
+  <p class="footnote-inline">
+    Trace reads exported statement files. Reading balances directly from a bank
+    needs that bank's authorisation under an open-banking scheme, which is an
+    institutional agreement rather than a technical obstacle, and is the natural
+    next step for this work.
+  </p>
+</div>
+{% endblock %}

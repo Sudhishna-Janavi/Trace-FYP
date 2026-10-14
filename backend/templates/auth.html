@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}{{ heading }} · Trace{% endblock %}
+{% block body %}
+<div class="auth-wrap">
+  <div class="auth-card">
+    <div class="brand"><i></i>Trace</div>
+    <h1>{{ heading }}</h1>
+    <p class="sub">{{ blurb }}</p>
+
+    {% if error %}<div class="alert">{{ error }}</div>{% endif %}
+
+    <form method="post" action="{{ action }}" novalidate>
+      {% if mode == 'signup' %}
+      <label>
+        <span>Name</span>
+        <input name="display_name" autocomplete="name" required
+               value="{{ form.display_name|default('') }}" placeholder="Your name">
+      </label>
+      {% endif %}
+      <label>
+        <span>Email</span>
+        <input name="email" type="email" autocomplete="email" required
+               value="{{ form.email|default('') }}" placeholder="you@example.com">
+      </label>
+      <label>
+        <span>Password</span>
+        <input name="password" type="password" required
+               autocomplete="{{ 'new-password' if mode == 'signup' else 'current-password' }}"
+               placeholder="{{ 'At least 8 characters' if mode == 'signup' else '' }}">
+      </label>
+      <button class="primary" type="submit">{{ cta }}</button>
+    </form>
+
+    <p class="switch">{{ switch_text }} <a href="{{ switch_href }}">{{ switch_cta }}</a></p>
+  </div>
+  <p class="footnote">
+    A final year project. Transaction data shown is a public research dataset,
+    not real bank records.
+  </p>
+</div>
+{% endblock %}

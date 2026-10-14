@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Connected · Trace{% endblock %}
+{% block body %}
+<div class="auth-wrap">
+  <div class="auth-card wide">
+    <div class="brand"><i></i>Trace</div>
+    <h1>Connected</h1>
+    <p class="sub">
+      {{ result.files }} files from {{ result.accounts }} banks, in three
+      different export formats, normalised and categorised.
+    </p>
+
+    <div class="result">
+      <h2>Which layer decided</h2>
+      <div class="hint">
+        Most transactions never reach the model. Each layer answers only what the
+        one before it could not.
+      </div>
+      <div class="layers">
+        {% for key, label, note, colour in layers %}
+        {% set n = result.by_layer.get(key, 0) %}
+        <div class="layer">
+          <span class="name">{{ label }}<small>{{ note }}</small></span>
+          <span class="track"><i style="width:{{ (n / result.transactions * 100)|round(1) }}%;background:{{ colour }}"></i></span>
+          <span class="n">{{ n }} · {{ (n / result.transactions * 100)|round(0)|int }}%</span>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="kv" style="margin-top:20px">
+        <span>Transactions</span><b class="num">{{ result.transactions }}</b></div>
+      <div class="kv"><span>Accounts</span><b>{{ result.accounts }}</b></div>
+      <div class="kv"><span>Held for your review</span>
+        <b class="num">{{ result.needs_review }}</b></div>
+    </div>
+
+    <form method="get" action="/">
+      <button class="primary" type="submit">Go to dashboard</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

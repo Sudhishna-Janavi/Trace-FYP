@@ -1,0 +1,246 @@
+{
+  "model": "MiniLM embeddings + Logistic Regression",
+  "machine_learning": true,
+  "encoder": "all-MiniLM-L6-v2 (frozen, pre-trained)",
+  "embedding_dim": 384,
+  "head_train_seconds": 1.244,
+  "results": {
+    "stratified (validation)": {
+      "n": 4780,
+      "accuracy": 0.902928870292887,
+      "macro_f1": 0.9167033548574912,
+      "coverage": 1.0,
+      "precision_when_fired": 0.902928870292887
+    },
+    "merchant held out (validation)": {
+      "n": 4812,
+      "accuracy": 0.6311305070656692,
+      "macro_f1": 0.6478941989755731,
+      "coverage": 1.0,
+      "precision_when_fired": 0.6311305070656692
+    },
+    "  of which strictly novel": {
+      "n": 2457,
+      "accuracy": 0.571021571021571,
+      "macro_f1": 0.5935659250958164,
+      "coverage": 1.0,
+      "precision_when_fired": 0.571021571021571
+    }
+  },
+  "results_light_text": {
+    "stratified (validation)": {
+      "n": 4780,
+      "accuracy": 0.9077405857740586,
+      "macro_f1": 0.921133020135886,
+      "coverage": 1.0,
+      "precision_when_fired": 0.9077405857740586
+    },
+    "merchant held out (validation)": {
+      "n": 4812,
+      "accuracy": 0.6163757273482959,
+      "macro_f1": 0.6314462637475141,
+      "coverage": 1.0,
+      "precision_when_fired": 0.6163757273482959
+    },
+    "  of which strictly novel": {
+      "n": 2457,
+      "accuracy": 0.5608465608465608,
+      "macro_f1": 0.5776326976949546,
+      "coverage": 1.0,
+      "precision_when_fired": 0.5608465608465608
+    }
+  },
+  "calibration": {
+    "stratified": {
+      "ece": 0.10963191754773072,
+      "mce": 0.23140316292390983,
+      "brier": 0.16345207393169403,
+      "mean_confidence": 0.7934796810150146,
+      "accuracy": 0.902928870292887,
+      "overconfidence": -0.1094491892778724
+    },
+    "merchant": {
+      "ece": 0.035995819594274434,
+      "mce": 0.1068819672379342,
+      "brier": 0.5020473599433899,
+      "mean_confidence": 0.6662388443946838,
+      "accuracy": 0.6311305070656692,
+      "overconfidence": 0.03510833732901464
+    },
+    "strictly_novel": {
+      "ece": 0.04359418410302955,
+      "mce": 0.08333052033963406,
+      "brier": 0.5638474225997925,
+      "mean_confidence": 0.6142842173576355,
+      "accuracy": 0.571021571021571,
+      "overconfidence": 0.04326264633606447
+    }
+  },
+  "calibration_light_text": {
+    "stratified": {
+      "ece": 0.11140869750200956,
+      "mce": 0.2476785888844747,
+      "brier": 0.16049575805664062,
+      "mean_confidence": 0.7963318824768066,
+      "accuracy": 0.9077405857740586,
+      "overconfidence": -0.11140870329725194
+    },
+    "merchant": {
+      "ece": 0.055067369595157616,
+      "mce": 0.10996314258344714,
+      "brier": 0.5111009478569031,
+      "mean_confidence": 0.6700263023376465,
+      "accuracy": 0.6163757273482959,
+      "overconfidence": 0.05365057498935055
+    },
+    "strictly_novel": {
+      "ece": 0.05874396460930605,
+      "mce": 0.12458912833877234,
+      "brier": 0.5727436542510986,
+      "mean_confidence": 0.6172579526901245,
+      "accuracy": 0.5608465608465608,
+      "overconfidence": 0.056411391843563696
+    }
+  },
+  "per_class_f1": {
+    "labels": [
+      "Education",
+      "Entertainment",
+      "Fees",
+      "Groceries",
+      "Healthcare",
+      "Income",
+      "Insurance",
+      "Mortgage",
+      "Personal Care",
+      "Rent",
+      "Restaurants",
+      "Shopping",
+      "Subscription",
+      "Transfer",
+      "Transportation",
+      "Travel",
+      "Utilities"
+    ],
+    "stratified": [
+      0.9336099585062241,
+      0.8778761061946903,
+      0.9947643979057592,
+      0.89171974522293,
+      0.9490333919156415,
+      0.972809667673716,
+      0.9,
+      0.9885931558935361,
+      0.9387040280210157,
+      1.0,
+      0.8346636259977195,
+      0.784370477568741,
+      0.8161434977578476,
+      0.9606837606837607,
+      0.8694404591104734,
+      0.919931856899489,
+      0.9516129032258065
+    ],
+    "merchant": [
+      0.6169354838709677,
+      0.6773162939297125,
+      0.9912536443148688,
+      0.5060240963855421,
+      0.7946428571428571,
+      0.35023041474654376,
+      0.610236220472441,
+      0.936,
+      0.49411764705882355,
+      0.977491961414791,
+      0.654320987654321,
+      0.38526912181303113,
+      0.5465648854961832,
+      0.6750348675034867,
+      0.425531914893617,
+      0.5480943738656987,
+      0.825136612021858
+    ]
+  },
+  "largest_confusions": [
+    {
+      "true": "Income",
+      "predicted": "Transfer",
+      "share": 0.6971,
+      "rows": 122
+    },
+    {
+      "true": "Groceries",
+      "predicted": "Restaurants",
+      "share": 0.2618,
+      "rows": 105
+    },
+    {
+      "true": "Shopping",
+      "predicted": "Groceries",
+      "share": 0.1774,
+      "rows": 66
+    },
+    {
+      "true": "Education",
+      "predicted": "Entertainment",
+      "share": 0.1626,
+      "rows": 40
+    },
+    {
+      "true": "Personal Care",
+      "predicted": "Shopping",
+      "share": 0.1529,
+      "rows": 48
+    },
+    {
+      "true": "Insurance",
+      "predicted": "Travel",
+      "share": 0.1322,
+      "rows": 32
+    },
+    {
+      "true": "Personal Care",
+      "predicted": "Healthcare",
+      "share": 0.1306,
+      "rows": 41
+    },
+    {
+      "true": "Transportation",
+      "predicted": "Shopping",
+      "share": 0.1131,
+      "rows": 37
+    },
+    {
+      "true": "Shopping",
+      "predicted": "Subscription",
+      "share": 0.1075,
+      "rows": 40
+    },
+    {
+      "true": "Travel",
+      "predicted": "Transportation",
+      "share": 0.1056,
+      "rows": 30
+    },
+    {
+      "true": "Transportation",
+      "predicted": "Entertainment",
+      "share": 0.0948,
+      "rows": 31
+    },
+    {
+      "true": "Groceries",
+      "predicted": "Shopping",
+      "share": 0.0873,
+      "rows": 35
+    }
+  ],
+  "figures": [
+    "model5_protocols.png",
+    "model5_per_class_f1.png",
+    "model5_confusion.png",
+    "model5_reliability.png",
+    "model5_text_variant.png",
+    "model5_vs_tfidf.png"
+  ]
+}

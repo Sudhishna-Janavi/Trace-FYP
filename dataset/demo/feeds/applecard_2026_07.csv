@@ -1,0 +1,32 @@
+Transaction Date,Clearing Date,Description,Merchant,Category,Type,Amount (USD)
+07/02/2026,07/02/2026,[debit] WHOLE FOODS 2746 PARK AVE INDIANAPOLIS 46201-0551IN USA,WHOLE,Groceries,Purchase,18.98
+07/02/2026,07/05/2026,[debit] WINN-DIXIE*97TIET5WZO,WINN,Groceries,Purchase,39.23
+07/02/2026,07/03/2026,[debit] STATE DMV 6821 OAK WAY PHOENIX 85001-3747AZ USA,DMV,Gas/Automotive,Purchase,200.62
+07/05/2026,07/06/2026,[debit] DENTAL365 9037 UNIVERSITY WAY PORTLAND97201 OR USA,UNIVERSITY,Health Care,Purchase,163.29
+07/06/2026,07/06/2026,[debit] NATIONWIDE 9777 INDUSTRIAL CT NEWARK07101 NJ USA,NATIONWIDE,Insurance,Purchase,97.67
+07/06/2026,07/09/2026,[debit] PYPL*Kohl's,KOHL,Merchandise,Purchase,42.84
+07/06/2026,07/08/2026,[debit] MERCARI 7460 PARK RD MINNEAPOLIS 55401-4149MN USA,MERCARI,Merchandise,Purchase,33.52
+07/07/2026,07/10/2026,[debit] MARATHON,MARATHON,Gas/Automotive,Purchase,103.78
+07/08/2026,07/11/2026,[debit] Zelle payment to RICHARD MILLER BROOKLYN NY 76803997631,ZELLE,Payment/Credit,Purchase,214.36
+07/09/2026,07/10/2026,[debit] Ladder 4953 Broadway Ct Phoenix 85001-4410az Usa,LADDER,Insurance,Purchase,113.34
+07/10/2026,07/11/2026,[debit] DRAFTKINGS 8856 BROADWAY WAY SEATTLE98101 WA USA,DRAFTKINGS,Entertainment,Purchase,50.51
+07/11/2026,07/13/2026,[debit] Lyft *trip Queens L28vps,LYFT,Gas/Automotive,Purchase,101.31
+07/12/2026,07/12/2026,[debit] APPLE.COM/BILL 8959 CENTER LN SEATTLE 98101 WA USA,APPLE,Internet,Purchase,26.36
+07/14/2026,07/15/2026,[debit] ATM SERVICE CHARGE - 20/59,ATM,Fee/Interest Charge,Purchase,35.46
+07/15/2026,07/16/2026,[debit] DAZN 6184 MISSION CT BROOKLYN11201 NY USA,DAZN,Entertainment,Purchase,35.78
+07/15/2026,07/16/2026,[debit] PAYPAL *7-ELEVEN 4HRLSA0EF8,ELEVEN,Merchandise,Purchase,20.45
+07/16/2026,07/16/2026,[debit] cardenas 9831 oak st hayward94541 ca usa,CARDENAS,Groceries,Purchase,76.56
+07/16/2026,07/17/2026,[debit] whole foods 2230 park ln hayward 94541-5638ca usa,WHOLE,Groceries,Purchase,46.27
+07/16/2026,07/19/2026,[debit] MOBIL*6EURG0JDBIC,MOBIL,Gas/Automotive,Purchase,168.67
+07/17/2026,07/19/2026,[debit] DR. MARTINEZ CARDIOLOGY,MARTINEZ,Health Care,Purchase,69.62
+07/20/2026,07/20/2026,[debit] tesla supercharger 2986 elm ave nashville 37201 tn usa,TESLA,Gas/Automotive,Purchase,104.49
+07/20/2026,07/21/2026,[debit] Preauthorized Withdrawal to VISIONWORKS,VISIONWORKS,Health Care,Purchase,271.10
+07/21/2026,07/22/2026,[debit] T-mobile 3197 Market Way Houston 77001-1108tx Usa,MOBILE,Utilities,Purchase,122.51
+07/21/2026,07/21/2026,[debit] PAYPAL INST XFER REPAIRCLINIC.COMWEB ID: PAYPALSI43,COMWEB,Merchandise,Purchase,20.73
+07/22/2026,07/23/2026,[debit] FANDUEL 2439 CENTER AVE MIAMI33101 FL USA,FANDUEL,Entertainment,Purchase,54.99
+07/23/2026,07/24/2026,[credit] valve corp game,VALVE,Entertainment,Payment,-33.29
+07/24/2026,07/25/2026,[debit] hard rock bet deposit,HARD,Entertainment,Purchase,39.70
+07/25/2026,07/28/2026,[debit] ELEMENTS MASSAGE LLC,ELEMENTS,Other Services,Purchase,26.77
+07/28/2026,07/29/2026,[debit] Parkwhiz 506 Center Way Philadelphia19101 Pa Usa,PARKWHIZ,Gas/Automotive,Purchase,94.24
+07/29/2026,07/30/2026,[debit] EXCESS TRANSACTION FEE - 39/80,EXCESS,Fee/Interest Charge,Purchase,71.04
+07/31/2026,08/02/2026,[debit] SMASHBURGER 7461 UNIVERSITY AVE AUSTIN 78701 TX USA,SMASHBURGER,Dining,Purchase,12.51

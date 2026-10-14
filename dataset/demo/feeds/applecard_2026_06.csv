@@ -1,0 +1,23 @@
+Transaction Date,Clearing Date,Description,Merchant,Category,Type,Amount (USD)
+06/02/2026,06/03/2026,[debit] Preauthorized Withdrawal to MAYO CLINIC,MAYO,Health Care,Purchase,264.59
+06/03/2026,06/04/2026,[debit] PHILLIPS 66 - AUSTIN,PHILLIPS,Gas/Automotive,Purchase,74.05
+06/03/2026,06/03/2026,[debit] AMZN MKTP US*RSI52J81WC,AMZN,Merchandise,Purchase,9.56
+06/05/2026,06/05/2026,[debit] Mta 1892 Main St Pittsburgh 15201 Pa Usa,MTA,Gas/Automotive,Purchase,93.73
+06/06/2026,06/06/2026,[debit] NATIONWIDE 9777 INDUSTRIAL CT NEWARK07101 NJ USA,NATIONWIDE,Insurance,Purchase,95.14
+06/08/2026,06/10/2026,[debit] PAYPAL PAYMENT TO KIMBERLY ROBINSON,KIMBERLY,Payment/Credit,Purchase,265.90
+06/09/2026,06/11/2026,[debit] Ladder 4953 Broadway Ct Phoenix 85001-4410az Usa,LADDER,Insurance,Purchase,113.09
+06/11/2026,06/11/2026,[debit] FOOD LION 3498 CENTER DR BROOKLYN 11201-4989NY USA,LION,Groceries,Purchase,83.54
+06/11/2026,06/12/2026,[debit] NATURALGR #41233,NATURALGR,Groceries,Purchase,90.54
+06/12/2026,06/12/2026,[debit] APPLE.COM/BILL 8959 CENTER LN SEATTLE 98101 WA USA,APPLE,Internet,Purchase,25.61
+06/12/2026,06/13/2026,[debit] SHELL - BROOKLYN,SHELL,Gas/Automotive,Purchase,93.71
+06/15/2026,06/16/2026,[credit] REGAL CINEMAS - DENVER,REGAL,Entertainment,Payment,-42.20
+06/15/2026,06/18/2026,[credit] Swimming Pool - Minneapolis,SWIMMING,Entertainment,Payment,-35.35
+06/17/2026,06/20/2026,[debit] WALGREENS 8032 OAK WAY DALLAS 75201 TX USA,WALGREENS,Health Care,Purchase,267.85
+06/18/2026,06/19/2026,[debit] Kroger 2485 Minneapolis,KROGER,Groceries,Purchase,40.49
+06/21/2026,06/22/2026,[debit] T-mobile 3197 Market Way Houston 77001-1108tx Usa,MOBILE,Utilities,Purchase,118.87
+06/21/2026,06/21/2026,[debit] GENTLE DENTAL 5413 OAK LN CHICAGO 60601-9014IL USA,GENTLE,Health Care,Purchase,129.54
+06/21/2026,06/21/2026,[credit] WIX #1164 TAMPA,WIX,Merchandise,Payment,-5.92
+06/23/2026,06/24/2026,[debit] asian supermarket 1906 park ave houston 77001-1837tx usa,ASIAN,Groceries,Purchase,148.03
+06/28/2026,06/29/2026,[debit] HORATIO'S*KSS3B5MS91DI,HORATIO,Dining,Purchase,22.85
+06/28/2026,06/29/2026,[debit] FOOD LION 939 INDUSTRIAL CT HAYWARD 94541-2437CA USA,LION,Groceries,Purchase,73.52
+06/29/2026,07/02/2026,[debit] PAYPAL *LIQUOR STORE 16Z7XV7QVR,LIQUOR,Merchandise,Purchase,32.82

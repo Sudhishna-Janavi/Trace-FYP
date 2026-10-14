@@ -1,0 +1,10 @@
+.venv/
+**/__pycache__/
+*.pyc
+trace.db
+results/
+dataset/US/
+dataset/Indian/
+dataset/processed/
+.cache/
+*.md
