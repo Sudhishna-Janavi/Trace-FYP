@@ -1,0 +1,68 @@
+{% extends "app.html" %}
+{% block title %}Transactions · Trace{% endblock %}
+{% block heading %}Transactions{% endblock %}
+{% block subheading %}
+  {{ matching }} of {{ total }} transactions{% if filtered %} matching your filters{% endif %}
+{% endblock %}
+{% block content %}
+<div class="card">
+  <form class="toolbar" method="get" action="/transactions">
+    <input name="q" value="{{ q }}" placeholder="Search descriptions…" autocomplete="off">
+    <select name="category" onchange="this.form.submit()">
+      <option value="">All categories</option>
+      {% for name in all_categories %}
+      <option value="{{ name }}" {{ 'selected' if name == category }}>{{ name }}</option>
+      {% endfor %}
+    </select>
+    <select name="account" onchange="this.form.submit()">
+      <option value="">All accounts</option>
+      {% for a in accounts %}
+      <option value="{{ a.id }}" {{ 'selected' if a.id|string == account }}>{{ a.bank }}</option>
+      {% endfor %}
+    </select>
+    <select name="state" onchange="this.form.submit()">
+      <option value="">Any state</option>
+      <option value="review" {{ 'selected' if state == 'review' }}>Needs review</option>
+      <option value="confirmed" {{ 'selected' if state == 'confirmed' }}>Confirmed</option>
+    </select>
+    <button class="ghost" type="submit">Search</button>
+  </form>
+
+  <table>
+    <thead><tr><th>Date</th><th>Description</th><th>Category</th>
+      <th>Decided by</th><th class="amt">Amount</th></tr></thead>
+    <tbody>
+    {% for row in rows %}
+      <tr data-id="{{ row.id }}" onclick="explain({{ row.id }})"
+          tabindex="0" role="button"
+          onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();explain({{ row.id }})}"
+          aria-label="Why {{ row.raw_description[:40] }} was categorised as {{ row.category }}">
+        <td class="when">{{ row.booking_date.strftime('%d %b %Y') }}</td>
+        <td><div class="mono">{{ row.raw_description[:62] }}</div>
+            <div class="when" style="margin-top:3px">{{ row.account.bank }}</div></td>
+        <td><span class="tag {{ 'rev' if row.needs_review and not row.reviewed_at }}">{{ row.category }}</span></td>
+        <td><span class="when">{{ layer_labels.get(row.decided_by, row.decided_by) }}</span></td>
+        <td class="amt {{ 'in' if row.amount > 0 }}">{{ row.amount | money }}</td>
+      </tr>
+    {% else %}
+      <tr><td colspan="5"><div class="empty">
+        <h3>Nothing matches</h3><p>Try clearing a filter or searching for something else.</p>
+      </div></td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% if pages > 1 %}
+  <nav class="pager" aria-label="Pages of transactions">
+    {% set qs = '&' ~ query_string if query_string else '' %}
+    {% if page > 1 %}
+      <a class="ghostlink" href="?page={{ page - 1 }}{{ qs }}">← Newer</a>
+    {% else %}<span class="ghostlink off">← Newer</span>{% endif %}
+    <span class="pager-at">{{ first_row }}–{{ last_row }} of {{ matching }}</span>
+    {% if page < pages %}
+      <a class="ghostlink" href="?page={{ page + 1 }}{{ qs }}">Older →</a>
+    {% else %}<span class="ghostlink off">Older →</span>{% endif %}
+  </nav>
+  {% endif %}
+</div>
+{% include "_panel.html" %}
+{% endblock %}

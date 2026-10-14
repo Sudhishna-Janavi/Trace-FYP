@@ -1,0 +1,30 @@
+Transaction Date,Clearing Date,Description,Merchant,Category,Type,Amount (USD)
+09/01/2026,09/02/2026,[debit] IMAX 9728 INDUSTRIAL CT PHILADELPHIA19101 PA USA,IMAX,Entertainment,Purchase,40.02
+09/03/2026,09/05/2026,[debit] WEGMANS 0811713,WEGMANS,Groceries,Purchase,46.64
+09/04/2026,09/04/2026,[debit] Vehicle Registration 6632 Main St Raleigh 27601-5612nc Usa,VEHICLE,Gas/Automotive,Purchase,118.97
+09/06/2026,09/07/2026,[debit] NATIONWIDE 9777 INDUSTRIAL CT NEWARK07101 NJ USA,NATIONWIDE,Insurance,Purchase,95.84
+09/06/2026,09/06/2026,[debit] RALPH'S 2775 ELM CT HAYWARD 94541 CA USA,RALPH,Groceries,Purchase,28.58
+09/07/2026,09/10/2026,[debit] TST*SHAWARMA KING - NEW YORK,SHAWARMA,Dining,Purchase,11.61
+09/08/2026,09/11/2026,[debit] FOODMAXX 8977 MISSION DR SALT LAKE CITY 84101-3409UT USA,FOODMAXX,Groceries,Purchase,52.01
+09/08/2026,09/08/2026,[debit] PAYPAL *CALTRAIN 8I3YQWJEFI,CALTRAIN,Gas/Automotive,Purchase,92.87
+09/09/2026,09/10/2026,[debit] Ladder 4953 Broadway Ct Phoenix 85001-4410az Usa,LADDER,Insurance,Purchase,115.01
+09/09/2026,09/12/2026,[debit] AMAZON MARKTPLACE*KURVH2HW,MARKTPLACE,Merchandise,Purchase,16.66
+09/10/2026,09/10/2026,[debit] TST*POKE BOWL #096,POKE,Dining,Purchase,18.25
+09/11/2026,09/11/2026,[debit] VALVE CORP #586 FREMONT,VALVE,Entertainment,Purchase,26.75
+09/11/2026,09/11/2026,[debit] PYPL *ROOSTERS,ROOSTERS,Other Services,Purchase,59.03
+09/12/2026,09/14/2026,[debit] APPLE.COM/BILL 8959 CENTER LN SEATTLE 98101 WA USA,APPLE,Internet,Purchase,26.25
+09/13/2026,09/13/2026,[debit] Albertsons 9658 Oak Pkwy Columbus43201 Oh Usa,ALBERTSONS,Groceries,Purchase,68.82
+09/14/2026,09/14/2026,[debit] dr lopez dermatology,LOPEZ,Health Care,Purchase,133.13
+09/15/2026,09/15/2026,[debit] TST* instacart - UNION CITY,INSTACART,Dining,Purchase,9.54
+09/19/2026,09/19/2026,[debit] SPORTS CLIPS 1004 OAK DR NASHVILLE 37201-4435TN USA,SPORTS,Other Services,Purchase,19.67
+09/21/2026,09/21/2026,[debit] T-mobile 3197 Market Way Houston 77001-1108tx Usa,MOBILE,Utilities,Purchase,120.68
+09/24/2026,09/24/2026,[debit] WINGSTOP DENVER,WINGSTOP,Dining,Purchase,24.29
+09/24/2026,09/24/2026,[debit] SAVEMART 3660 MISSION CT SAN DIEGO 92101 CA USA,SAVEMART,Groceries,Purchase,192.64
+09/24/2026,09/25/2026,[debit] chewy - union city,CHEWY,Merchandise,Purchase,21.91
+09/25/2026,09/25/2026,[debit] DR PEREZ PSYCHIATRY,PEREZ,Health Care,Purchase,164.23
+09/25/2026,09/26/2026,[debit] PAYPAL *ATHLETA J89OH7QMZN,ATHLETA,Merchandise,Purchase,40.01
+09/26/2026,09/29/2026,[credit] Preauthorized Withdrawal To Pacific Dental,PACIFIC,Health Care,Payment,-130.83
+09/26/2026,09/26/2026,[debit] BOWLING 8679 OAK AVE SALT LAKE CITY 84101-5533UT USA,BOWLING,Entertainment,Purchase,27.87
+09/27/2026,09/28/2026,[debit] seoul garden #00619 fremont,SEOUL,Dining,Purchase,29.68
+09/30/2026,10/03/2026,[debit] EL POLLO LOCO,POLLO,Dining,Purchase,18.04
+09/30/2026,10/01/2026,[debit] bp*4jqledcaazl,UNKNOWN,Gas/Automotive,Purchase,201.32

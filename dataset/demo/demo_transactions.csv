@@ -1,0 +1,773 @@
+transaction_id,raw_description,normalised_description,merchant_key,category,direction,amount,booking_date,account_id,bank,account_name,is_recurring
+tx-010664,[debit] SAFEWAY 4090 SAN DIEGO,DEBIT SAFEWAY <NUM> SAN DIEGO,SAFEWAY,Groceries,debit,-80.93,2025-10-01,acc-applecard,Apple Card,Credit Card,0
+tx-053037,[debit] FATBURGER 3911 PARK BLVD PITTSBURGH 15201-2625PA USA,DEBIT FATBURGER <NUM> PARK BLVD PITTSBURGH <NUM> 2625PA USA,FATBURGER,Restaurants,debit,-25.27,2025-10-03,acc-applecard,Apple Card,Credit Card,0
+tx-050106,[debit] escape room - san jose,DEBIT ESCAPE ROOM SAN JOSE,ESCAPE,Entertainment,debit,-52.43,2025-10-03,acc-capitalone,Capital One,Savings Account,0
+tx-046007,[credit] OFFERUP 178 MARKET PKWY NASHVILLE 37201 TN USA,CREDIT OFFERUP 178 MARKET PKWY NASHVILLE <NUM> TN USA,OFFERUP,Shopping,credit,26.12,2025-10-03,acc-applecard,Apple Card,Credit Card,0
+tx-057090-m00,[debit] invitation homes rent pmt 28582933 web id: xg26tpe4,DEBIT INVITATION HOMES RENT PMT <NUM> WEB ID XG26TPE4,INVITATION,Rent,debit,-1315.20,2025-10-04,acc-chase,Chase,Current Account,1
+tx-007880,[debit] ONO HAWAIIAN BBQ*S7O6UPHYN,DEBIT ONO HAWAIIAN BBQ S7O6UPHYN,ONO,Restaurants,debit,-14.41,2025-10-04,acc-applecard,Apple Card,Credit Card,0
+tx-062792,[credit] BLINK CHARGING SAN JOSE,CREDIT BLINK CHARGING SAN JOSE,BLINK,Transportation,credit,69.16,2025-10-04,acc-applecard,Apple Card,Credit Card,0
+tx-028231,[debit] AXSTICKETS 5905 MARKET PKWY NEW YORK10001 NY USA,DEBIT AXSTICKETS <NUM> MARKET PKWY NEW YORK10001 NY USA,AXSTICKETS,Entertainment,debit,-21.95,2025-10-04,acc-applecard,Apple Card,Credit Card,0
+tx-054984,[credit] TRAMPOLINE PARK.COM,CREDIT TRAMPOLINE PARK COM,TRAMPOLINE,Entertainment,credit,78.21,2025-10-05,acc-chase,Chase,Current Account,0
+tx-065687-m00,[debit] NATIONWIDE 9777 INDUSTRIAL CT NEWARK07101 NJ USA,DEBIT NATIONWIDE <NUM> INDUSTRIAL CT NEWARK07101 NJ USA,NATIONWIDE,Insurance,debit,-98.85,2025-10-06,acc-applecard,Apple Card,Credit Card,1
+tx-067284-m00,[debit] PARAMOUNT+* Monthly,DEBIT PARAMOUNT MONTHLY,PARAMOUNT,Subscription,debit,-23.68,2025-10-08,acc-chase,Chase,Current Account,1
+tx-035608,[debit] FRESH MARKET*35C4HAV0CT,DEBIT FRESH MARKET 35C4HAV0CT,FRESH,Groceries,debit,-70.18,2025-10-08,acc-applecard,Apple Card,Credit Card,0
+tx-040686-m00,[debit] Ladder 4953 Broadway Ct Phoenix 85001-4410az Usa,DEBIT LADDER <NUM> BROADWAY CT PHOENIX <NUM> 4410AZ USA,LADDER,Insurance,debit,-116.41,2025-10-09,acc-applecard,Apple Card,Credit Card,1
+tx-006744-m00,[debit] Withdrawal from STARLINK CABLE,DEBIT WITHDRAWAL FROM STARLINK CABLE,STARLINK,Utilities,debit,-152.98,2025-10-09,acc-capitalone,Capital One,Savings Account,1
+tx-044619,[debit] VONS*ZWHQK9B1UR3R,DEBIT VONS ZWHQK9B1UR3R,VONS,Groceries,debit,-63.38,2025-10-09,acc-capitalone,Capital One,Savings Account,0
+tx-024712,[debit] ZIPS CAR WASH*NVPXRPIUXF,DEBIT ZIPS CAR WASH NVPXRPIUXF,ZIPS,Transportation,debit,-49.59,2025-10-09,acc-applecard,Apple Card,Credit Card,0
+tx-035836,[debit] dental365 8726 park pkwy san jose 95101-8556ca usa,DEBIT DENTAL365 <NUM> PARK PKWY SAN JOSE <NUM> 8556CA USA,JOSE,Healthcare,debit,-358.73,2025-10-09,acc-applecard,Apple Card,Credit Card,0
+tx-038238-m00,[debit] DISCORD NITRO* Credit Report,DEBIT DISCORD NITRO CREDIT REPORT,DISCORD,Subscription,debit,-23.14,2025-10-10,acc-capitalone,Capital One,Savings Account,1
+tx-059243,[debit] CINEMARK #55739 NEW YORK,DEBIT CINEMARK <NUM> NEW YORK,CINEMARK,Entertainment,debit,-40.77,2025-10-10,acc-capitalone,Capital One,Savings Account,0
+tx-011263,[debit] HAIDILAO - ATLANTA,DEBIT HAIDILAO ATLANTA,HAIDILAO,Restaurants,debit,-30.17,2025-10-11,acc-chase,Chase,Current Account,0
+tx-031847,[debit] AMAZON KINDLE 9193 CENTER WAY ORLANDO 32801-1088FL USA,DEBIT AMAZON KINDLE <NUM> CENTER WAY ORLANDO <NUM> 1088FL USA,KINDLE,Education,debit,-232.72,2025-10-11,acc-applecard,Apple Card,Credit Card,0
+tx-004733-m00,[debit] APPLE.COM/BILL 8959 CENTER LN SEATTLE 98101 WA USA,DEBIT APPLE COM BILL <NUM> CENTER LN SEATTLE <NUM> WA USA,APPLE,Subscription,debit,-26.68,2025-10-12,acc-applecard,Apple Card,Credit Card,1
+tx-001389,[debit] Kindle Unltd*96OTSCM3ZA,DEBIT KINDLE UNLTD 96OTSCM3ZA,UNLTD,Shopping,debit,-21.12,2025-10-12,acc-chase,Chase,Current Account,0
+tx-000839-m00,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3804.87,2025-10-13,acc-chase,Chase,Current Account,1
+tx-053316-m00,[debit] PAYPAL INST XFER SENDGRID WEB ID: PAYPALSI36,DEBIT PAYPAL INST XFER SENDGRID WEB ID PAYPALSI36,SENDGRID,Subscription,debit,-28.03,2025-10-13,acc-chase,Chase,Current Account,1
+tx-006712,[debit] TRAMPOLINE PARK; Billing,DEBIT TRAMPOLINE PARK BILLING,TRAMPOLINE,Entertainment,debit,-20.18,2025-10-13,acc-capitalone,Capital One,Savings Account,0
+tx-011021,[debit] Miller Psychiatry,DEBIT MILLER PSYCHIATRY,MILLER,Healthcare,debit,-300.17,2025-10-14,acc-applecard,Apple Card,Credit Card,0
+tx-058212,[credit] PREAUTHORIZED WITHDRAWAL TO DRIVING RANGE,CREDIT PREAUTHORIZED WITHDRAWAL TO DRIVING RANGE,DRIVING,Entertainment,credit,29.15,2025-10-14,acc-applecard,Apple Card,Credit Card,0
+tx-005309,[debit] PreApproved Payment Bill User Payment: LUCKY,DEBIT PREAPPROVED PAYMENT BILL USER PAYMENT LUCKY,LUCKY,Groceries,debit,-83.70,2025-10-15,acc-applecard,Apple Card,Credit Card,0
+tx-028826,[debit] PARKWHIZ 9455 CENTER LN NEW YORK 10001 NY USA,DEBIT PARKWHIZ <NUM> CENTER LN NEW YORK <NUM> NY USA,PARKWHIZ,Transportation,debit,-59.53,2025-10-15,acc-applecard,Apple Card,Credit Card,0
+tx-000856,[debit] BARSTOOL SPORTSBOOK,DEBIT BARSTOOL SPORTSBOOK,BARSTOOL,Entertainment,debit,-19.63,2025-10-15,acc-applecard,Apple Card,Credit Card,0
+tx-014463,[debit] PAYPAL *COSTCO KSPRC6LBVR,DEBIT PAYPAL COSTCO KSPRC6LBVR,COSTCO,Shopping,debit,-34.16,2025-10-15,acc-capitalone,Capital One,Savings Account,0
+tx-019244,[debit] WHATABURGER #8198 HAYWARD,DEBIT WHATABURGER <NUM> HAYWARD,WHATABURGER,Restaurants,debit,-22.64,2025-10-16,acc-chase,Chase,Current Account,0
+tx-027664,[debit] marukai 3122 oak ln tampa33601 fl usa,DEBIT MARUKAI <NUM> OAK LN TAMPA33601 FL USA,MARUKAI,Groceries,debit,-42.36,2025-10-16,acc-applecard,Apple Card,Credit Card,0
+tx-058154,[debit] CASH APP PAYMENT TO KAREN BROWN,DEBIT CASH APP PAYMENT TO KAREN BROWN,APP,Transfer,debit,-1055.57,2025-10-16,acc-capitalone,Capital One,Savings Account,0
+tx-062555,[debit] MARUGAME UDON #12601 NEW YORK,DEBIT MARUGAME UDON <NUM> NEW YORK,MARUGAME,Restaurants,debit,-30.65,2025-10-17,acc-chase,Chase,Current Account,0
+tx-054790,[debit] SMARTFINAL #63 DENVER,DEBIT SMARTFINAL 63 DENVER,SMARTFINAL,Groceries,debit,-56.18,2025-10-17,acc-chase,Chase,Current Account,0
+tx-045074,[debit] BP*86NSEW6Y3PW,DEBIT BP 86NSEW6Y3PW,UNKNOWN,Transportation,debit,-123.87,2025-10-17,acc-applecard,Apple Card,Credit Card,0
+tx-010728,[debit] DEPT OF MOTOR VEHICLES 3005 OAK PKWY RALEIGH 27601 NC USA,DEBIT DEPT OF MOTOR VEHICLES <NUM> OAK PKWY RALEIGH <NUM> NC USA,DEPT,Transportation,debit,-203.80,2025-10-18,acc-applecard,Apple Card,Credit Card,0
+tx-028863,[debit] PEKING DUCK HOUSE #924 NASHVILLE,DEBIT PEKING DUCK HOUSE 924 NASHVILLE,PEKING,Restaurants,debit,-33.84,2025-10-19,acc-chase,Chase,Current Account,0
+tx-007657,[debit] PIGGLY WIGGLY 6399 ELM PKWY AUSTIN 78701 TX USA,DEBIT PIGGLY WIGGLY <NUM> ELM PKWY AUSTIN <NUM> TX USA,PIGGLY,Groceries,debit,-75.02,2025-10-19,acc-applecard,Apple Card,Credit Card,0
+tx-031023,[credit] Deposit From M&t Bank Ext Trnsfr,CREDIT DEPOSIT FROM M T BANK EXT TRNSFR,BANK,Transfer,credit,248.34,2025-10-20,acc-chase,Chase,Current Account,0
+tx-039284-m00,[debit] T-mobile 3197 Market Way Houston 77001-1108tx Usa,DEBIT T MOBILE <NUM> MARKET WAY HOUSTON <NUM> 1108TX USA,MOBILE,Utilities,debit,-120.77,2025-10-21,acc-applecard,Apple Card,Credit Card,1
+tx-028899,[debit] P.F. CHANG'S #896 COLUMBUS,DEBIT P F CHANG S 896 COLUMBUS,CHANG,Restaurants,debit,-21.31,2025-10-21,acc-capitalone,Capital One,Savings Account,0
+tx-060207,[debit] OUTBACK STEAKHOUSE*YUOASHBQ5,DEBIT OUTBACK STEAKHOUSE YUOASHBQ5,OUTBACK,Restaurants,debit,-29.91,2025-10-22,acc-chase,Chase,Current Account,0
+tx-040186,[debit] SHELL - SACRAMENTO,DEBIT SHELL SACRAMENTO,SHELL,Transportation,debit,-73.71,2025-10-22,acc-chase,Chase,Current Account,0
+tx-005398,[credit] LYFT *TRIP PORTLAND T2U0LE,CREDIT LYFT TRIP PORTLAND T2U0LE,LYFT,Transportation,credit,86.75,2025-10-22,acc-applecard,Apple Card,Credit Card,0
+tx-009562,[debit] ROOSTERS.COM,DEBIT ROOSTERS COM,ROOSTERS,Personal Care,debit,-24.93,2025-10-23,acc-capitalone,Capital One,Savings Account,0
+tx-005308,[debit] INTELLIGENTSIA,DEBIT INTELLIGENTSIA,INTELLIGENTSIA,Restaurants,debit,-24.95,2025-10-24,acc-capitalone,Capital One,Savings Account,0
+tx-059082,[debit] CLV*BAGEL SHOP #064,DEBIT CLV BAGEL SHOP 064,BAGEL,Restaurants,debit,-58.60,2025-10-25,acc-applecard,Apple Card,Credit Card,0
+tx-011267,[debit] SUBSCRIPTION PAYMENT: SWIMMING POOL,DEBIT SUBSCRIPTION PAYMENT SWIMMING POOL,SWIMMING,Entertainment,debit,-56.85,2025-10-25,acc-capitalone,Capital One,Savings Account,0
+tx-063203,[debit] PYPL*HUNAN GARDEN,DEBIT PYPL HUNAN GARDEN,HUNAN,Restaurants,debit,-11.28,2025-10-26,acc-capitalone,Capital One,Savings Account,0
+tx-047151,[debit] PAYMENT TO: ELEMENTS MASSAGE,DEBIT PAYMENT TO ELEMENTS MASSAGE,ELEMENTS,Personal Care,debit,-29.59,2025-10-26,acc-chase,Chase,Current Account,0
+tx-000839-m01,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3837.11,2025-10-27,acc-chase,Chase,Current Account,1
+tx-021130,[debit] SP PLUS 4126 MISSION DR RALEIGH 27601 NC USA,DEBIT SP PLUS <NUM> MISSION DR RALEIGH <NUM> NC USA,PLUS,Transportation,debit,-298.92,2025-10-27,acc-applecard,Apple Card,Credit Card,0
+tx-044380,[debit] DR MARTIN PHYSICAL THERAPY,DEBIT DR MARTIN PHYSICAL THERAPY,MARTIN,Healthcare,debit,-204.86,2025-10-27,acc-applecard,Apple Card,Credit Card,0
+tx-007619-m00,[debit] Withdrawal from VERIZON GAS,DEBIT WITHDRAWAL FROM VERIZON GAS,VERIZON,Utilities,debit,-121.26,2025-10-28,acc-capitalone,Capital One,Savings Account,1
+tx-026854,[debit] TST*THAI BASIL,DEBIT TST THAI BASIL,THAI,Restaurants,debit,-26.29,2025-10-28,acc-applecard,Apple Card,Credit Card,0
+tx-006738,[debit] WITHDRAWAL FROM LASER TAG,DEBIT WITHDRAWAL FROM LASER TAG,LASER,Entertainment,debit,-27.63,2025-10-29,acc-capitalone,Capital One,Savings Account,0
+tx-055198,[debit] Paypal *sheng Kee Bakery Nrs59oot76,DEBIT PAYPAL SHENG KEE BAKERY NRS59OOT76,SHENG,Restaurants,debit,-16.21,2025-10-30,acc-chase,Chase,Current Account,0
+tx-049863,[credit] CLIMBING GYM 105205,CREDIT CLIMBING GYM <NUM>,CLIMBING,Entertainment,credit,34.87,2025-10-30,acc-capitalone,Capital One,Savings Account,0
+tx-037915,[credit] Pypl *wayfair,CREDIT PYPL WAYFAIR,WAYFAIR,Shopping,credit,15.22,2025-10-30,acc-capitalone,Capital One,Savings Account,0
+tx-002987,[debit] betterhelp #687 atlanta,DEBIT BETTERHELP 687 ATLANTA,BETTERHELP,Healthcare,debit,-419.39,2025-10-31,acc-applecard,Apple Card,Credit Card,0
+tx-032259,[debit] TAQUERIA EL BUEN GUSTO 8306 OAK AVE DENVER 80201-4104CO USA,DEBIT TAQUERIA EL BUEN GUSTO <NUM> OAK AVE DENVER <NUM> 4104CO USA,TAQUERIA,Restaurants,debit,-33.47,2025-11-01,acc-applecard,Apple Card,Credit Card,0
+tx-045720,[debit] MARATHON #3234 QUEENS,DEBIT MARATHON <NUM> QUEENS,MARATHON,Transportation,debit,-41.40,2025-11-01,acc-applecard,Apple Card,Credit Card,0
+tx-059755,[debit] paypal *outback steakhouse ytr8u6qqxk,DEBIT PAYPAL OUTBACK STEAKHOUSE YTR8U6QQXK,OUTBACK,Restaurants,debit,-21.56,2025-11-02,acc-capitalone,Capital One,Savings Account,0
+tx-010841,[debit] PreApproved Payment Bill User Payment: REGAL CINEMAS,DEBIT PREAPPROVED PAYMENT BILL USER PAYMENT REGAL CINEMAS,REGAL,Entertainment,debit,-41.35,2025-11-02,acc-capitalone,Capital One,Savings Account,0
+tx-009609,[debit] wendy's 6685007,DEBIT WENDY S <NUM>,WENDY,Restaurants,debit,-20.04,2025-11-03,acc-chase,Chase,Current Account,0
+tx-057090-m01,[debit] invitation homes rent pmt 28582933 web id: xg26tpe4,DEBIT INVITATION HOMES RENT PMT <NUM> WEB ID XG26TPE4,INVITATION,Rent,debit,-1328.43,2025-11-04,acc-chase,Chase,Current Account,1
+tx-010826,[debit] PAYPAL *MI PUEBLO 5M6IWFMT37,DEBIT PAYPAL MI PUEBLO 5M6IWFMT37,PUEBLO,Restaurants,debit,-31.22,2025-11-04,acc-applecard,Apple Card,Credit Card,0
+tx-062797,[debit] SMARTFINAL #08 DENVER,DEBIT SMARTFINAL 08 DENVER,SMARTFINAL,Groceries,debit,-41.23,2025-11-04,acc-capitalone,Capital One,Savings Account,0
+tx-059461,[debit] PAYPAL *GIANT EAGLE NSG9334WWK,DEBIT PAYPAL GIANT EAGLE NSG9334WWK,GIANT,Groceries,debit,-42.53,2025-11-04,acc-applecard,Apple Card,Credit Card,0
+tx-054595,[debit] PHO SAIGON*DRR51Z2NTZR,DEBIT PHO SAIGON DRR51Z2NTZR,SAIGON,Restaurants,debit,-22.87,2025-11-05,acc-applecard,Apple Card,Credit Card,0
+tx-000826,[debit] PAYPAL INST XFER GRUBHUB WEB ID: PAYPALSI20,DEBIT PAYPAL INST XFER GRUBHUB WEB ID PAYPALSI20,GRUBHUB,Restaurants,debit,-35.09,2025-11-05,acc-chase,Chase,Current Account,0
+tx-000706,[debit] PANDA EXPRESS SACRAMENTO 7068,DEBIT PANDA EXPRESS SACRAMENTO <NUM>,PANDA,Restaurants,debit,-30.02,2025-11-05,acc-chase,Chase,Current Account,0
+tx-051474,[debit] Sephora; Purchase,DEBIT SEPHORA PURCHASE,SEPHORA,Personal Care,debit,-37.48,2025-11-05,acc-applecard,Apple Card,Credit Card,0
+tx-065687-m01,[debit] NATIONWIDE 9777 INDUSTRIAL CT NEWARK07101 NJ USA,DEBIT NATIONWIDE <NUM> INDUSTRIAL CT NEWARK07101 NJ USA,NATIONWIDE,Insurance,debit,-99.16,2025-11-06,acc-applecard,Apple Card,Credit Card,1
+tx-007530,[debit] MLB.TV 6947 BROADWAY WAY BROOKLYN11201 NY USA,DEBIT MLB TV <NUM> BROADWAY WAY BROOKLYN11201 NY USA,MLB,Entertainment,debit,-69.62,2025-11-07,acc-applecard,Apple Card,Credit Card,0
+tx-010854,[debit] AXSTICKETS 3680 MARKET WAY OAKLAND 94601 CA USA,DEBIT AXSTICKETS <NUM> MARKET WAY OAKLAND <NUM> CA USA,AXSTICKETS,Entertainment,debit,-20.44,2025-11-07,acc-applecard,Apple Card,Credit Card,0
+tx-057765,[debit] AMAZON MKTPL*MJ4V0K3X2,DEBIT AMAZON MKTPL MJ4V0K3X2,AMAZON,Shopping,debit,-15.72,2025-11-07,acc-capitalone,Capital One,Savings Account,0
+tx-001393,[debit] BATH & BODY WORKS 955939,DEBIT BATH BODY WORKS <NUM>,BODY,Shopping,debit,-13.31,2025-11-07,acc-applecard,Apple Card,Credit Card,0
+tx-067284-m01,[debit] PARAMOUNT+* Monthly,DEBIT PARAMOUNT MONTHLY,PARAMOUNT,Subscription,debit,-22.67,2025-11-08,acc-chase,Chase,Current Account,1
+tx-029610,[debit] AMAZON MKTPL*FYQFPKO7D,DEBIT AMAZON MKTPL FYQFPKO7D,AMAZON,Shopping,debit,-44.19,2025-11-08,acc-applecard,Apple Card,Credit Card,0
+tx-040686-m01,[debit] Ladder 4953 Broadway Ct Phoenix 85001-4410az Usa,DEBIT LADDER <NUM> BROADWAY CT PHOENIX <NUM> 4410AZ USA,LADDER,Insurance,debit,-116.94,2025-11-09,acc-applecard,Apple Card,Credit Card,1
+tx-006744-m01,[debit] Withdrawal from STARLINK CABLE,DEBIT WITHDRAWAL FROM STARLINK CABLE,STARLINK,Utilities,debit,-146.62,2025-11-09,acc-capitalone,Capital One,Savings Account,1
+tx-015768,[debit] STUBHUB 91779328,DEBIT STUBHUB <NUM>,STUBHUB,Entertainment,debit,-64.53,2025-11-09,acc-capitalone,Capital One,Savings Account,0
+tx-008149,[debit] AMZN MKTP US*UXK3WRO5CPJ,DEBIT AMZN MKTP US UXK3WRO5CPJ,AMZN,Shopping,debit,-27.18,2025-11-09,acc-chase,Chase,Current Account,0
+tx-005650,[debit] Bombas #3030 Pittsburgh,DEBIT BOMBAS <NUM> PITTSBURGH,BOMBAS,Shopping,debit,-16.13,2025-11-09,acc-capitalone,Capital One,Savings Account,0
+tx-038238-m01,[debit] DISCORD NITRO* Credit Report,DEBIT DISCORD NITRO CREDIT REPORT,DISCORD,Subscription,debit,-22.65,2025-11-10,acc-capitalone,Capital One,Savings Account,1
+tx-004733-m01,[debit] APPLE.COM/BILL 8959 CENTER LN SEATTLE 98101 WA USA,DEBIT APPLE COM BILL <NUM> CENTER LN SEATTLE <NUM> WA USA,APPLE,Subscription,debit,-26.12,2025-11-12,acc-applecard,Apple Card,Credit Card,1
+tx-048827,[debit] Wholefds #080 Houston,DEBIT WHOLEFDS 080 HOUSTON,WHOLEFDS,Groceries,debit,-92.43,2025-11-12,acc-chase,Chase,Current Account,0
+tx-000252,[debit] FOODMAXX #510 SACRAMEN,DEBIT FOODMAXX 510 SACRAMEN,FOODMAXX,Groceries,debit,-19.51,2025-11-12,acc-capitalone,Capital One,Savings Account,0
+tx-002048,[debit] PAYPAL *PYPL BURLINGTON,DEBIT PAYPAL PYPL BURLINGTON,BURLINGTON,Shopping,debit,-30.40,2025-11-12,acc-applecard,Apple Card,Credit Card,0
+tx-022639,[debit] DELTA AIR LINES 4740 MARKET LN BROOKLYN11201 NY USA,DEBIT DELTA AIR LINES <NUM> MARKET LN BROOKLYN11201 NY USA,DELTA,Travel,debit,-148.97,2025-11-12,acc-applecard,Apple Card,Credit Card,0
+tx-021864,[debit] VENMO PAYMENT TO ELIZABETH LI,DEBIT VENMO PAYMENT TO ELIZABETH LI,VENMO,Transfer,debit,-295.83,2025-11-12,acc-capitalone,Capital One,Savings Account,0
+tx-000839-m02,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3796.60,2025-11-13,acc-chase,Chase,Current Account,1
+tx-053316-m01,[debit] PAYPAL INST XFER SENDGRID WEB ID: PAYPALSI36,DEBIT PAYPAL INST XFER SENDGRID WEB ID PAYPALSI36,SENDGRID,Subscription,debit,-27.24,2025-11-13,acc-chase,Chase,Current Account,1
+tx-027235,[debit] SQ *Jollibee #284,DEBIT SQ JOLLIBEE 284,JOLLIBEE,Restaurants,debit,-17.61,2025-11-14,acc-applecard,Apple Card,Credit Card,0
+tx-019120,[credit] LIQUOR STORE #216,CREDIT LIQUOR STORE 216,LIQUOR,Shopping,credit,19.34,2025-11-14,acc-capitalone,Capital One,Savings Account,0
+tx-005709,[debit] TEXAS ROADHOUSE*DQNGU66VYU,DEBIT TEXAS ROADHOUSE DQNGU66VYU,TEXAS,Restaurants,debit,-20.12,2025-11-15,acc-applecard,Apple Card,Credit Card,0
+tx-032066,[debit] AMC THEATRES*NTQ4LX3267Z,DEBIT AMC THEATRES NTQ4LX3267Z,AMC,Entertainment,debit,-15.64,2025-11-15,acc-capitalone,Capital One,Savings Account,0
+tx-002388,[debit] PET SUPPLIES PLUS 26313,DEBIT PET SUPPLIES PLUS <NUM>,SUPPLIES,Shopping,debit,-9.90,2025-11-15,acc-capitalone,Capital One,Savings Account,0
+tx-005622,[debit] elpolloloco portland,DEBIT ELPOLLOLOCO PORTLAND,ELPOLLOLOCO,Restaurants,debit,-32.29,2025-11-17,acc-applecard,Apple Card,Credit Card,0
+tx-054287,[debit] TST*ONO HAWAIIAN BBQ - SAN DIEGO,DEBIT TST ONO HAWAIIAN BBQ SAN DIEGO,ONO,Restaurants,debit,-55.16,2025-11-17,acc-capitalone,Capital One,Savings Account,0
+tx-065862,[debit] 99 RANCH #445,DEBIT 99 RANCH 445,RANCH,Groceries,debit,-37.32,2025-11-18,acc-applecard,Apple Card,Credit Card,0
+tx-055573,[debit] BATH & BODY WORKS*EPA4041B8V5,DEBIT BATH BODY WORKS EPA4041B8V5,BODY,Shopping,debit,-30.58,2025-11-18,acc-capitalone,Capital One,Savings Account,0
+tx-023519,[debit] MOBIL - SEATTLE,DEBIT MOBIL SEATTLE,MOBIL,Transportation,debit,-82.06,2025-11-19,acc-capitalone,Capital One,Savings Account,0
+tx-001509,[debit] MOO.COM 439600,DEBIT MOO COM <NUM>,MOO,Shopping,debit,-11.15,2025-11-20,acc-capitalone,Capital One,Savings Account,0
+tx-039284-m01,[debit] T-mobile 3197 Market Way Houston 77001-1108tx Usa,DEBIT T MOBILE <NUM> MARKET WAY HOUSTON <NUM> 1108TX USA,MOBILE,Utilities,debit,-116.83,2025-11-21,acc-applecard,Apple Card,Credit Card,1
+tx-004331,[debit] MINI GOLF #297 HAYWARD,DEBIT MINI GOLF 297 HAYWARD,MINI,Entertainment,debit,-28.06,2025-11-21,acc-capitalone,Capital One,Savings Account,0
+tx-066621,[debit] CLV*FOOD FACTORY,DEBIT CLV FOOD FACTORY,FACTORY,Restaurants,debit,-32.54,2025-11-22,acc-applecard,Apple Card,Credit Card,0
+tx-021309,[debit] DAVESHOTCHICKEN MIAMI,DEBIT DAVESHOTCHICKEN MIAMI,DAVESHOTCHICKEN,Restaurants,debit,-46.97,2025-11-22,acc-capitalone,Capital One,Savings Account,0
+tx-029735,[credit] TRADER JOE'S #4500,CREDIT TRADER JOE S <NUM>,TRADER,Groceries,credit,25.90,2025-11-22,acc-applecard,Apple Card,Credit Card,0
+tx-033306,[credit] PAYPAL INST XFER PAYPAL_CREDIT_C WEB ID: PAYPALSI06,CREDIT PAYPAL INST XFER PAYPAL CREDIT C WEB ID PAYPALSI06,UNKNOWN,Transfer,credit,403.05,2025-11-22,acc-chase,Chase,Current Account,0
+tx-054708,[debit] SMARTFINAL #4941 SEATTLE,DEBIT SMARTFINAL <NUM> SEATTLE,SMARTFINAL,Groceries,debit,-56.22,2025-11-25,acc-applecard,Apple Card,Credit Card,0
+tx-027687,[debit] SQUARESPACE #986 LOS ANGELES,DEBIT SQUARESPACE 986 LOS ANGELES,SQUARESPACE,Shopping,debit,-15.21,2025-11-25,acc-capitalone,Capital One,Savings Account,0
+tx-067830,[debit] CLIMBING GYM #005 MIAMI,DEBIT CLIMBING GYM 005 MIAMI,CLIMBING,Entertainment,debit,-79.62,2025-11-26,acc-chase,Chase,Current Account,0
+tx-000839-m03,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3789.89,2025-11-27,acc-chase,Chase,Current Account,1
+tx-031893,[debit] NAAN N CURRY #34779 NASHVILLE,DEBIT NAAN N CURRY <NUM> NASHVILLE,NAAN,Restaurants,debit,-18.29,2025-11-27,acc-applecard,Apple Card,Credit Card,0
+tx-031662,[debit] SAFEWAY 7471 BOSTON,DEBIT SAFEWAY <NUM> BOSTON,SAFEWAY,Groceries,debit,-136.53,2025-11-27,acc-chase,Chase,Current Account,0
+tx-011791,[debit] Harristeet Mia #3863,DEBIT HARRISTEET MIA <NUM>,HARRISTEET,Groceries,debit,-89.82,2025-11-27,acc-capitalone,Capital One,Savings Account,0
+tx-017754,[debit] ZIPS CAR WASH LLC,DEBIT ZIPS CAR WASH LLC,ZIPS,Transportation,debit,-100.68,2025-11-27,acc-capitalone,Capital One,Savings Account,0
+tx-039302,[debit] ENCORE 461 ELM WAY QUEENS 11101-5512NY USA,DEBIT ENCORE 461 ELM WAY QUEENS <NUM> 5512NY USA,ENCORE,Entertainment,debit,-34.30,2025-11-27,acc-applecard,Apple Card,Credit Card,0
+tx-063772,[debit] Shein 3996694,DEBIT SHEIN <NUM>,SHEIN,Shopping,debit,-30.17,2025-11-27,acc-capitalone,Capital One,Savings Account,0
+tx-007619-m01,[debit] Withdrawal from VERIZON GAS,DEBIT WITHDRAWAL FROM VERIZON GAS,VERIZON,Utilities,debit,-120.99,2025-11-28,acc-capitalone,Capital One,Savings Account,1
+tx-053186,[debit] PAYPAL *GOLF COURSE,DEBIT PAYPAL GOLF COURSE,COURSE,Entertainment,debit,-37.38,2025-11-28,acc-applecard,Apple Card,Credit Card,0
+tx-018299,[credit] CHICKFILA ATLANTA,CREDIT CHICKFILA ATLANTA,CHICKFILA,Restaurants,credit,5.25,2025-11-29,acc-chase,Chase,Current Account,0
+tx-019837,[debit] 76*ARBBP3B1L9N,DEBIT 76 ARBBP3B1L9N,UNKNOWN,Transportation,debit,-89.24,2025-12-01,acc-chase,Chase,Current Account,0
+tx-043543,[debit] GOLF COURSE - ORLANDO,DEBIT GOLF COURSE ORLANDO,COURSE,Entertainment,debit,-41.47,2025-12-01,acc-capitalone,Capital One,Savings Account,0
+tx-000007,[debit] WITHDRAWAL FROM CERAVE,DEBIT WITHDRAWAL FROM CERAVE,CERAVE,Personal Care,debit,-107.49,2025-12-01,acc-capitalone,Capital One,Savings Account,0
+tx-046802,[debit] WINN-DIXIE #03314 SACRAMENTO,DEBIT WINN DIXIE <NUM> SACRAMENTO,WINN,Groceries,debit,-54.92,2025-12-02,acc-capitalone,Capital One,Savings Account,0
+tx-014759,[debit] GOLF COURSE 9763 OAK BLVD HAYWARD94541 CA USA,DEBIT GOLF COURSE <NUM> OAK BLVD HAYWARD94541 CA USA,COURSE,Entertainment,debit,-34.07,2025-12-02,acc-applecard,Apple Card,Credit Card,0
+tx-064239,[debit] ZOO 9719 ELM DR RALEIGH 27601-1240NC USA,DEBIT ZOO <NUM> ELM DR RALEIGH <NUM> 1240NC USA,ZOO,Entertainment,debit,-37.28,2025-12-03,acc-applecard,Apple Card,Credit Card,0
+tx-057090-m02,[debit] invitation homes rent pmt 28582933 web id: xg26tpe4,DEBIT INVITATION HOMES RENT PMT <NUM> WEB ID XG26TPE4,INVITATION,Rent,debit,-1372.52,2025-12-04,acc-chase,Chase,Current Account,1
+tx-061398,[debit] LIVENATION 7437 MAIN WAY PHOENIX 85001-4113AZ USA,DEBIT LIVENATION <NUM> MAIN WAY PHOENIX <NUM> 4113AZ USA,LIVENATION,Entertainment,debit,-15.89,2025-12-04,acc-applecard,Apple Card,Credit Card,0
+tx-066936,[debit] AMZN DIGITAL*FMWPRDKBBN4,DEBIT AMZN DIGITAL FMWPRDKBBN4,AMZN,Shopping,debit,-22.76,2025-12-05,acc-applecard,Apple Card,Credit Card,0
+tx-065687-m02,[debit] NATIONWIDE 9777 INDUSTRIAL CT NEWARK07101 NJ USA,DEBIT NATIONWIDE <NUM> INDUSTRIAL CT NEWARK07101 NJ USA,NATIONWIDE,Insurance,debit,-94.77,2025-12-06,acc-applecard,Apple Card,Credit Card,1
+tx-003607,[debit] cheesecake factory - columbus,DEBIT CHEESECAKE FACTORY COLUMBUS,CHEESECAKE,Restaurants,debit,-17.69,2025-12-06,acc-capitalone,Capital One,Savings Account,0
+tx-012478,[debit] LUCKY - RALEIGH,DEBIT LUCKY RALEIGH,LUCKY,Groceries,debit,-124.27,2025-12-06,acc-capitalone,Capital One,Savings Account,0
+tx-067284-m02,[debit] PARAMOUNT+* Monthly,DEBIT PARAMOUNT MONTHLY,PARAMOUNT,Subscription,debit,-22.77,2025-12-08,acc-chase,Chase,Current Account,1
+tx-054739,[debit] BUYER PAYMENT: JERK CHICKEN,DEBIT BUYER PAYMENT JERK CHICKEN,BUYER,Restaurants,debit,-6.65,2025-12-08,acc-capitalone,Capital One,Savings Account,0
+tx-046781,[debit] Express Checkout Payment: FRESH MARKET,DEBIT EXPRESS CHECKOUT PAYMENT FRESH MARKET,FRESH,Groceries,debit,-15.87,2025-12-08,acc-chase,Chase,Current Account,0
+tx-040686-m02,[debit] Ladder 4953 Broadway Ct Phoenix 85001-4410az Usa,DEBIT LADDER <NUM> BROADWAY CT PHOENIX <NUM> 4410AZ USA,LADDER,Insurance,debit,-119.06,2025-12-09,acc-applecard,Apple Card,Credit Card,1
+tx-006744-m02,[debit] Withdrawal from STARLINK CABLE,DEBIT WITHDRAWAL FROM STARLINK CABLE,STARLINK,Utilities,debit,-153.05,2025-12-09,acc-capitalone,Capital One,Savings Account,1
+tx-064557,[debit] SMARTAND ATL #477,DEBIT SMARTAND ATL 477,SMARTAND,Groceries,debit,-29.18,2025-12-09,acc-applecard,Apple Card,Credit Card,0
+tx-038238-m02,[debit] DISCORD NITRO* Credit Report,DEBIT DISCORD NITRO CREDIT REPORT,DISCORD,Subscription,debit,-23.32,2025-12-10,acc-capitalone,Capital One,Savings Account,1
+tx-028601,[debit] casey's*9ecx9pgq,DEBIT CASEY S 9ECX9PGQ,CASEY,Transportation,debit,-120.10,2025-12-10,acc-applecard,Apple Card,Credit Card,0
+tx-000044,[debit] FOODMAXX #12878,DEBIT FOODMAXX <NUM>,FOODMAXX,Groceries,debit,-60.00,2025-12-11,acc-chase,Chase,Current Account,0
+tx-004733-m02,[debit] APPLE.COM/BILL 8959 CENTER LN SEATTLE 98101 WA USA,DEBIT APPLE COM BILL <NUM> CENTER LN SEATTLE <NUM> WA USA,APPLE,Subscription,debit,-26.95,2025-12-12,acc-applecard,Apple Card,Credit Card,1
+tx-052567,[debit] PAYPAL *banh mi,DEBIT PAYPAL BANH MI,BANH,Restaurants,debit,-30.64,2025-12-12,acc-chase,Chase,Current Account,0
+tx-016250,[debit] TST* GYRO KING #795,DEBIT TST GYRO KING 795,GYRO,Restaurants,debit,-24.89,2025-12-12,acc-capitalone,Capital One,Savings Account,0
+tx-000335,[debit] STOP & SHOP 6198 CENTER PKWY FREMONT 94536-2063CA USA,DEBIT STOP SHOP <NUM> CENTER PKWY FREMONT <NUM> 2063CA USA,STOP,Groceries,debit,-103.90,2025-12-12,acc-applecard,Apple Card,Credit Card,0
+tx-000839-m04,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3780.94,2025-12-13,acc-chase,Chase,Current Account,1
+tx-053316-m02,[debit] PAYPAL INST XFER SENDGRID WEB ID: PAYPALSI36,DEBIT PAYPAL INST XFER SENDGRID WEB ID PAYPALSI36,SENDGRID,Subscription,debit,-27.18,2025-12-13,acc-chase,Chase,Current Account,1
+tx-063479,[debit] TST* POKE BOWL - SEATTLE,DEBIT TST POKE BOWL SEATTLE,POKE,Restaurants,debit,-21.58,2025-12-13,acc-chase,Chase,Current Account,0
+tx-051021,[debit] O'REILLY AUTO; PAYMENT,DEBIT O REILLY AUTO PAYMENT,REILLY,Transportation,debit,-161.69,2025-12-13,acc-capitalone,Capital One,Savings Account,0
+tx-026638,[debit] luigi's pizza 1457,DEBIT LUIGI S PIZZA <NUM>,LUIGI,Restaurants,debit,-70.70,2025-12-14,acc-chase,Chase,Current Account,0
+tx-033375,[debit] CHEESECAKE FACTORY 4079 MARKET WAY ATLANTA 30301-2352GA USA,DEBIT CHEESECAKE FACTORY <NUM> MARKET WAY ATLANTA <NUM> 2352GA USA,CHEESECAKE,Restaurants,debit,-33.97,2025-12-15,acc-applecard,Apple Card,Credit Card,0
+tx-010492,[debit] regal cinemas 7055 oak ln philadelphia 19101-1515pa usa,DEBIT REGAL CINEMAS <NUM> OAK LN PHILADELPHIA <NUM> 1515PA USA,REGAL,Entertainment,debit,-102.58,2025-12-15,acc-applecard,Apple Card,Credit Card,0
+tx-001250,[debit] WALMART 5689 CHARLOTTE,DEBIT WALMART <NUM> CHARLOTTE,WALMART,Shopping,debit,-54.06,2025-12-15,acc-capitalone,Capital One,Savings Account,0
+tx-026538,[debit] CURRY HOUSE,DEBIT CURRY HOUSE,CURRY,Restaurants,debit,-12.89,2025-12-16,acc-applecard,Apple Card,Credit Card,0
+tx-038968,[debit] TRADERJOES #67737,DEBIT TRADERJOES <NUM>,TRADERJOES,Groceries,debit,-36.96,2025-12-16,acc-chase,Chase,Current Account,0
+tx-007590,[credit] JPMORGAN CHASE DDA TO DDA OICPB6JZMP PPD ID: 6655436947,CREDIT JPMORGAN CHASE DDA TO DDA OICPB6JZMP PPD ID <NUM>,JPMORGAN,Transfer,credit,764.03,2025-12-17,acc-chase,Chase,Current Account,0
+tx-020372,[credit] PLUSHCARE TELEHEALTH,CREDIT PLUSHCARE TELEHEALTH,PLUSHCARE,Healthcare,credit,220.09,2025-12-20,acc-chase,Chase,Current Account,0
+tx-004923,[debit] brilliant.org inc.,DEBIT BRILLIANT ORG INC,BRILLIANT,Education,debit,-163.13,2025-12-20,acc-chase,Chase,Current Account,0
+tx-039284-m02,[debit] T-mobile 3197 Market Way Houston 77001-1108tx Usa,DEBIT T MOBILE <NUM> MARKET WAY HOUSTON <NUM> 1108TX USA,MOBILE,Utilities,debit,-121.40,2025-12-21,acc-applecard,Apple Card,Credit Card,1
+tx-050813,[debit] HUNTINGTON DDA TO DDA REFCODE TLKE4C8O WEB ID: FZXBISCYOO,DEBIT HUNTINGTON DDA TO DDA REFCODE TLKE4C8O WEB ID FZXBISCYOO,HUNTINGTON,Transfer,debit,-96.30,2025-12-21,acc-chase,Chase,Current Account,0
+tx-065829,[debit] TIKTOK SHOP 9793 ELM BLVD PHOENIX 85001 AZ USA,DEBIT TIKTOK SHOP <NUM> ELM BLVD PHOENIX <NUM> AZ USA,TIKTOK,Shopping,debit,-21.41,2025-12-22,acc-applecard,Apple Card,Credit Card,0
+tx-067976,[debit] HABIT BURGER*3H7JHAISBXY,DEBIT HABIT BURGER 3H7JHAISBXY,HABIT,Restaurants,debit,-14.94,2025-12-23,acc-capitalone,Capital One,Savings Account,0
+tx-044006,[debit] SAFEWAY 9092 COLUMBUS,DEBIT SAFEWAY <NUM> COLUMBUS,SAFEWAY,Groceries,debit,-225.66,2025-12-23,acc-chase,Chase,Current Account,0
+tx-041992,[debit] Cinemark #343 Atlanta,DEBIT CINEMARK 343 ATLANTA,CINEMARK,Entertainment,debit,-64.43,2025-12-23,acc-applecard,Apple Card,Credit Card,0
+tx-001228,[debit] LULULEMON #15124,DEBIT LULULEMON <NUM>,LULULEMON,Shopping,debit,-33.68,2025-12-24,acc-capitalone,Capital One,Savings Account,0
+tx-061716,[debit] TST*SOUP KITCHEN #581,DEBIT TST SOUP KITCHEN 581,SOUP,Restaurants,debit,-25.35,2025-12-25,acc-capitalone,Capital One,Savings Account,0
+tx-029932,[debit] Lucky 6043 Brooklyn,DEBIT LUCKY <NUM> BROOKLYN,LUCKY,Groceries,debit,-38.35,2025-12-25,acc-capitalone,Capital One,Savings Account,0
+tx-045724,[debit] preauthorized withdrawal to quick quack,DEBIT PREAUTHORIZED WITHDRAWAL TO QUICK QUACK,QUACK,Transportation,debit,-183.31,2025-12-25,acc-chase,Chase,Current Account,0
+tx-023018,[debit] ASPEN DENTAL 457 ELM LN BOSTON 02101 MA USA,DEBIT ASPEN DENTAL 457 ELM LN BOSTON <NUM> MA USA,ASPEN,Healthcare,debit,-267.31,2025-12-25,acc-applecard,Apple Card,Credit Card,0
+tx-046630,[debit] OFFERUP 7033 MISSION DR PHOENIX 85001-4507AZ USA,DEBIT OFFERUP <NUM> MISSION DR PHOENIX <NUM> 4507AZ USA,OFFERUP,Shopping,debit,-23.18,2025-12-25,acc-applecard,Apple Card,Credit Card,0
+tx-056716,[debit] EL POLLO LOCO AUSTIN 4406,DEBIT EL POLLO LOCO AUSTIN <NUM>,POLLO,Restaurants,debit,-77.38,2025-12-26,acc-capitalone,Capital One,Savings Account,0
+tx-008476,[debit] BUYER PAYMENT: QUICK SMOG,DEBIT BUYER PAYMENT QUICK SMOG,BUYER,Transportation,debit,-64.84,2025-12-26,acc-capitalone,Capital One,Savings Account,0
+tx-006255,[debit] PREAUTHORIZED WITHDRAWAL TO CITY PARKING,DEBIT PREAUTHORIZED WITHDRAWAL TO CITY PARKING,PARKING,Transportation,debit,-154.66,2025-12-26,acc-chase,Chase,Current Account,0
+tx-000839-m05,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3636.91,2025-12-27,acc-chase,Chase,Current Account,1
+tx-037021,[debit] DEPT OF MOTOR VEHICLES 7353 MARKET RD PITTSBURGH15201 PA USA,DEBIT DEPT OF MOTOR VEHICLES <NUM> MARKET RD PITTSBURGH15201 PA USA,DEPT,Transportation,debit,-75.41,2025-12-27,acc-applecard,Apple Card,Credit Card,0
+tx-007619-m02,[debit] Withdrawal from VERIZON GAS,DEBIT WITHDRAWAL FROM VERIZON GAS,VERIZON,Utilities,debit,-127.20,2025-12-28,acc-capitalone,Capital One,Savings Account,1
+tx-024782,[credit] TST*GARDEN GRILL - RALEIGH,CREDIT TST GARDEN GRILL RALEIGH,GRILL,Restaurants,credit,16.72,2025-12-28,acc-chase,Chase,Current Account,0
+tx-043580,[debit] kroger - portland,DEBIT KROGER PORTLAND,KROGER,Groceries,debit,-40.89,2025-12-28,acc-chase,Chase,Current Account,0
+tx-016279,[debit] Midas 2789 Market St Hayward 94541 Ca Usa,DEBIT MIDAS <NUM> MARKET ST HAYWARD <NUM> CA USA,MIDAS,Transportation,debit,-255.61,2025-12-28,acc-applecard,Apple Card,Credit Card,0
+tx-057008,[debit] SQUARE ENIX 9850 MISSION LN LAS VEGAS 89101 NV USA,DEBIT SQUARE ENIX <NUM> MISSION LN LAS VEGAS <NUM> NV USA,SQUARE,Entertainment,debit,-56.40,2025-12-28,acc-applecard,Apple Card,Credit Card,0
+tx-001286,[debit] LION SUPERMARKET 837249,DEBIT LION SUPERMARKET <NUM>,LION,Groceries,debit,-124.82,2025-12-30,acc-capitalone,Capital One,Savings Account,0
+tx-024738,[debit] uber *trip miami shn78o,DEBIT UBER TRIP MIAMI SHN78O,UBER,Transportation,debit,-218.26,2025-12-31,acc-chase,Chase,Current Account,0
+tx-038558,[debit] Amazon.com*F5QA8FFKQD,DEBIT AMAZON COM F5QA8FFKQD,AMAZON,Shopping,debit,-28.42,2025-12-31,acc-capitalone,Capital One,Savings Account,0
+tx-006787,[debit] Smith Orthopedics,DEBIT SMITH ORTHOPEDICS,SMITH,Healthcare,debit,-278.67,2026-01-01,acc-chase,Chase,Current Account,0
+tx-032386,[debit] PAYMENT TO: ONO HAWAIIAN BBQ,DEBIT PAYMENT TO ONO HAWAIIAN BBQ,ONO,Restaurants,debit,-15.55,2026-01-02,acc-applecard,Apple Card,Credit Card,0
+tx-001195,[debit] Zelle payment to SARAH WILLIAMS SAN FRANCISCO CA 16329252922,DEBIT ZELLE PAYMENT TO SARAH WILLIAMS SAN FRANCISCO CA <NUM>,ZELLE,Transfer,debit,-391.03,2026-01-02,acc-capitalone,Capital One,Savings Account,0
+tx-003032,[debit] RALLY'S,DEBIT RALLY S,RALLY,Restaurants,debit,-9.73,2026-01-03,acc-applecard,Apple Card,Credit Card,0
+tx-057090-m03,[debit] invitation homes rent pmt 28582933 web id: xg26tpe4,DEBIT INVITATION HOMES RENT PMT <NUM> WEB ID XG26TPE4,INVITATION,Rent,debit,-1381.04,2026-01-04,acc-chase,Chase,Current Account,1
+tx-032406,[debit] FOOD4LES ATL #265,DEBIT FOOD4LES ATL 265,ATL,Groceries,debit,-32.28,2026-01-05,acc-capitalone,Capital One,Savings Account,0
+tx-003125,[debit] FOOD LION,DEBIT FOOD LION,LION,Groceries,debit,-44.99,2026-01-05,acc-capitalone,Capital One,Savings Account,0
+tx-025719,[debit] PAYPAL *fubotv,DEBIT PAYPAL FUBOTV,FUBOTV,Entertainment,debit,-54.76,2026-01-05,acc-capitalone,Capital One,Savings Account,0
+tx-064730,[debit] AMZN MKTP US*2G42U8JKMHI,DEBIT AMZN MKTP US 2G42U8JKMHI,AMZN,Shopping,debit,-22.44,2026-01-05,acc-applecard,Apple Card,Credit Card,0
+tx-065687-m03,[debit] NATIONWIDE 9777 INDUSTRIAL CT NEWARK07101 NJ USA,DEBIT NATIONWIDE <NUM> INDUSTRIAL CT NEWARK07101 NJ USA,NATIONWIDE,Insurance,debit,-95.60,2026-01-06,acc-applecard,Apple Card,Credit Card,1
+tx-058479,[debit] Go Kart*erjxj6qayt,DEBIT GO KART ERJXJ6QAYT,KART,Entertainment,debit,-13.58,2026-01-06,acc-applecard,Apple Card,Credit Card,0
+tx-022032,[debit] PORTILLO'S 1499 BROADWAY ST UNION CITY 94587 CA USA,DEBIT PORTILLO S <NUM> BROADWAY ST UNION CITY <NUM> CA USA,PORTILLO,Restaurants,debit,-34.67,2026-01-07,acc-applecard,Apple Card,Credit Card,0
+tx-067284-m03,[debit] PARAMOUNT+* Monthly,DEBIT PARAMOUNT MONTHLY,PARAMOUNT,Subscription,debit,-22.76,2026-01-08,acc-chase,Chase,Current Account,1
+tx-023122,[debit] TST*MASTER SHIN #369,DEBIT TST MASTER SHIN 369,MASTER,Restaurants,debit,-7.97,2026-01-08,acc-capitalone,Capital One,Savings Account,0
+tx-003967,[debit] AMERICAS TIRE,DEBIT AMERICAS TIRE,AMERICAS,Transportation,debit,-136.34,2026-01-08,acc-applecard,Apple Card,Credit Card,0
+tx-040686-m03,[debit] Ladder 4953 Broadway Ct Phoenix 85001-4410az Usa,DEBIT LADDER <NUM> BROADWAY CT PHOENIX <NUM> 4410AZ USA,LADDER,Insurance,debit,-119.37,2026-01-09,acc-applecard,Apple Card,Credit Card,1
+tx-006744-m03,[debit] Withdrawal from STARLINK CABLE,DEBIT WITHDRAWAL FROM STARLINK CABLE,STARLINK,Utilities,debit,-146.25,2026-01-09,acc-capitalone,Capital One,Savings Account,1
+tx-014607,[debit] WHATABURGER,DEBIT WHATABURGER,WHATABURGER,Restaurants,debit,-31.24,2026-01-09,acc-chase,Chase,Current Account,0
+tx-040959,[debit] valero - pittsburgh,DEBIT VALERO PITTSBURGH,VALERO,Transportation,debit,-260.15,2026-01-09,acc-capitalone,Capital One,Savings Account,0
+tx-065324,[debit] Dental365 1791 Center Dr Houston 77001-4819tx Usa,DEBIT DENTAL365 <NUM> CENTER DR HOUSTON <NUM> 4819TX USA,HOUSTON,Healthcare,debit,-248.93,2026-01-09,acc-applecard,Apple Card,Credit Card,0
+tx-005628,[debit] Withdrawal from BOWLING,DEBIT WITHDRAWAL FROM BOWLING,BOWLING,Entertainment,debit,-28.08,2026-01-09,acc-capitalone,Capital One,Savings Account,0
+tx-040849,[debit] OFFERUP 7832 MARKET LN AUSTIN78701 TX USA,DEBIT OFFERUP <NUM> MARKET LN AUSTIN78701 TX USA,OFFERUP,Shopping,debit,-22.74,2026-01-09,acc-applecard,Apple Card,Credit Card,0
+tx-038238-m03,[debit] DISCORD NITRO* Credit Report,DEBIT DISCORD NITRO CREDIT REPORT,DISCORD,Subscription,debit,-22.73,2026-01-10,acc-capitalone,Capital One,Savings Account,1
+tx-024054,[debit] 99 RANCH*L07I5LJOVYG,DEBIT 99 RANCH L07I5LJOVYG,RANCH,Groceries,debit,-79.85,2026-01-11,acc-applecard,Apple Card,Credit Card,0
+tx-004733-m03,[debit] APPLE.COM/BILL 8959 CENTER LN SEATTLE 98101 WA USA,DEBIT APPLE COM BILL <NUM> CENTER LN SEATTLE <NUM> WA USA,APPLE,Subscription,debit,-26.69,2026-01-12,acc-applecard,Apple Card,Credit Card,1
+tx-017693,[debit] LYFT *TRIP UNION CITY Q44V68,DEBIT LYFT TRIP UNION CITY Q44V68,LYFT,Transportation,debit,-47.01,2026-01-12,acc-capitalone,Capital One,Savings Account,0
+tx-016124,[debit] NFL SUNDAY TICKET #65714 NASHVILLE,DEBIT NFL SUNDAY TICKET <NUM> NASHVILLE,NFL,Entertainment,debit,-39.71,2026-01-12,acc-chase,Chase,Current Account,0
+tx-000839-m06,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3826.51,2026-01-13,acc-chase,Chase,Current Account,1
+tx-053316-m03,[debit] PAYPAL INST XFER SENDGRID WEB ID: PAYPALSI36,DEBIT PAYPAL INST XFER SENDGRID WEB ID PAYPALSI36,SENDGRID,Subscription,debit,-27.13,2026-01-13,acc-chase,Chase,Current Account,1
+tx-060488,[debit] PP*Food Lion,DEBIT PP FOOD LION,LION,Groceries,debit,-56.21,2026-01-13,acc-capitalone,Capital One,Savings Account,0
+tx-034534,[debit] Betmgm 5747 Elm Blvd Tampa 33601 Fl Usa,DEBIT BETMGM <NUM> ELM BLVD TAMPA <NUM> FL USA,BETMGM,Entertainment,debit,-27.71,2026-01-13,acc-applecard,Apple Card,Credit Card,0
+tx-047137,[debit] SUPERCUTS #065 INDIANAPOLIS,DEBIT SUPERCUTS 065 INDIANAPOLIS,SUPERCUTS,Personal Care,debit,-8.19,2026-01-14,acc-chase,Chase,Current Account,0
+tx-062730,[debit] TST*fatburger,DEBIT TST FATBURGER,FATBURGER,Restaurants,debit,-32.15,2026-01-18,acc-chase,Chase,Current Account,0
+tx-062928,[debit] Casey's #83175 Indianapolis,DEBIT CASEY S <NUM> INDIANAPOLIS,CASEY,Transportation,debit,-26.22,2026-01-18,acc-chase,Chase,Current Account,0
+tx-017408,[debit] SPEEDWAY - COLUMBUS,DEBIT SPEEDWAY COLUMBUS,SPEEDWAY,Transportation,debit,-285.33,2026-01-18,acc-chase,Chase,Current Account,0
+tx-054707,[debit] SUBSCRIPTION PAYMENT: CRACKER BARREL,DEBIT SUBSCRIPTION PAYMENT CRACKER BARREL,CRACKER,Restaurants,debit,-26.44,2026-01-19,acc-chase,Chase,Current Account,0
+tx-003796,[debit] lyft *trip boston iu6f7n,DEBIT LYFT TRIP BOSTON IU6F7N,LYFT,Transportation,debit,-29.99,2026-01-19,acc-applecard,Apple Card,Credit Card,0
+tx-062837,[debit] VENMO PAYMENT TO DONNA NGUYEN,DEBIT VENMO PAYMENT TO DONNA NGUYEN,VENMO,Transfer,debit,-462.34,2026-01-20,acc-applecard,Apple Card,Credit Card,0
+tx-039284-m03,[debit] T-mobile 3197 Market Way Houston 77001-1108tx Usa,DEBIT T MOBILE <NUM> MARKET WAY HOUSTON <NUM> 1108TX USA,MOBILE,Utilities,debit,-119.88,2026-01-21,acc-applecard,Apple Card,Credit Card,1
+tx-020989,[debit] 365 market 5041 university st pittsburgh15201 pa usa,DEBIT 365 MARKET <NUM> UNIVERSITY ST PITTSBURGH15201 PA USA,UNIVERSITY,Groceries,debit,-32.78,2026-01-21,acc-applecard,Apple Card,Credit Card,0
+tx-025593,[debit] museum #52528 san francisco,DEBIT MUSEUM <NUM> SAN FRANCISCO,MUSEUM,Entertainment,debit,-67.87,2026-01-22,acc-chase,Chase,Current Account,0
+tx-000727,[debit] PAYPAL *Orangetheory,DEBIT PAYPAL ORANGETHEORY,ORANGETHEORY,Personal Care,debit,-59.44,2026-01-22,acc-applecard,Apple Card,Credit Card,0
+tx-054097,[credit] Lowe's,CREDIT LOWE S,LOWE,Shopping,credit,38.07,2026-01-22,acc-capitalone,Capital One,Savings Account,0
+tx-062140,[debit] SPEEDWAY #176 OAKLAND,DEBIT SPEEDWAY 176 OAKLAND,SPEEDWAY,Transportation,debit,-37.29,2026-01-23,acc-capitalone,Capital One,Savings Account,0
+tx-020476,[debit] AMAZON MARKTPLACE*X3UGXYFB4,DEBIT AMAZON MARKTPLACE X3UGXYFB4,MARKTPLACE,Shopping,debit,-23.79,2026-01-23,acc-chase,Chase,Current Account,0
+tx-014619,[debit] SUBSCRIPTION PAYMENT: MASSAGE ENVY,DEBIT SUBSCRIPTION PAYMENT MASSAGE ENVY,ENVY,Personal Care,debit,-37.18,2026-01-24,acc-capitalone,Capital One,Savings Account,0
+tx-027393,[debit] UBER *TRIP HAYWARD D14RUI,DEBIT UBER TRIP HAYWARD D14RUI,UBER,Transportation,debit,-126.31,2026-01-25,acc-chase,Chase,Current Account,0
+tx-055246,[debit] PAYPAL *FATBURGER ZCWH0G4GTD,DEBIT PAYPAL FATBURGER ZCWH0G4GTD,FATBURGER,Restaurants,debit,-12.11,2026-01-26,acc-applecard,Apple Card,Credit Card,0
+tx-060834,[debit] WOK EXPRESS - NEW YORK,DEBIT WOK EXPRESS NEW YORK,WOK,Restaurants,debit,-16.88,2026-01-26,acc-applecard,Apple Card,Credit Card,0
+tx-000839-m07,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3636.58,2026-01-27,acc-chase,Chase,Current Account,1
+tx-048475,[debit] UBER *TRIP INDIANAPOLIS DMS0UD,DEBIT UBER TRIP INDIANAPOLIS DMS0UD,UBER,Transportation,debit,-123.63,2026-01-27,acc-chase,Chase,Current Account,0
+tx-003376,[debit] ENCORE ONLINE,DEBIT ENCORE ONLINE,ENCORE,Entertainment,debit,-31.80,2026-01-27,acc-capitalone,Capital One,Savings Account,0
+tx-007619-m03,[debit] Withdrawal from VERIZON GAS,DEBIT WITHDRAWAL FROM VERIZON GAS,VERIZON,Utilities,debit,-123.65,2026-01-28,acc-capitalone,Capital One,Savings Account,1
+tx-020575,[debit] uber *trip newark jh4gus,DEBIT UBER TRIP NEWARK JH4GUS,UBER,Transportation,debit,-69.60,2026-01-28,acc-capitalone,Capital One,Savings Account,0
+tx-002924,[debit] WMATA,DEBIT WMATA,WMATA,Transportation,debit,-196.89,2026-01-29,acc-capitalone,Capital One,Savings Account,0
+tx-004765,[credit] PP*elements massage,CREDIT PP ELEMENTS MASSAGE,ELEMENTS,Personal Care,credit,67.83,2026-01-29,acc-capitalone,Capital One,Savings Account,0
+tx-039481,[debit] PP*FRESH MARKET,DEBIT PP FRESH MARKET,FRESH,Groceries,debit,-108.06,2026-01-30,acc-capitalone,Capital One,Savings Account,0
+tx-042510,[debit] Lion Supermarket 1305 Industrial Dr Denver 80201-4704co Usa,DEBIT LION SUPERMARKET <NUM> INDUSTRIAL DR DENVER <NUM> 4704CO USA,LION,Groceries,debit,-39.91,2026-01-31,acc-applecard,Apple Card,Credit Card,0
+tx-046869,[debit] PP*espn+,DEBIT PP ESPN,ESPN,Entertainment,debit,-31.01,2026-01-31,acc-capitalone,Capital One,Savings Account,0
+tx-015924,[debit] Express Checkout Payment: LIVENATION,DEBIT EXPRESS CHECKOUT PAYMENT LIVENATION,LIVENATION,Entertainment,debit,-140.47,2026-01-31,acc-applecard,Apple Card,Credit Card,0
+tx-057090-m04,[debit] invitation homes rent pmt 28582933 web id: xg26tpe4,DEBIT INVITATION HOMES RENT PMT <NUM> WEB ID XG26TPE4,INVITATION,Rent,debit,-1357.85,2026-02-04,acc-chase,Chase,Current Account,1
+tx-055760,[debit] LYFT *TRIP TAMPA FRTBYE,DEBIT LYFT TRIP TAMPA FRTBYE,LYFT,Transportation,debit,-90.18,2026-02-04,acc-applecard,Apple Card,Credit Card,0
+tx-053527,[debit] PAYPAL PAYMENT TO MARY THOMAS,DEBIT PAYPAL PAYMENT TO MARY THOMAS,MARY,Transfer,debit,-395.14,2026-02-04,acc-chase,Chase,Current Account,0
+tx-056632,[debit] Ranch99 Por #27662,DEBIT RANCH99 POR <NUM>,POR,Groceries,debit,-69.62,2026-02-05,acc-chase,Chase,Current Account,0
+tx-010338,[debit] BETTERHELP*UXBZBX2H8J6K,DEBIT BETTERHELP UXBZBX2H8J6K,BETTERHELP,Healthcare,debit,-423.22,2026-02-05,acc-chase,Chase,Current Account,0
+tx-065687-m04,[debit] NATIONWIDE 9777 INDUSTRIAL CT NEWARK07101 NJ USA,DEBIT NATIONWIDE <NUM> INDUSTRIAL CT NEWARK07101 NJ USA,NATIONWIDE,Insurance,debit,-94.97,2026-02-06,acc-applecard,Apple Card,Credit Card,1
+tx-014774,[debit] WHOLE FOODS 178 BROADWAY BLVD CHICAGO 60601-2971IL USA,DEBIT WHOLE FOODS 178 BROADWAY BLVD CHICAGO <NUM> 2971IL USA,WHOLE,Groceries,debit,-63.68,2026-02-06,acc-applecard,Apple Card,Credit Card,0
+tx-036028,[debit] MERCARI 5032 MARKET WAY SEATTLE 98101-1251WA USA,DEBIT MERCARI <NUM> MARKET WAY SEATTLE <NUM> 1251WA USA,MERCARI,Shopping,debit,-85.33,2026-02-06,acc-applecard,Apple Card,Credit Card,0
+tx-067284-m04,[debit] PARAMOUNT+* Monthly,DEBIT PARAMOUNT MONTHLY,PARAMOUNT,Subscription,debit,-23.00,2026-02-08,acc-chase,Chase,Current Account,1
+tx-040686-m04,[debit] Ladder 4953 Broadway Ct Phoenix 85001-4410az Usa,DEBIT LADDER <NUM> BROADWAY CT PHOENIX <NUM> 4410AZ USA,LADDER,Insurance,debit,-116.58,2026-02-09,acc-applecard,Apple Card,Credit Card,1
+tx-006744-m04,[debit] Withdrawal from STARLINK CABLE,DEBIT WITHDRAWAL FROM STARLINK CABLE,STARLINK,Utilities,debit,-154.90,2026-02-09,acc-capitalone,Capital One,Savings Account,1
+tx-030336,[credit] PROVIDENCE HEALTH MEDICAL,CREDIT PROVIDENCE HEALTH MEDICAL,PROVIDENCE,Healthcare,credit,137.12,2026-02-09,acc-capitalone,Capital One,Savings Account,0
+tx-017630,[debit] DATACAMP*LQP96G2WQ,DEBIT DATACAMP LQP96G2WQ,DATACAMP,Education,debit,-458.80,2026-02-09,acc-capitalone,Capital One,Savings Account,0
+tx-038238-m04,[debit] DISCORD NITRO* Credit Report,DEBIT DISCORD NITRO CREDIT REPORT,DISCORD,Subscription,debit,-22.87,2026-02-10,acc-capitalone,Capital One,Savings Account,1
+tx-027262,[debit] TST* TACO SPOT #892,DEBIT TST TACO SPOT 892,TACO,Restaurants,debit,-38.69,2026-02-10,acc-applecard,Apple Card,Credit Card,0
+tx-041344,[debit] Payment To: Savemart,DEBIT PAYMENT TO SAVEMART,SAVEMART,Groceries,debit,-173.60,2026-02-11,acc-applecard,Apple Card,Credit Card,0
+tx-004733-m04,[debit] APPLE.COM/BILL 8959 CENTER LN SEATTLE 98101 WA USA,DEBIT APPLE COM BILL <NUM> CENTER LN SEATTLE <NUM> WA USA,APPLE,Subscription,debit,-27.03,2026-02-12,acc-applecard,Apple Card,Credit Card,1
+tx-000839-m08,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3825.92,2026-02-13,acc-chase,Chase,Current Account,1
+tx-053316-m04,[debit] PAYPAL INST XFER SENDGRID WEB ID: PAYPALSI36,DEBIT PAYPAL INST XFER SENDGRID WEB ID PAYPALSI36,SENDGRID,Subscription,debit,-27.45,2026-02-13,acc-chase,Chase,Current Account,1
+tx-062342,[credit] TST* PIZZA PLACE - BOSTON,CREDIT TST PIZZA PLACE BOSTON,PLACE,Restaurants,credit,13.24,2026-02-15,acc-capitalone,Capital One,Savings Account,0
+tx-046507,[debit] MOBIL #61591 NEWARK,DEBIT MOBIL <NUM> NEWARK,MOBIL,Transportation,debit,-50.80,2026-02-15,acc-capitalone,Capital One,Savings Account,0
+tx-022790,[credit] Bp - Austin,CREDIT BP AUSTIN,AUSTIN,Transportation,credit,97.18,2026-02-15,acc-chase,Chase,Current Account,0
+tx-006996,[debit] AMAZON MKTPL*AM6CN44K,DEBIT AMAZON MKTPL AM6CN44K,AMAZON,Shopping,debit,-14.87,2026-02-15,acc-applecard,Apple Card,Credit Card,0
+tx-032019,[debit] CASA OLE*TUCN5CVA1OJ,DEBIT CASA OLE TUCN5CVA1OJ,CASA,Restaurants,debit,-132.09,2026-02-16,acc-applecard,Apple Card,Credit Card,0
+tx-016755,[debit] PAYPAL *365 MARKET,DEBIT PAYPAL 365 MARKET,MARKET,Groceries,debit,-91.41,2026-02-16,acc-chase,Chase,Current Account,0
+tx-027698,[debit] BUYER PAYMENT: 7-ELEVEN,DEBIT BUYER PAYMENT 7 ELEVEN,BUYER,Shopping,debit,-18.76,2026-02-16,acc-applecard,Apple Card,Credit Card,0
+tx-045166,[debit] GYRO KING*DWSO46AAYM,DEBIT GYRO KING DWSO46AAYM,GYRO,Restaurants,debit,-24.25,2026-02-17,acc-capitalone,Capital One,Savings Account,0
+tx-047067,[debit] PANDA EXPRESS 046835,DEBIT PANDA EXPRESS <NUM>,PANDA,Restaurants,debit,-24.50,2026-02-18,acc-applecard,Apple Card,Credit Card,0
+tx-015240,[debit] PNC BANK IFI DDA TO DDA DR32TU4I WEB ID: INTFITRVOS,DEBIT PNC BANK IFI DDA TO DDA DR32TU4I WEB ID INTFITRVOS,PNC,Transfer,debit,-226.85,2026-02-18,acc-chase,Chase,Current Account,0
+tx-061207,[debit] SQ *DEL TACO - SEATTLE,DEBIT SQ DEL TACO SEATTLE,DEL,Restaurants,debit,-23.28,2026-02-19,acc-chase,Chase,Current Account,0
+tx-037326,[debit] discount tire 807 industrial blvd brooklyn11201 ny usa,DEBIT DISCOUNT TIRE 807 INDUSTRIAL BLVD BROOKLYN11201 NY USA,DISCOUNT,Transportation,debit,-161.30,2026-02-19,acc-applecard,Apple Card,Credit Card,0
+tx-019083,[debit] Liquor Store #40483 Atlanta,DEBIT LIQUOR STORE <NUM> ATLANTA,LIQUOR,Shopping,debit,-20.47,2026-02-19,acc-applecard,Apple Card,Credit Card,0
+tx-020120,[debit] LYFT *TRIP FREMONT SC7UAS,DEBIT LYFT TRIP FREMONT SC7UAS,LYFT,Transportation,debit,-129.65,2026-02-20,acc-applecard,Apple Card,Credit Card,0
+tx-055608,[debit] Coursera*6mhwcqpr92u,DEBIT COURSERA 6MHWCQPR92U,COURSERA,Education,debit,-527.69,2026-02-20,acc-chase,Chase,Current Account,0
+tx-039284-m04,[debit] T-mobile 3197 Market Way Houston 77001-1108tx Usa,DEBIT T MOBILE <NUM> MARKET WAY HOUSTON <NUM> 1108TX USA,MOBILE,Utilities,debit,-122.91,2026-02-21,acc-applecard,Apple Card,Credit Card,1
+tx-009333,[debit] SQ *buffalo wild wings,DEBIT SQ BUFFALO WILD WINGS,BUFFALO,Restaurants,debit,-51.78,2026-02-21,acc-capitalone,Capital One,Savings Account,0
+tx-017476,[debit] CASA OLE 6502 OAK LN MIAMI 33101 FL USA,DEBIT CASA OLE <NUM> OAK LN MIAMI <NUM> FL USA,CASA,Restaurants,debit,-36.19,2026-02-22,acc-applecard,Apple Card,Credit Card,0
+tx-003876,[debit] BJ'S WHOLESALE 09400245,DEBIT BJ S WHOLESALE <NUM>,WHOLESALE,Groceries,debit,-105.87,2026-02-22,acc-chase,Chase,Current Account,0
+tx-007975,[debit] cook out*0kywhzp8anl4,DEBIT COOK OUT 0KYWHZP8ANL4,COOK,Restaurants,debit,-7.63,2026-02-23,acc-chase,Chase,Current Account,0
+tx-026044,[debit] KBBQ HOUSE #685 AUSTIN,DEBIT KBBQ HOUSE 685 AUSTIN,KBBQ,Restaurants,debit,-25.51,2026-02-23,acc-chase,Chase,Current Account,0
+tx-000819,[debit] TARGET #1779 SAN FRANCISCO,DEBIT TARGET <NUM> SAN FRANCISCO,TARGET,Shopping,debit,-24.94,2026-02-23,acc-chase,Chase,Current Account,0
+tx-017147,[debit] Express Checkout Payment: Grubhub,DEBIT EXPRESS CHECKOUT PAYMENT GRUBHUB,GRUBHUB,Restaurants,debit,-14.73,2026-02-24,acc-applecard,Apple Card,Credit Card,0
+tx-029625,[debit] kroger 7984 park dr union city 94587-1922ca usa,DEBIT KROGER <NUM> PARK DR UNION CITY <NUM> 1922CA USA,KROGER,Groceries,debit,-32.95,2026-02-24,acc-applecard,Apple Card,Credit Card,0
+tx-042347,[debit] UBER *TRIP RALEIGH BIBM81,DEBIT UBER TRIP RALEIGH BIBM81,UBER,Transportation,debit,-124.83,2026-02-24,acc-applecard,Apple Card,Credit Card,0
+tx-010885,[debit] PYPL *SYLVAN LEARNING,DEBIT PYPL SYLVAN LEARNING,SYLVAN,Education,debit,-534.84,2026-02-24,acc-chase,Chase,Current Account,0
+tx-011858,[debit] PREAPPROVED PAYMENT BILL USER PAYMENT: ONO HAWAIIAN BBQ,DEBIT PREAPPROVED PAYMENT BILL USER PAYMENT ONO HAWAIIAN BBQ,ONO,Restaurants,debit,-51.14,2026-02-25,acc-applecard,Apple Card,Credit Card,0
+tx-037752,[debit] BART INC,DEBIT BART INC,BART,Transportation,debit,-103.96,2026-02-25,acc-applecard,Apple Card,Credit Card,0
+tx-036709,[debit] Express Checkout Payment: SUPERCUTS,DEBIT EXPRESS CHECKOUT PAYMENT SUPERCUTS,SUPERCUTS,Personal Care,debit,-40.69,2026-02-25,acc-applecard,Apple Card,Credit Card,0
+tx-007769,[credit] CARNIVAL CRUISE.COM,CREDIT CARNIVAL CRUISE COM,CARNIVAL,Travel,credit,779.29,2026-02-25,acc-applecard,Apple Card,Credit Card,0
+tx-025796,[debit] Jollibee - Portland,DEBIT JOLLIBEE PORTLAND,JOLLIBEE,Restaurants,debit,-28.46,2026-02-26,acc-applecard,Apple Card,Credit Card,0
+tx-010755,[debit] Foodmaxx 1476 San Diego,DEBIT FOODMAXX <NUM> SAN DIEGO,FOODMAXX,Groceries,debit,-47.81,2026-02-26,acc-chase,Chase,Current Account,0
+tx-043717,[debit] NINTENDO 3064 INDUSTRIAL RD LOS ANGELES 90001 CA USA,DEBIT NINTENDO <NUM> INDUSTRIAL RD LOS ANGELES <NUM> CA USA,NINTENDO,Entertainment,debit,-60.16,2026-02-26,acc-applecard,Apple Card,Credit Card,0
+tx-000839-m09,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3659.85,2026-02-27,acc-chase,Chase,Current Account,1
+tx-045649,[debit] MARUGAME UDON,DEBIT MARUGAME UDON,MARUGAME,Restaurants,debit,-39.83,2026-02-27,acc-capitalone,Capital One,Savings Account,0
+tx-018273,[debit] AMZN DIGITAL*5702IT5MD,DEBIT AMZN DIGITAL 5702IT5MD,AMZN,Shopping,debit,-23.30,2026-02-27,acc-capitalone,Capital One,Savings Account,0
+tx-007619-m04,[debit] Withdrawal from VERIZON GAS,DEBIT WITHDRAWAL FROM VERIZON GAS,VERIZON,Utilities,debit,-127.34,2026-02-28,acc-capitalone,Capital One,Savings Account,1
+tx-004887,[debit] five guys,DEBIT FIVE GUYS,GUYS,Restaurants,debit,-24.57,2026-02-28,acc-capitalone,Capital One,Savings Account,0
+tx-034477,[debit] SQ *BAGEL SHOP - ATLANTA,DEBIT SQ BAGEL SHOP ATLANTA,BAGEL,Restaurants,debit,-21.55,2026-02-28,acc-capitalone,Capital One,Savings Account,0
+tx-048576,[debit] GO KART 6046 UNIVERSITY AVE SAN FRANCISCO94102 CA USA,DEBIT GO KART <NUM> UNIVERSITY AVE SAN FRANCISCO94102 CA USA,KART,Entertainment,debit,-30.37,2026-02-28,acc-applecard,Apple Card,Credit Card,0
+tx-043666,[debit] FIVE GUYS 5189 CENTER LN DALLAS 75201-6452TX USA,DEBIT FIVE GUYS <NUM> CENTER LN DALLAS <NUM> 6452TX USA,GUYS,Restaurants,debit,-23.03,2026-03-01,acc-applecard,Apple Card,Credit Card,0
+tx-066928,[debit] FOODMAXX #11672 TAMPA,DEBIT FOODMAXX <NUM> TAMPA,FOODMAXX,Groceries,debit,-26.87,2026-03-01,acc-chase,Chase,Current Account,0
+tx-011659,[debit] UBER *TRIP HOUSTON 79T9BK,DEBIT UBER TRIP HOUSTON 79T9BK,UBER,Transportation,debit,-65.08,2026-03-01,acc-capitalone,Capital One,Savings Account,0
+tx-033737,[debit] PAYPAL INST XFER BART WEB ID: PAYPALSI96,DEBIT PAYPAL INST XFER BART WEB ID PAYPALSI96,BART,Transportation,debit,-34.51,2026-03-01,acc-chase,Chase,Current Account,0
+tx-018120,[debit] TIKTOK SHOP 6191 MAIN LN HOUSTON 77001 TX USA,DEBIT TIKTOK SHOP <NUM> MAIN LN HOUSTON <NUM> TX USA,TIKTOK,Shopping,debit,-16.69,2026-03-01,acc-applecard,Apple Card,Credit Card,0
+tx-002574,[debit] target #9307 columbus,DEBIT TARGET <NUM> COLUMBUS,TARGET,Shopping,debit,-13.85,2026-03-03,acc-capitalone,Capital One,Savings Account,0
+tx-040026,[debit] Amazon.com*S5TC80TJG7,DEBIT AMAZON COM S5TC80TJG7,AMAZON,Shopping,debit,-18.46,2026-03-03,acc-capitalone,Capital One,Savings Account,0
+tx-057090-m05,[debit] invitation homes rent pmt 28582933 web id: xg26tpe4,DEBIT INVITATION HOMES RENT PMT <NUM> WEB ID XG26TPE4,INVITATION,Rent,debit,-1355.06,2026-03-04,acc-chase,Chase,Current Account,1
+tx-038855,[debit] CURRY HOUSE 2361 PARK ST MINNEAPOLIS 55401 MN USA,DEBIT CURRY HOUSE <NUM> PARK ST MINNEAPOLIS <NUM> MN USA,CURRY,Restaurants,debit,-22.56,2026-03-04,acc-applecard,Apple Card,Credit Card,0
+tx-064155,[debit] PIGGLY WIGGLY 4041 NEW YORK,DEBIT PIGGLY WIGGLY <NUM> NEW YORK,PIGGLY,Groceries,debit,-101.02,2026-03-05,acc-chase,Chase,Current Account,0
+tx-039641,[debit] ZOO; Subscription,DEBIT ZOO SUBSCRIPTION,ZOO,Entertainment,debit,-45.47,2026-03-05,acc-capitalone,Capital One,Savings Account,0
+tx-065687-m05,[debit] NATIONWIDE 9777 INDUSTRIAL CT NEWARK07101 NJ USA,DEBIT NATIONWIDE <NUM> INDUSTRIAL CT NEWARK07101 NJ USA,NATIONWIDE,Insurance,debit,-95.81,2026-03-06,acc-applecard,Apple Card,Credit Card,1
+tx-045255,[debit] KROGER 7484 OAK ST QUEENS11101 NY USA,DEBIT KROGER <NUM> OAK ST QUEENS11101 NY USA,KROGER,Groceries,debit,-49.29,2026-03-06,acc-applecard,Apple Card,Credit Card,0
+tx-057129,[debit] ASIAN SUPERMARKET 7982 PARK LN LOS ANGELES90001 CA USA,DEBIT ASIAN SUPERMARKET <NUM> PARK LN LOS ANGELES90001 CA USA,ASIAN,Groceries,debit,-35.25,2026-03-07,acc-applecard,Apple Card,Credit Card,0
+tx-067284-m05,[debit] PARAMOUNT+* Monthly,DEBIT PARAMOUNT MONTHLY,PARAMOUNT,Subscription,debit,-22.85,2026-03-08,acc-chase,Chase,Current Account,1
+tx-024735,[debit] Hardee's 5319 Broadway Ave Indianapolis46201 In Usa,DEBIT HARDEE S <NUM> BROADWAY AVE INDIANAPOLIS46201 IN USA,HARDEE,Restaurants,debit,-15.34,2026-03-08,acc-applecard,Apple Card,Credit Card,0
+tx-008835,[debit] Regal Cinemas 98508795,DEBIT REGAL CINEMAS <NUM>,REGAL,Entertainment,debit,-29.05,2026-03-08,acc-applecard,Apple Card,Credit Card,0
+tx-039964,[debit] THE ORDINARY; Billing,DEBIT THE ORDINARY BILLING,ORDINARY,Personal Care,debit,-16.87,2026-03-08,acc-capitalone,Capital One,Savings Account,0
+tx-040686-m05,[debit] Ladder 4953 Broadway Ct Phoenix 85001-4410az Usa,DEBIT LADDER <NUM> BROADWAY CT PHOENIX <NUM> 4410AZ USA,LADDER,Insurance,debit,-116.23,2026-03-09,acc-applecard,Apple Card,Credit Card,1
+tx-006744-m05,[debit] Withdrawal from STARLINK CABLE,DEBIT WITHDRAWAL FROM STARLINK CABLE,STARLINK,Utilities,debit,-146.62,2026-03-09,acc-capitalone,Capital One,Savings Account,1
+tx-066148,[debit] Newegg #098,DEBIT NEWEGG 098,NEWEGG,Shopping,debit,-23.76,2026-03-09,acc-chase,Chase,Current Account,0
+tx-018129,[debit] PAYPAL INST XFER BARCLAYCARD WEB ID: PAYPALSI62,DEBIT PAYPAL INST XFER BARCLAYCARD WEB ID PAYPALSI62,BARCLAYCARD,Transfer,debit,-513.03,2026-03-09,acc-chase,Chase,Current Account,0
+tx-038238-m05,[debit] DISCORD NITRO* Credit Report,DEBIT DISCORD NITRO CREDIT REPORT,DISCORD,Subscription,debit,-22.95,2026-03-10,acc-capitalone,Capital One,Savings Account,1
+tx-006235,[debit] winn-dixie 5103 denver,DEBIT WINN DIXIE <NUM> DENVER,WINN,Groceries,debit,-58.36,2026-03-11,acc-chase,Chase,Current Account,0
+tx-004733-m05,[debit] APPLE.COM/BILL 8959 CENTER LN SEATTLE 98101 WA USA,DEBIT APPLE COM BILL <NUM> CENTER LN SEATTLE <NUM> WA USA,APPLE,Subscription,debit,-25.54,2026-03-12,acc-applecard,Apple Card,Credit Card,1
+tx-000839-m10,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3821.46,2026-03-13,acc-chase,Chase,Current Account,1
+tx-053316-m05,[debit] PAYPAL INST XFER SENDGRID WEB ID: PAYPALSI36,DEBIT PAYPAL INST XFER SENDGRID WEB ID PAYPALSI36,SENDGRID,Subscription,debit,-28.01,2026-03-13,acc-chase,Chase,Current Account,1
+tx-001661,[debit] DMV REGISTRATION 260 BROADWAY ST OAKLAND 94601 CA USA,DEBIT DMV REGISTRATION 260 BROADWAY ST OAKLAND <NUM> CA USA,DMV,Transportation,debit,-177.40,2026-03-13,acc-applecard,Apple Card,Credit Card,0
+tx-057207,[debit] Cvs 2890 Oak St Philadelphia 19101 Pa Usa,DEBIT CVS <NUM> OAK ST PHILADELPHIA <NUM> PA USA,CVS,Healthcare,debit,-234.67,2026-03-13,acc-applecard,Apple Card,Credit Card,0
+tx-055886,[debit] TAKE 5 CAR WASH*48MSPCKZF,DEBIT TAKE 5 CAR WASH 48MSPCKZF,TAKE,Transportation,debit,-60.08,2026-03-15,acc-chase,Chase,Current Account,0
+tx-016779,[debit] POSTMATES,DEBIT POSTMATES,POSTMATES,Restaurants,debit,-25.41,2026-03-17,acc-applecard,Apple Card,Credit Card,0
+tx-062605,[debit] DIN TAI FUNG*H8H656XE2HQ0,DEBIT DIN TAI FUNG H8H656XE2HQ0,DIN,Restaurants,debit,-16.48,2026-03-18,acc-applecard,Apple Card,Credit Card,0
+tx-044908,[debit] TST* pizza place - PITTSBURGH,DEBIT TST PIZZA PLACE PITTSBURGH,PLACE,Restaurants,debit,-18.45,2026-03-18,acc-chase,Chase,Current Account,0
+tx-022656,[debit] PreApproved Payment Bill User Payment: ALBERTSONS,DEBIT PREAPPROVED PAYMENT BILL USER PAYMENT ALBERTSONS,ALBERTSONS,Groceries,debit,-48.38,2026-03-18,acc-applecard,Apple Card,Credit Card,0
+tx-020659,[debit] WINN-DIXIE 410 MISSION RD SACRAMENTO 95814-4146CA USA,DEBIT WINN DIXIE 410 MISSION RD SACRAMENTO <NUM> 4146CA USA,WINN,Groceries,debit,-18.82,2026-03-19,acc-applecard,Apple Card,Credit Card,0
+tx-010687,[debit] MITSUWA ORL #8803,DEBIT MITSUWA ORL <NUM>,MITSUWA,Groceries,debit,-186.62,2026-03-19,acc-applecard,Apple Card,Credit Card,0
+tx-067254,[credit] UBER *TRIP RALEIGH DSB6OP,CREDIT UBER TRIP RALEIGH DSB6OP,UBER,Transportation,credit,134.92,2026-03-19,acc-applecard,Apple Card,Credit Card,0
+tx-008105,[debit] BP - SACRAMENTO,DEBIT BP SACRAMENTO,SACRAMENTO,Transportation,debit,-187.98,2026-03-19,acc-capitalone,Capital One,Savings Account,0
+tx-055021,[debit] GO KART 4786 MARKET WAY ATLANTA30301 GA USA,DEBIT GO KART <NUM> MARKET WAY ATLANTA30301 GA USA,KART,Entertainment,debit,-29.00,2026-03-19,acc-applecard,Apple Card,Credit Card,0
+tx-004045,[debit] COSTCO GAS - HAYWARD,DEBIT COSTCO GAS HAYWARD,COSTCO,Transportation,debit,-66.83,2026-03-20,acc-applecard,Apple Card,Credit Card,0
+tx-001439,[debit] WITHDRAWAL FROM ACE PARKING,DEBIT WITHDRAWAL FROM ACE PARKING,ACE,Transportation,debit,-82.60,2026-03-20,acc-capitalone,Capital One,Savings Account,0
+tx-039284-m05,[debit] T-mobile 3197 Market Way Houston 77001-1108tx Usa,DEBIT T MOBILE <NUM> MARKET WAY HOUSTON <NUM> 1108TX USA,MOBILE,Utilities,debit,-118.97,2026-03-21,acc-applecard,Apple Card,Credit Card,1
+tx-011188,[debit] lyft *trip oakland f3ynrl,DEBIT LYFT TRIP OAKLAND F3YNRL,LYFT,Transportation,debit,-34.19,2026-03-22,acc-capitalone,Capital One,Savings Account,0
+tx-003672,[debit] WALMART 9154 LAS VEGAS,DEBIT WALMART <NUM> LAS VEGAS,WALMART,Shopping,debit,-34.18,2026-03-22,acc-capitalone,Capital One,Savings Account,0
+tx-057669,[debit] SAVEMART #23140 HOUSTON,DEBIT SAVEMART <NUM> HOUSTON,SAVEMART,Groceries,debit,-50.56,2026-03-23,acc-capitalone,Capital One,Savings Account,0
+tx-064895,[debit] LYFT *TRIP DENVER PB1RPT,DEBIT LYFT TRIP DENVER PB1RPT,LYFT,Transportation,debit,-53.90,2026-03-23,acc-applecard,Apple Card,Credit Card,0
+tx-023566,[debit] intelligentsia 4585 elm dr brooklyn 11201 ny usa,DEBIT INTELLIGENTSIA <NUM> ELM DR BROOKLYN <NUM> NY USA,INTELLIGENTSIA,Restaurants,debit,-28.10,2026-03-24,acc-applecard,Apple Card,Credit Card,0
+tx-057232,[debit] CASA OLE - LOS ANGELES,DEBIT CASA OLE LOS ANGELES,CASA,Restaurants,debit,-18.96,2026-03-24,acc-capitalone,Capital One,Savings Account,0
+tx-039016,[debit] FOODMAXX #88307 PHILADEL,DEBIT FOODMAXX <NUM> PHILADEL,FOODMAXX,Groceries,debit,-39.76,2026-03-24,acc-applecard,Apple Card,Credit Card,0
+tx-013974,[debit] POSHMARK #12005,DEBIT POSHMARK <NUM>,POSHMARK,Shopping,debit,-27.70,2026-03-24,acc-chase,Chase,Current Account,0
+tx-007803,[debit] EXPRESS - DALLAS,DEBIT EXPRESS DALLAS,DALLAS,Shopping,debit,-12.59,2026-03-24,acc-applecard,Apple Card,Credit Card,0
+tx-022045,[debit] FACEBOOK MARKETPLACE #984,DEBIT FACEBOOK MARKETPLACE 984,MARKETPLACE,Shopping,debit,-10.93,2026-03-25,acc-chase,Chase,Current Account,0
+tx-025407,[debit] PAYPAL *TEXAS ROADHOUSE 53Q0CD7O9E,DEBIT PAYPAL TEXAS ROADHOUSE 53Q0CD7O9E,TEXAS,Restaurants,debit,-27.98,2026-03-26,acc-chase,Chase,Current Account,0
+tx-032912,[debit] FIRESTONE 3454 OAK PKWY SAN DIEGO 92101-3683CA USA,DEBIT FIRESTONE <NUM> OAK PKWY SAN DIEGO <NUM> 3683CA USA,FIRESTONE,Transportation,debit,-77.64,2026-03-26,acc-applecard,Apple Card,Credit Card,0
+tx-000839-m11,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3762.79,2026-03-27,acc-chase,Chase,Current Account,1
+tx-028679,[debit] GRUBHUB - MINNEAPOLIS,DEBIT GRUBHUB MINNEAPOLIS,GRUBHUB,Restaurants,debit,-27.76,2026-03-27,acc-chase,Chase,Current Account,0
+tx-058441,[debit] FIVE BELOW #9442 SACRAMENTO,DEBIT FIVE BELOW <NUM> SACRAMENTO,FIVE,Shopping,debit,-39.95,2026-03-27,acc-chase,Chase,Current Account,0
+tx-007619-m05,[debit] Withdrawal from VERIZON GAS,DEBIT WITHDRAWAL FROM VERIZON GAS,VERIZON,Utilities,debit,-122.75,2026-03-28,acc-capitalone,Capital One,Savings Account,1
+tx-065101,[debit] PYPL *O'REILLY AUTO,DEBIT PYPL O REILLY AUTO,REILLY,Transportation,debit,-141.72,2026-03-28,acc-applecard,Apple Card,Credit Card,0
+tx-012689,[debit] WINCO FOODS*XPHAGM9I1,DEBIT WINCO FOODS XPHAGM9I1,WINCO,Groceries,debit,-45.88,2026-03-29,acc-capitalone,Capital One,Savings Account,0
+tx-000599,[debit] QUIKTRIP 91925960,DEBIT QUIKTRIP <NUM>,QUIKTRIP,Transportation,debit,-315.55,2026-03-29,acc-capitalone,Capital One,Savings Account,0
+tx-050572,[debit] RETURNED ITEM FEE - 39/37,DEBIT RETURNED ITEM FEE 39 37,RETURNED,Fees,debit,-35.93,2026-03-29,acc-capitalone,Capital One,Savings Account,0
+tx-014620,[debit] WITHDRAWAL FROM GOLF COURSE,DEBIT WITHDRAWAL FROM GOLF COURSE,COURSE,Entertainment,debit,-46.49,2026-03-30,acc-capitalone,Capital One,Savings Account,0
+tx-065683,[credit] AMAZON MKTPL*MSB73W1FQ,CREDIT AMAZON MKTPL MSB73W1FQ,AMAZON,Shopping,credit,23.79,2026-03-30,acc-capitalone,Capital One,Savings Account,0
+tx-043855,[debit] SONIC 6229 UNIVERSITY WAY NEW YORK 10001-5493NY USA,DEBIT SONIC <NUM> UNIVERSITY WAY NEW YORK <NUM> 5493NY USA,SONIC,Restaurants,debit,-23.85,2026-03-31,acc-applecard,Apple Card,Credit Card,0
+tx-066445,[credit] TARGET #0879 DENVER,CREDIT TARGET <NUM> DENVER,TARGET,Shopping,credit,14.10,2026-03-31,acc-applecard,Apple Card,Credit Card,0
+tx-015994,[credit] MTA,CREDIT MTA,MTA,Transportation,credit,84.80,2026-04-01,acc-applecard,Apple Card,Credit Card,0
+tx-065066,[debit] AXSTICKETS 3445 INDUSTRIAL RD NEW YORK 10001 NY USA,DEBIT AXSTICKETS <NUM> INDUSTRIAL RD NEW YORK <NUM> NY USA,AXSTICKETS,Entertainment,debit,-45.73,2026-04-01,acc-applecard,Apple Card,Credit Card,0
+tx-022438,[debit] Subscription Payment: ZOO,DEBIT SUBSCRIPTION PAYMENT ZOO,ZOO,Entertainment,debit,-26.34,2026-04-01,acc-capitalone,Capital One,Savings Account,0
+tx-062688,[debit] TST*NAAN N CURRY - CHARLOTTE,DEBIT TST NAAN N CURRY CHARLOTTE,NAAN,Restaurants,debit,-36.43,2026-04-02,acc-applecard,Apple Card,Credit Card,0
+tx-007974,[debit] Bp #94975 Salt Lake City,DEBIT BP <NUM> SALT LAKE CITY,LAKE,Transportation,debit,-36.30,2026-04-02,acc-applecard,Apple Card,Credit Card,0
+tx-008157,[debit] PREAUTHORIZED WITHDRAWAL TO AXSTICKETS,DEBIT PREAUTHORIZED WITHDRAWAL TO AXSTICKETS,AXSTICKETS,Entertainment,debit,-43.46,2026-04-02,acc-applecard,Apple Card,Credit Card,0
+tx-057090-m06,[debit] invitation homes rent pmt 28582933 web id: xg26tpe4,DEBIT INVITATION HOMES RENT PMT <NUM> WEB ID XG26TPE4,INVITATION,Rent,debit,-1380.47,2026-04-04,acc-chase,Chase,Current Account,1
+tx-038015,[debit] TST*BBQ PIT #325,DEBIT TST BBQ PIT 325,BBQ,Restaurants,debit,-56.23,2026-04-04,acc-capitalone,Capital One,Savings Account,0
+tx-004875,[debit] SOUTHWEST AIRLINES 24872,DEBIT SOUTHWEST AIRLINES <NUM>,SOUTHWEST,Travel,debit,-153.62,2026-04-04,acc-capitalone,Capital One,Savings Account,0
+tx-062438,[debit] AMZN MKTP US*FU0XIE3FZV7,DEBIT AMZN MKTP US FU0XIE3FZV7,AMZN,Shopping,debit,-27.67,2026-04-05,acc-capitalone,Capital One,Savings Account,0
+tx-065687-m06,[debit] NATIONWIDE 9777 INDUSTRIAL CT NEWARK07101 NJ USA,DEBIT NATIONWIDE <NUM> INDUSTRIAL CT NEWARK07101 NJ USA,NATIONWIDE,Insurance,debit,-100.47,2026-04-06,acc-applecard,Apple Card,Credit Card,1
+tx-062883,[debit] DIM SUM KING*V0VD10W0,DEBIT DIM SUM KING V0VD10W0,DIM,Restaurants,debit,-20.72,2026-04-06,acc-applecard,Apple Card,Credit Card,0
+tx-000800,[debit] COSTCO WHSE 0534 SALT LAKE CITY,DEBIT COSTCO WHSE <NUM> SALT LAKE CITY,WHSE,Groceries,debit,-29.77,2026-04-07,acc-chase,Chase,Current Account,0
+tx-006599,[debit] PYPL *SWIMMING POOL,DEBIT PYPL SWIMMING POOL,SWIMMING,Entertainment,debit,-102.49,2026-04-07,acc-chase,Chase,Current Account,0
+tx-067284-m06,[debit] PARAMOUNT+* Monthly,DEBIT PARAMOUNT MONTHLY,PARAMOUNT,Subscription,debit,-23.52,2026-04-08,acc-chase,Chase,Current Account,1
+tx-013676,[debit] CHICK-FIL-A 5008,DEBIT CHICK FIL A <NUM>,CHICK,Restaurants,debit,-19.72,2026-04-08,acc-applecard,Apple Card,Credit Card,0
+tx-050453,[debit] RALPHS QUE #092,DEBIT RALPHS QUE 092,RALPHS,Groceries,debit,-65.43,2026-04-08,acc-chase,Chase,Current Account,0
+tx-040686-m06,[debit] Ladder 4953 Broadway Ct Phoenix 85001-4410az Usa,DEBIT LADDER <NUM> BROADWAY CT PHOENIX <NUM> 4410AZ USA,LADDER,Insurance,debit,-113.05,2026-04-09,acc-applecard,Apple Card,Credit Card,1
+tx-006744-m06,[debit] Withdrawal from STARLINK CABLE,DEBIT WITHDRAWAL FROM STARLINK CABLE,STARLINK,Utilities,debit,-152.06,2026-04-09,acc-capitalone,Capital One,Savings Account,1
+tx-057974,[debit] GOLF COURSE 7082 BROADWAY BLVD UNION CITY 94587-0912CA USA,DEBIT GOLF COURSE <NUM> BROADWAY BLVD UNION CITY <NUM> 0912CA USA,COURSE,Entertainment,debit,-144.66,2026-04-09,acc-applecard,Apple Card,Credit Card,0
+tx-045455,[debit] Dermalogica - Miami,DEBIT DERMALOGICA MIAMI,DERMALOGICA,Personal Care,debit,-47.65,2026-04-09,acc-capitalone,Capital One,Savings Account,0
+tx-038238-m06,[debit] DISCORD NITRO* Credit Report,DEBIT DISCORD NITRO CREDIT REPORT,DISCORD,Subscription,debit,-23.73,2026-04-10,acc-capitalone,Capital One,Savings Account,1
+tx-012572,[debit] ICHIRAN RAMEN #5911 MIAMI,DEBIT ICHIRAN RAMEN <NUM> MIAMI,ICHIRAN,Restaurants,debit,-20.43,2026-04-11,acc-capitalone,Capital One,Savings Account,0
+tx-027129,[debit] Whataburger*zo1f1c5v3c19,DEBIT WHATABURGER ZO1F1C5V3C19,WHATABURGER,Restaurants,debit,-30.27,2026-04-11,acc-chase,Chase,Current Account,0
+tx-025080,[debit] PAYPAL *LUIGI'S PIZZA 8EEQQ55IOX,DEBIT PAYPAL LUIGI S PIZZA 8EEQQ55IOX,LUIGI,Restaurants,debit,-21.40,2026-04-11,acc-applecard,Apple Card,Credit Card,0
+tx-004733-m06,[debit] APPLE.COM/BILL 8959 CENTER LN SEATTLE 98101 WA USA,DEBIT APPLE COM BILL <NUM> CENTER LN SEATTLE <NUM> WA USA,APPLE,Subscription,debit,-26.20,2026-04-12,acc-applecard,Apple Card,Credit Card,1
+tx-039912,[debit] HORATIO'S 8893 CENTER ST HAYWARD94541 CA USA,DEBIT HORATIO S <NUM> CENTER ST HAYWARD94541 CA USA,HORATIO,Restaurants,debit,-22.42,2026-04-12,acc-applecard,Apple Card,Credit Card,0
+tx-040327,[debit] h-e-b,DEBIT H E B,UNKNOWN,Groceries,debit,-26.07,2026-04-12,acc-applecard,Apple Card,Credit Card,0
+tx-055477,[debit] Kindle Unltd*FS0DD8KNV,DEBIT KINDLE UNLTD FS0DD8KNV,UNLTD,Shopping,debit,-31.76,2026-04-12,acc-applecard,Apple Card,Credit Card,0
+tx-000839-m12,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3709.96,2026-04-13,acc-chase,Chase,Current Account,1
+tx-053316-m06,[debit] PAYPAL INST XFER SENDGRID WEB ID: PAYPALSI36,DEBIT PAYPAL INST XFER SENDGRID WEB ID PAYPALSI36,SENDGRID,Subscription,debit,-26.88,2026-04-13,acc-chase,Chase,Current Account,1
+tx-063310,[debit] I-PASS TOLL PMT WEB ID: RUWU37OT,DEBIT I PASS TOLL PMT WEB ID RUWU37OT,PASS,Transportation,debit,-61.15,2026-04-14,acc-chase,Chase,Current Account,0
+tx-067190,[debit] SAVEMART CHA #50294,DEBIT SAVEMART CHA <NUM>,SAVEMART,Groceries,debit,-29.96,2026-04-15,acc-chase,Chase,Current Account,0
+tx-038566,[debit] TOPGOLF 9614 BROADWAY LN SALT LAKE CITY 84101-4680UT USA,DEBIT TOPGOLF <NUM> BROADWAY LN SALT LAKE CITY <NUM> 4680UT USA,TOPGOLF,Entertainment,debit,-63.87,2026-04-15,acc-applecard,Apple Card,Credit Card,0
+tx-044599,[debit] El Pollo Loco*2fijlf313,DEBIT EL POLLO LOCO 2FIJLF313,POLLO,Restaurants,debit,-8.24,2026-04-18,acc-chase,Chase,Current Account,0
+tx-014813,[debit] H-E-B 6177 BROADWAY RD DENVER 80201-0863CO USA,DEBIT H E B <NUM> BROADWAY RD DENVER <NUM> 0863CO USA,DENVER,Groceries,debit,-119.65,2026-04-18,acc-applecard,Apple Card,Credit Card,0
+tx-012230,[debit] LYFT *TRIP PORTLAND I4MHYY,DEBIT LYFT TRIP PORTLAND I4MHYY,LYFT,Transportation,debit,-108.51,2026-04-18,acc-capitalone,Capital One,Savings Account,0
+tx-007469,[debit] IMAX 770 BROADWAY ST SEATTLE98101 WA USA,DEBIT IMAX 770 BROADWAY ST SEATTLE98101 WA USA,IMAX,Entertainment,debit,-39.16,2026-04-18,acc-applecard,Apple Card,Credit Card,0
+tx-020988,[debit] CHARGEPOINT INDIANAPOLIS,DEBIT CHARGEPOINT INDIANAPOLIS,CHARGEPOINT,Transportation,debit,-166.31,2026-04-19,acc-capitalone,Capital One,Savings Account,0
+tx-044582,[debit] CEREBRAL #0062 HAYWARD,DEBIT CEREBRAL <NUM> HAYWARD,CEREBRAL,Healthcare,debit,-174.36,2026-04-19,acc-capitalone,Capital One,Savings Account,0
+tx-011970,[credit] OFFERUP 2956 PARK LN HOUSTON 77001-0181TX USA,CREDIT OFFERUP <NUM> PARK LN HOUSTON <NUM> 0181TX USA,OFFERUP,Shopping,credit,30.02,2026-04-19,acc-applecard,Apple Card,Credit Card,0
+tx-053050,[debit] Account Closure Fee - 94/19,DEBIT ACCOUNT CLOSURE FEE 94 19,CLOSURE,Fees,debit,-65.57,2026-04-19,acc-applecard,Apple Card,Credit Card,0
+tx-064949,[debit] PYPL*ETHIOPIAN RESTAURANT,DEBIT PYPL ETHIOPIAN RESTAURANT,ETHIOPIAN,Restaurants,debit,-18.54,2026-04-20,acc-chase,Chase,Current Account,0
+tx-039284-m06,[debit] T-mobile 3197 Market Way Houston 77001-1108tx Usa,DEBIT T MOBILE <NUM> MARKET WAY HOUSTON <NUM> 1108TX USA,MOBILE,Utilities,debit,-121.23,2026-04-21,acc-applecard,Apple Card,Credit Card,1
+tx-061565,[debit] Carl's Jr #998 Salt Lake City,DEBIT CARL S JR 998 SALT LAKE CITY,CARL,Restaurants,debit,-16.32,2026-04-21,acc-capitalone,Capital One,Savings Account,0
+tx-040992,[debit] ALBERTSONS 4690 INDUSTRIAL ST BROOKLYN 11201 NY USA,DEBIT ALBERTSONS <NUM> INDUSTRIAL ST BROOKLYN <NUM> NY USA,ALBERTSONS,Groceries,debit,-32.73,2026-04-21,acc-applecard,Apple Card,Credit Card,0
+tx-000870,[debit] sunpass auto replenish,DEBIT SUNPASS AUTO REPLENISH,SUNPASS,Transportation,debit,-131.49,2026-04-21,acc-capitalone,Capital One,Savings Account,0
+tx-046392,[debit] LYFT *TRIP AUSTIN 0W97UC,DEBIT LYFT TRIP AUSTIN 0W97UC,LYFT,Transportation,debit,-96.10,2026-04-21,acc-applecard,Apple Card,Credit Card,0
+tx-055870,[debit] TST* UBER EATS,DEBIT TST UBER EATS,UBER,Restaurants,debit,-8.35,2026-04-22,acc-applecard,Apple Card,Credit Card,0
+tx-016515,[debit] LYFT *TRIP SACRAMENTO MRWKFZ,DEBIT LYFT TRIP SACRAMENTO MRWKFZ,LYFT,Transportation,debit,-88.88,2026-04-22,acc-applecard,Apple Card,Credit Card,0
+tx-023667,[debit] NAPA AUTO.COM,DEBIT NAPA AUTO COM,NAPA,Transportation,debit,-128.49,2026-04-22,acc-applecard,Apple Card,Credit Card,0
+tx-015233,[credit] FRESHMARKE #2370,CREDIT FRESHMARKE <NUM>,FRESHMARKE,Groceries,credit,57.77,2026-04-23,acc-chase,Chase,Current Account,0
+tx-019820,[debit] CENTURY 21 #494,DEBIT CENTURY 21 494,CENTURY,Shopping,debit,-10.41,2026-04-24,acc-chase,Chase,Current Account,0
+tx-056688,[debit] AMZN MKTP US*QTKTBQEEF,DEBIT AMZN MKTP US QTKTBQEEF,AMZN,Shopping,debit,-14.05,2026-04-24,acc-chase,Chase,Current Account,0
+tx-017991,[debit] Quiktrip*whqjfyqmo,DEBIT QUIKTRIP WHQJFYQMO,QUIKTRIP,Transportation,debit,-117.23,2026-04-25,acc-chase,Chase,Current Account,0
+tx-033057,[debit] TRAMPOLINE PARK 5007 CENTER BLVD NASHVILLE37201 TN USA,DEBIT TRAMPOLINE PARK <NUM> CENTER BLVD NASHVILLE37201 TN USA,TRAMPOLINE,Entertainment,debit,-38.63,2026-04-25,acc-applecard,Apple Card,Credit Card,0
+tx-065422,[debit] Escape Room 2634 Oak Blvd Denver80201 Co Usa,DEBIT ESCAPE ROOM <NUM> OAK BLVD DENVER80201 CO USA,ESCAPE,Entertainment,debit,-58.98,2026-04-25,acc-applecard,Apple Card,Credit Card,0
+tx-002402,[debit] ULTA SALON 85168,DEBIT ULTA SALON <NUM>,SALON,Personal Care,debit,-21.66,2026-04-25,acc-applecard,Apple Card,Credit Card,0
+tx-065168,[debit] NON-NETWORK ATM FEE - 39/05,DEBIT NON NETWORK ATM FEE 39 05,NON,Fees,debit,-28.72,2026-04-25,acc-applecard,Apple Card,Credit Card,0
+tx-006706,[debit] LYFT *TRIP BROOKLYN J4QRFI,DEBIT LYFT TRIP BROOKLYN J4QRFI,LYFT,Transportation,debit,-110.56,2026-04-26,acc-applecard,Apple Card,Credit Card,0
+tx-025926,[debit] WAWA #709 PHILADELPHIA,DEBIT WAWA 709 PHILADELPHIA,WAWA,Transportation,debit,-249.15,2026-04-26,acc-chase,Chase,Current Account,0
+tx-000839-m13,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3763.96,2026-04-27,acc-chase,Chase,Current Account,1
+tx-018355,[debit] FRESH MARKET #638,DEBIT FRESH MARKET 638,FRESH,Groceries,debit,-71.60,2026-04-27,acc-capitalone,Capital One,Savings Account,0
+tx-012591,[debit] TICKETMASTER 3716 ELM DR CHICAGO60601 IL USA,DEBIT TICKETMASTER <NUM> ELM DR CHICAGO60601 IL USA,TICKETMASTER,Entertainment,debit,-18.24,2026-04-27,acc-applecard,Apple Card,Credit Card,0
+tx-020622,[debit] M&T BANK XFER DDA TO DDAXRSHYRQC WEB ID: HO7KJL1MV8,DEBIT M T BANK XFER DDA TO DDAXRSHYRQC WEB ID HO7KJL1MV8,DDAXRSHYRQC,Transfer,debit,-656.39,2026-04-27,acc-chase,Chase,Current Account,0
+tx-007619-m06,[debit] Withdrawal from VERIZON GAS,DEBIT WITHDRAWAL FROM VERIZON GAS,VERIZON,Utilities,debit,-126.51,2026-04-28,acc-capitalone,Capital One,Savings Account,1
+tx-002839,[debit] SMOG STATION; BILLING,DEBIT SMOG STATION BILLING,STATION,Transportation,debit,-142.50,2026-04-28,acc-capitalone,Capital One,Savings Account,0
+tx-066229,[debit] lion supermarket 1907 san jose,DEBIT LION SUPERMARKET <NUM> SAN JOSE,LION,Groceries,debit,-50.71,2026-04-30,acc-capitalone,Capital One,Savings Account,0
+tx-020606,[debit] Amazon.com*3QG2H5B0WK,DEBIT AMAZON COM 3QG2H5B0WK,AMAZON,Shopping,debit,-25.35,2026-05-01,acc-chase,Chase,Current Account,0
+tx-003208,[debit] SMARTFINAL #94291 MINNEAPO,DEBIT SMARTFINAL <NUM> MINNEAPO,SMARTFINAL,Groceries,debit,-117.19,2026-05-02,acc-capitalone,Capital One,Savings Account,0
+tx-026891,[debit] BONCHON #521 OAKLAND,DEBIT BONCHON 521 OAKLAND,BONCHON,Restaurants,debit,-41.62,2026-05-03,acc-applecard,Apple Card,Credit Card,0
+tx-057090-m07,[debit] invitation homes rent pmt 28582933 web id: xg26tpe4,DEBIT INVITATION HOMES RENT PMT <NUM> WEB ID XG26TPE4,INVITATION,Rent,debit,-1311.20,2026-05-04,acc-chase,Chase,Current Account,1
+tx-034467,[debit] wingstop newark 1095,DEBIT WINGSTOP NEWARK <NUM>,WINGSTOP,Restaurants,debit,-2.20,2026-05-04,acc-capitalone,Capital One,Savings Account,0
+tx-019141,[debit] TRAMPOLINE PARK CORP,DEBIT TRAMPOLINE PARK CORP,TRAMPOLINE,Entertainment,debit,-92.80,2026-05-04,acc-applecard,Apple Card,Credit Card,0
+tx-012614,[credit] ROYAL CARIBBEAN LINE,CREDIT ROYAL CARIBBEAN LINE,ROYAL,Travel,credit,284.07,2026-05-05,acc-applecard,Apple Card,Credit Card,0
+tx-065687-m07,[debit] NATIONWIDE 9777 INDUSTRIAL CT NEWARK07101 NJ USA,DEBIT NATIONWIDE <NUM> INDUSTRIAL CT NEWARK07101 NJ USA,NATIONWIDE,Insurance,debit,-98.66,2026-05-06,acc-applecard,Apple Card,Credit Card,1
+tx-033811,[debit] Applebee's 2838 Market Ct Newark 07101 Nj Usa,DEBIT APPLEBEE S <NUM> MARKET CT NEWARK <NUM> NJ USA,APPLEBEE,Restaurants,debit,-39.75,2026-05-06,acc-applecard,Apple Card,Credit Card,0
+tx-055532,[credit] BART 4785,CREDIT BART <NUM>,BART,Transportation,credit,92.36,2026-05-06,acc-capitalone,Capital One,Savings Account,0
+tx-028098,[debit] GOLF COURSE 3995 MISSION RD ATLANTA 30301 GA USA,DEBIT GOLF COURSE <NUM> MISSION RD ATLANTA <NUM> GA USA,COURSE,Entertainment,debit,-46.78,2026-05-07,acc-applecard,Apple Card,Credit Card,0
+tx-067284-m07,[debit] PARAMOUNT+* Monthly,DEBIT PARAMOUNT MONTHLY,PARAMOUNT,Subscription,debit,-23.35,2026-05-08,acc-chase,Chase,Current Account,1
+tx-065993,[debit] TST* SAKURA SUSHI - RALEIGH,DEBIT TST SAKURA SUSHI RALEIGH,SAKURA,Restaurants,debit,-13.23,2026-05-08,acc-applecard,Apple Card,Credit Card,0
+tx-040686-m07,[debit] Ladder 4953 Broadway Ct Phoenix 85001-4410az Usa,DEBIT LADDER <NUM> BROADWAY CT PHOENIX <NUM> 4410AZ USA,LADDER,Insurance,debit,-116.97,2026-05-09,acc-applecard,Apple Card,Credit Card,1
+tx-006744-m07,[debit] Withdrawal from STARLINK CABLE,DEBIT WITHDRAWAL FROM STARLINK CABLE,STARLINK,Utilities,debit,-152.42,2026-05-09,acc-capitalone,Capital One,Savings Account,1
+tx-024214,[debit] PREAUTHORIZED WITHDRAWAL TO WMATA,DEBIT PREAUTHORIZED WITHDRAWAL TO WMATA,WMATA,Transportation,debit,-44.06,2026-05-09,acc-capitalone,Capital One,Savings Account,0
+tx-038238-m07,[debit] DISCORD NITRO* Credit Report,DEBIT DISCORD NITRO CREDIT REPORT,DISCORD,Subscription,debit,-22.71,2026-05-10,acc-capitalone,Capital One,Savings Account,1
+tx-050478,[debit] PAYPAL INST XFER THAI BASIL WEB ID: PAYPALSI90,DEBIT PAYPAL INST XFER THAI BASIL WEB ID PAYPALSI90,THAI,Restaurants,debit,-39.79,2026-05-10,acc-chase,Chase,Current Account,0
+tx-036252,[debit] KROGER 5990 PHILADELPHIA,DEBIT KROGER <NUM> PHILADELPHIA,KROGER,Groceries,debit,-52.66,2026-05-10,acc-chase,Chase,Current Account,0
+tx-044927,[debit] MARATHON - UNION CITY,DEBIT MARATHON UNION CITY,MARATHON,Transportation,debit,-90.26,2026-05-10,acc-chase,Chase,Current Account,0
+tx-040984,[debit] Card Replacement Fee - 40/82,DEBIT CARD REPLACEMENT FEE 40 82,REPLACEMENT,Fees,debit,-43.75,2026-05-10,acc-capitalone,Capital One,Savings Account,0
+tx-038543,[debit] SNAPFISH #4386 UNION CITY,DEBIT SNAPFISH <NUM> UNION CITY,SNAPFISH,Shopping,debit,-41.18,2026-05-11,acc-applecard,Apple Card,Credit Card,0
+tx-004733-m07,[debit] APPLE.COM/BILL 8959 CENTER LN SEATTLE 98101 WA USA,DEBIT APPLE COM BILL <NUM> CENTER LN SEATTLE <NUM> WA USA,APPLE,Subscription,debit,-26.11,2026-05-12,acc-applecard,Apple Card,Credit Card,1
+tx-047250,[debit] FATBURGER 4462 UNIVERSITY LN NEW YORK10001 NY USA,DEBIT FATBURGER <NUM> UNIVERSITY LN NEW YORK10001 NY USA,FATBURGER,Restaurants,debit,-35.14,2026-05-12,acc-applecard,Apple Card,Credit Card,0
+tx-049346,[debit] UBER EATS*SUSHI SPOT,DEBIT UBER EATS SUSHI SPOT,UBER,Restaurants,debit,-28.61,2026-05-12,acc-chase,Chase,Current Account,0
+tx-014548,[debit] DR BROWN PEDIATRICS,DEBIT DR BROWN PEDIATRICS,BROWN,Healthcare,debit,-178.17,2026-05-12,acc-chase,Chase,Current Account,0
+tx-008445,[credit] NORDSTROM,CREDIT NORDSTROM,NORDSTROM,Shopping,credit,17.21,2026-05-12,acc-capitalone,Capital One,Savings Account,0
+tx-000839-m14,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3740.37,2026-05-13,acc-chase,Chase,Current Account,1
+tx-053316-m07,[debit] PAYPAL INST XFER SENDGRID WEB ID: PAYPALSI36,DEBIT PAYPAL INST XFER SENDGRID WEB ID PAYPALSI36,SENDGRID,Subscription,debit,-28.18,2026-05-13,acc-chase,Chase,Current Account,1
+tx-046134,[debit] RUTH'S CHRIS #841 DENVER,DEBIT RUTH S CHRIS 841 DENVER,RUTH,Restaurants,debit,-17.96,2026-05-13,acc-chase,Chase,Current Account,0
+tx-052800,[debit] NAAN N CURRY - SAN DIEGO,DEBIT NAAN N CURRY SAN DIEGO,NAAN,Restaurants,debit,-4.82,2026-05-13,acc-applecard,Apple Card,Credit Card,0
+tx-005447,[debit] Quiktrip*3k0p4k7nrwdz,DEBIT QUIKTRIP 3K0P4K7NRWDZ,QUIKTRIP,Transportation,debit,-131.05,2026-05-13,acc-chase,Chase,Current Account,0
+tx-003063,[debit] SOMISOMI,DEBIT SOMISOMI,SOMISOMI,Restaurants,debit,-17.99,2026-05-14,acc-applecard,Apple Card,Credit Card,0
+tx-044616,[debit] JERK CHICKEN 1950 ELM CT SAN DIEGO 92101 CA USA,DEBIT JERK CHICKEN <NUM> ELM CT SAN DIEGO <NUM> CA USA,JERK,Restaurants,debit,-17.79,2026-05-14,acc-applecard,Apple Card,Credit Card,0
+tx-052340,[debit] Shaw's #8574 Phoenix,DEBIT SHAW S <NUM> PHOENIX,SHAW,Groceries,debit,-21.84,2026-05-14,acc-applecard,Apple Card,Credit Card,0
+tx-031511,[debit] LYFT *TRIP SALT LAKE CITY BFFVOX,DEBIT LYFT TRIP SALT LAKE CITY BFFVOX,LYFT,Transportation,debit,-229.01,2026-05-14,acc-capitalone,Capital One,Savings Account,0
+tx-032794,[debit] JACKINTHEBOX SAN JOSE,DEBIT JACKINTHEBOX SAN JOSE,JACKINTHEBOX,Restaurants,debit,-21.42,2026-05-15,acc-chase,Chase,Current Account,0
+tx-007044,[debit] Chick-fil-a Houston 5952,DEBIT CHICK FIL A HOUSTON <NUM>,CHICK,Restaurants,debit,-24.86,2026-05-15,acc-applecard,Apple Card,Credit Card,0
+tx-029341,[debit] SQ *DEL TACO #801,DEBIT SQ DEL TACO 801,DEL,Restaurants,debit,-56.22,2026-05-15,acc-applecard,Apple Card,Credit Card,0
+tx-018500,[debit] BETRIVERS 2906 MAIN ST NEWARK07101 NJ USA,DEBIT BETRIVERS <NUM> MAIN ST NEWARK07101 NJ USA,BETRIVERS,Entertainment,debit,-28.14,2026-05-15,acc-applecard,Apple Card,Credit Card,0
+tx-006372,[debit] SHUTTERFLY #463,DEBIT SHUTTERFLY 463,SHUTTERFLY,Shopping,debit,-8.00,2026-05-15,acc-capitalone,Capital One,Savings Account,0
+tx-046760,[debit] PAYPAL INST XFER SMOG STATION WEB ID: PAYPALSI65,DEBIT PAYPAL INST XFER SMOG STATION WEB ID PAYPALSI65,STATION,Transportation,debit,-105.51,2026-05-16,acc-chase,Chase,Current Account,0
+tx-036960,[debit] WMATA 7016 INDUSTRIAL LN MIAMI 33101-5373FL USA,DEBIT WMATA <NUM> INDUSTRIAL LN MIAMI <NUM> 5373FL USA,WMATA,Transportation,debit,-69.46,2026-05-16,acc-applecard,Apple Card,Credit Card,0
+tx-026195,[debit] SPORT CLIPS #376 UNION CITY,DEBIT SPORT CLIPS 376 UNION CITY,SPORT,Personal Care,debit,-40.88,2026-05-16,acc-chase,Chase,Current Account,0
+tx-048902,[debit] SPORTS CLIPS 5810 BROADWAY BLVD SALT LAKE CITY 84101-5167UT USA,DEBIT SPORTS CLIPS <NUM> BROADWAY BLVD SALT LAKE CITY <NUM> 5167UT USA,SPORTS,Personal Care,debit,-18.92,2026-05-16,acc-applecard,Apple Card,Credit Card,0
+tx-007743,[debit] himalayan kitchen,DEBIT HIMALAYAN KITCHEN,HIMALAYAN,Restaurants,debit,-15.14,2026-05-17,acc-capitalone,Capital One,Savings Account,0
+tx-002518,[debit] SAFEWAY #980,DEBIT SAFEWAY 980,SAFEWAY,Groceries,debit,-63.92,2026-05-17,acc-chase,Chase,Current Account,0
+tx-012192,[debit] DRIVING RANGE LLC,DEBIT DRIVING RANGE LLC,DRIVING,Entertainment,debit,-22.56,2026-05-17,acc-chase,Chase,Current Account,0
+tx-064330,[debit] Kindle Unltd*PWU08TDC1FK,DEBIT KINDLE UNLTD PWU08TDC1FK,UNLTD,Shopping,debit,-22.66,2026-05-17,acc-capitalone,Capital One,Savings Account,0
+tx-011286,[debit] SHELL*DWSTU6O65,DEBIT SHELL DWSTU6O65,SHELL,Transportation,debit,-53.16,2026-05-18,acc-applecard,Apple Card,Credit Card,0
+tx-064059,[debit] Swimming Pool 4983 Oak Rd Newark07101 Nj Usa,DEBIT SWIMMING POOL <NUM> OAK RD NEWARK07101 NJ USA,SWIMMING,Entertainment,debit,-19.61,2026-05-19,acc-applecard,Apple Card,Credit Card,0
+tx-024021,[debit] Marshalls #604,DEBIT MARSHALLS 604,MARSHALLS,Shopping,debit,-40.67,2026-05-19,acc-chase,Chase,Current Account,0
+tx-010798,[debit] TST*POPEYES - MINNEAPOLIS,DEBIT TST POPEYES MINNEAPOLIS,POPEYES,Restaurants,debit,-8.72,2026-05-20,acc-chase,Chase,Current Account,0
+tx-004624,[debit] H-E-B #525,DEBIT H E B 525,UNKNOWN,Groceries,debit,-34.89,2026-05-20,acc-applecard,Apple Card,Credit Card,0
+tx-000125,[debit] BP #0097 COLUMBUS,DEBIT BP <NUM> COLUMBUS,COLUMBUS,Transportation,debit,-110.20,2026-05-20,acc-chase,Chase,Current Account,0
+tx-039284-m07,[debit] T-mobile 3197 Market Way Houston 77001-1108tx Usa,DEBIT T MOBILE <NUM> MARKET WAY HOUSTON <NUM> 1108TX USA,MOBILE,Utilities,debit,-120.28,2026-05-21,acc-applecard,Apple Card,Credit Card,1
+tx-056479,[debit] Natural Por #633,DEBIT NATURAL POR 633,NATURAL,Groceries,debit,-52.46,2026-05-22,acc-applecard,Apple Card,Credit Card,0
+tx-051647,[debit] Winn-dixie Ind #2620,DEBIT WINN DIXIE IND <NUM>,WINN,Groceries,debit,-81.16,2026-05-24,acc-capitalone,Capital One,Savings Account,0
+tx-053138,[debit] axstickets 7408 university dr union city 94587 ca usa,DEBIT AXSTICKETS <NUM> UNIVERSITY DR UNION CITY <NUM> CA USA,AXSTICKETS,Entertainment,debit,-42.05,2026-05-24,acc-applecard,Apple Card,Credit Card,0
+tx-040993,[debit] AMAZON MKTPL*AU3VDZRIW,DEBIT AMAZON MKTPL AU3VDZRIW,AMAZON,Shopping,debit,-16.81,2026-05-24,acc-applecard,Apple Card,Credit Card,0
+tx-019680,[debit] PAYPAL *WEGMANS 25PH0QKAF8,DEBIT PAYPAL WEGMANS 25PH0QKAF8,WEGMANS,Groceries,debit,-87.82,2026-05-26,acc-applecard,Apple Card,Credit Card,0
+tx-050854,[debit] TRUIST DDA TO DDA REFCODE Q3CCZ143 WEB ID: H1YPTRAH3Q,DEBIT TRUIST DDA TO DDA REFCODE Q3CCZ143 WEB ID H1YPTRAH3Q,TRUIST,Transfer,debit,-494.66,2026-05-26,acc-chase,Chase,Current Account,0
+tx-000839-m15,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3712.31,2026-05-27,acc-chase,Chase,Current Account,1
+tx-020087,[debit] Wegmans #379,DEBIT WEGMANS 379,WEGMANS,Groceries,debit,-78.57,2026-05-27,acc-applecard,Apple Card,Credit Card,0
+tx-007619-m07,[debit] Withdrawal from VERIZON GAS,DEBIT WITHDRAWAL FROM VERIZON GAS,VERIZON,Utilities,debit,-120.97,2026-05-28,acc-capitalone,Capital One,Savings Account,1
+tx-036284,[debit] PAYPAL INST XFER INSTACART WEB ID: PAYPALSI18,DEBIT PAYPAL INST XFER INSTACART WEB ID PAYPALSI18,INSTACART,Restaurants,debit,-15.84,2026-05-28,acc-chase,Chase,Current Account,0
+tx-051928,[debit] AMC THEATRES #501 LOS ANGELES,DEBIT AMC THEATRES 501 LOS ANGELES,AMC,Entertainment,debit,-43.66,2026-05-29,acc-capitalone,Capital One,Savings Account,0
+tx-000038,[debit] Wholefds Fre #3941 New York,DEBIT WHOLEFDS FRE <NUM> NEW YORK,WHOLEFDS,Groceries,debit,-50.82,2026-05-30,acc-chase,Chase,Current Account,0
+tx-015670,[debit] MOBIL #30019 SACRAMENTO,DEBIT MOBIL <NUM> SACRAMENTO,MOBIL,Transportation,debit,-136.82,2026-05-30,acc-capitalone,Capital One,Savings Account,0
+tx-010970,[debit] SAFELITE - HOUSTON,DEBIT SAFELITE HOUSTON,SAFELITE,Transportation,debit,-64.66,2026-05-30,acc-capitalone,Capital One,Savings Account,0
+tx-014354,[credit] AQUARIUM,CREDIT AQUARIUM,AQUARIUM,Entertainment,credit,32.67,2026-05-30,acc-capitalone,Capital One,Savings Account,0
+tx-063804,[debit] SAM'S CLUB 8438 BROOKLYN,DEBIT SAM S CLUB <NUM> BROOKLYN,SAM,Groceries,debit,-49.90,2026-06-01,acc-capitalone,Capital One,Savings Account,0
+tx-010936,[debit] MASTER SHIN #451 PITTSBURGH,DEBIT MASTER SHIN 451 PITTSBURGH,MASTER,Restaurants,debit,-22.65,2026-06-02,acc-chase,Chase,Current Account,0
+tx-038534,[debit] Preauthorized Withdrawal to MAYO CLINIC,DEBIT PREAUTHORIZED WITHDRAWAL TO MAYO CLINIC,MAYO,Healthcare,debit,-264.59,2026-06-02,acc-applecard,Apple Card,Credit Card,0
+tx-053110,[debit] PAYPAL *PYPL PHO SAIGON,DEBIT PAYPAL PYPL PHO SAIGON,SAIGON,Restaurants,debit,-29.15,2026-06-03,acc-capitalone,Capital One,Savings Account,0
+tx-051064,[debit] PHILLIPS 66 - AUSTIN,DEBIT PHILLIPS 66 AUSTIN,PHILLIPS,Transportation,debit,-74.05,2026-06-03,acc-applecard,Apple Card,Credit Card,0
+tx-005945,[debit] AMZN MKTP US*RSI52J81WC,DEBIT AMZN MKTP US RSI52J81WC,AMZN,Shopping,debit,-9.56,2026-06-03,acc-applecard,Apple Card,Credit Card,0
+tx-044194,[debit] WALGREENS #7956 NEW YORK,DEBIT WALGREENS <NUM> NEW YORK,WALGREENS,Shopping,debit,-11.47,2026-06-03,acc-chase,Chase,Current Account,0
+tx-057090-m08,[debit] invitation homes rent pmt 28582933 web id: xg26tpe4,DEBIT INVITATION HOMES RENT PMT <NUM> WEB ID XG26TPE4,INVITATION,Rent,debit,-1327.81,2026-06-04,acc-chase,Chase,Current Account,1
+tx-062061,[debit] Zelle payment to LINDA NGUYEN TAMPA FL 28659413866,DEBIT ZELLE PAYMENT TO LINDA NGUYEN TAMPA FL <NUM>,ZELLE,Transfer,debit,-307.01,2026-06-04,acc-capitalone,Capital One,Savings Account,0
+tx-014604,[debit] Mta 1892 Main St Pittsburgh 15201 Pa Usa,DEBIT MTA <NUM> MAIN ST PITTSBURGH <NUM> PA USA,MTA,Transportation,debit,-93.73,2026-06-05,acc-applecard,Apple Card,Credit Card,0
+tx-003524,[debit] MASSAGE ENVY,DEBIT MASSAGE ENVY,ENVY,Personal Care,debit,-98.15,2026-06-05,acc-capitalone,Capital One,Savings Account,0
+tx-065687-m08,[debit] NATIONWIDE 9777 INDUSTRIAL CT NEWARK07101 NJ USA,DEBIT NATIONWIDE <NUM> INDUSTRIAL CT NEWARK07101 NJ USA,NATIONWIDE,Insurance,debit,-95.14,2026-06-06,acc-applecard,Apple Card,Credit Card,1
+tx-039166,[credit] QUIKTRIP #07402 MINNEAPOLIS,CREDIT QUIKTRIP <NUM> MINNEAPOLIS,QUIKTRIP,Transportation,credit,92.75,2026-06-07,acc-chase,Chase,Current Account,0
+tx-067284-m08,[debit] PARAMOUNT+* Monthly,DEBIT PARAMOUNT MONTHLY,PARAMOUNT,Subscription,debit,-22.54,2026-06-08,acc-chase,Chase,Current Account,1
+tx-021870,[debit] PAYPAL PAYMENT TO KIMBERLY ROBINSON,DEBIT PAYPAL PAYMENT TO KIMBERLY ROBINSON,KIMBERLY,Transfer,debit,-265.90,2026-06-08,acc-applecard,Apple Card,Credit Card,0
+tx-040686-m08,[debit] Ladder 4953 Broadway Ct Phoenix 85001-4410az Usa,DEBIT LADDER <NUM> BROADWAY CT PHOENIX <NUM> 4410AZ USA,LADDER,Insurance,debit,-113.09,2026-06-09,acc-applecard,Apple Card,Credit Card,1
+tx-006744-m08,[debit] Withdrawal from STARLINK CABLE,DEBIT WITHDRAWAL FROM STARLINK CABLE,STARLINK,Utilities,debit,-154.36,2026-06-09,acc-capitalone,Capital One,Savings Account,1
+tx-017106,[debit] jack in the box san francisco 8786,DEBIT JACK IN THE BOX SAN FRANCISCO <NUM>,JACK,Restaurants,debit,-14.48,2026-06-09,acc-chase,Chase,Current Account,0
+tx-038238-m08,[debit] DISCORD NITRO* Credit Report,DEBIT DISCORD NITRO CREDIT REPORT,DISCORD,Subscription,debit,-22.79,2026-06-10,acc-capitalone,Capital One,Savings Account,1
+tx-053610,[debit] PAYPAL INST XFER UBER EATS WEB ID: PAYPALSI40,DEBIT PAYPAL INST XFER UBER EATS WEB ID PAYPALSI40,UBER,Restaurants,debit,-12.61,2026-06-10,acc-chase,Chase,Current Account,0
+tx-041920,[debit] PYPL *FATBURGER,DEBIT PYPL FATBURGER,FATBURGER,Restaurants,debit,-22.71,2026-06-10,acc-capitalone,Capital One,Savings Account,0
+tx-044593,[debit] FASTRAK TOLL PMT WEB ID: VENQT6QU,DEBIT FASTRAK TOLL PMT WEB ID VENQT6QU,FASTRAK,Transportation,debit,-73.31,2026-06-10,acc-chase,Chase,Current Account,0
+tx-043581,[debit] FOOD LION 3498 CENTER DR BROOKLYN 11201-4989NY USA,DEBIT FOOD LION <NUM> CENTER DR BROOKLYN <NUM> 4989NY USA,LION,Groceries,debit,-83.54,2026-06-11,acc-applecard,Apple Card,Credit Card,0
+tx-056133,[debit] NATURALGR #41233,DEBIT NATURALGR <NUM>,NATURALGR,Groceries,debit,-90.54,2026-06-11,acc-applecard,Apple Card,Credit Card,0
+tx-036990,[debit] PAYPAL INST XFER 24 HOUR FITNESS WEB ID: PAYPALSI25,DEBIT PAYPAL INST XFER 24 HOUR FITNESS WEB ID PAYPALSI25,HOUR,Personal Care,debit,-66.70,2026-06-11,acc-chase,Chase,Current Account,0
+tx-040760,[debit] Express Checkout Payment: Ebay,DEBIT EXPRESS CHECKOUT PAYMENT EBAY,EBAY,Shopping,debit,-24.71,2026-06-11,acc-chase,Chase,Current Account,0
+tx-004733-m08,[debit] APPLE.COM/BILL 8959 CENTER LN SEATTLE 98101 WA USA,DEBIT APPLE COM BILL <NUM> CENTER LN SEATTLE <NUM> WA USA,APPLE,Subscription,debit,-25.61,2026-06-12,acc-applecard,Apple Card,Credit Card,1
+tx-048253,[debit] SHELL - BROOKLYN,DEBIT SHELL BROOKLYN,SHELL,Transportation,debit,-93.71,2026-06-12,acc-applecard,Apple Card,Credit Card,0
+tx-000839-m16,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3656.18,2026-06-13,acc-chase,Chase,Current Account,1
+tx-053316-m08,[debit] PAYPAL INST XFER SENDGRID WEB ID: PAYPALSI36,DEBIT PAYPAL INST XFER SENDGRID WEB ID PAYPALSI36,SENDGRID,Subscription,debit,-27.20,2026-06-13,acc-chase,Chase,Current Account,1
+tx-060036,[debit] TOPGOLF - BOSTON,DEBIT TOPGOLF BOSTON,TOPGOLF,Entertainment,debit,-35.67,2026-06-14,acc-capitalone,Capital One,Savings Account,0
+tx-026950,[credit] REGAL CINEMAS - DENVER,CREDIT REGAL CINEMAS DENVER,REGAL,Entertainment,credit,42.20,2026-06-15,acc-applecard,Apple Card,Credit Card,0
+tx-035693,[credit] Swimming Pool - Minneapolis,CREDIT SWIMMING POOL MINNEAPOLIS,SWIMMING,Entertainment,credit,35.35,2026-06-15,acc-applecard,Apple Card,Credit Card,0
+tx-047197,[debit] Newegg #258,DEBIT NEWEGG 258,NEWEGG,Shopping,debit,-16.90,2026-06-16,acc-capitalone,Capital One,Savings Account,0
+tx-036491,[debit] WALGREENS 8032 OAK WAY DALLAS 75201 TX USA,DEBIT WALGREENS <NUM> OAK WAY DALLAS <NUM> TX USA,WALGREENS,Healthcare,debit,-267.85,2026-06-17,acc-applecard,Apple Card,Credit Card,0
+tx-043944,[debit] Kroger 2485 Minneapolis,DEBIT KROGER <NUM> MINNEAPOLIS,KROGER,Groceries,debit,-40.49,2026-06-18,acc-applecard,Apple Card,Credit Card,0
+tx-027191,[debit] citgo #434 dallas,DEBIT CITGO 434 DALLAS,CITGO,Transportation,debit,-158.11,2026-06-20,acc-chase,Chase,Current Account,0
+tx-039284-m08,[debit] T-mobile 3197 Market Way Houston 77001-1108tx Usa,DEBIT T MOBILE <NUM> MARKET WAY HOUSTON <NUM> 1108TX USA,MOBILE,Utilities,debit,-118.87,2026-06-21,acc-applecard,Apple Card,Credit Card,1
+tx-041424,[debit] GENTLE DENTAL 5413 OAK LN CHICAGO 60601-9014IL USA,DEBIT GENTLE DENTAL <NUM> OAK LN CHICAGO <NUM> 9014IL USA,GENTLE,Healthcare,debit,-129.54,2026-06-21,acc-applecard,Apple Card,Credit Card,0
+tx-030381,[credit] WIX #1164 TAMPA,CREDIT WIX <NUM> TAMPA,WIX,Shopping,credit,5.92,2026-06-21,acc-applecard,Apple Card,Credit Card,0
+tx-007316,[debit] asian supermarket 1906 park ave houston 77001-1837tx usa,DEBIT ASIAN SUPERMARKET <NUM> PARK AVE HOUSTON <NUM> 1837TX USA,ASIAN,Groceries,debit,-148.03,2026-06-23,acc-applecard,Apple Card,Credit Card,0
+tx-000886,[debit] Lyft *trip Hayward Sz8zmj,DEBIT LYFT TRIP HAYWARD SZ8ZMJ,LYFT,Transportation,debit,-144.57,2026-06-23,acc-chase,Chase,Current Account,0
+tx-045924,[debit] PAYPAL INST XFER CTA WEB ID: PAYPALSI74,DEBIT PAYPAL INST XFER CTA WEB ID PAYPALSI74,CTA,Transportation,debit,-101.83,2026-06-23,acc-chase,Chase,Current Account,0
+tx-032046,[debit] wendy's - las vegas,DEBIT WENDY S LAS VEGAS,WENDY,Restaurants,debit,-7.73,2026-06-24,acc-chase,Chase,Current Account,0
+tx-039274,[debit] WAWA #471 OAKLAND,DEBIT WAWA 471 OAKLAND,WAWA,Transportation,debit,-36.94,2026-06-25,acc-capitalone,Capital One,Savings Account,0
+tx-000839-m17,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3757.72,2026-06-27,acc-chase,Chase,Current Account,1
+tx-002931,[debit] MASTER SHIN,DEBIT MASTER SHIN,MASTER,Restaurants,debit,-19.81,2026-06-27,acc-capitalone,Capital One,Savings Account,0
+tx-000844,[debit] SHEETZ,DEBIT SHEETZ,SHEETZ,Transportation,debit,-140.59,2026-06-27,acc-chase,Chase,Current Account,0
+tx-007619-m08,[debit] Withdrawal from VERIZON GAS,DEBIT WITHDRAWAL FROM VERIZON GAS,VERIZON,Utilities,debit,-125.34,2026-06-28,acc-capitalone,Capital One,Savings Account,1
+tx-047225,[debit] HORATIO'S*KSS3B5MS91DI,DEBIT HORATIO S KSS3B5MS91DI,HORATIO,Restaurants,debit,-22.85,2026-06-28,acc-applecard,Apple Card,Credit Card,0
+tx-053941,[debit] FOOD LION 939 INDUSTRIAL CT HAYWARD 94541-2437CA USA,DEBIT FOOD LION 939 INDUSTRIAL CT HAYWARD <NUM> 2437CA USA,LION,Groceries,debit,-73.52,2026-06-28,acc-applecard,Apple Card,Credit Card,0
+tx-001182,[debit] SHELL - TAMPA,DEBIT SHELL TAMPA,SHELL,Transportation,debit,-124.12,2026-06-28,acc-capitalone,Capital One,Savings Account,0
+tx-039934,[debit] CLV*fatburger,DEBIT CLV FATBURGER,FATBURGER,Restaurants,debit,-46.35,2026-06-29,acc-capitalone,Capital One,Savings Account,0
+tx-065236,[debit] TAISHOKEN RAMEN #248 RALEIGH,DEBIT TAISHOKEN RAMEN 248 RALEIGH,TAISHOKEN,Restaurants,debit,-10.91,2026-06-29,acc-chase,Chase,Current Account,0
+tx-009799,[debit] PAYPAL *LIQUOR STORE 16Z7XV7QVR,DEBIT PAYPAL LIQUOR STORE 16Z7XV7QVR,LIQUOR,Shopping,debit,-32.82,2026-06-29,acc-applecard,Apple Card,Credit Card,0
+tx-010024,[debit] PARKWHIZ*41QOPBN6RM,DEBIT PARKWHIZ 41QOPBN6RM,PARKWHIZ,Transportation,debit,-57.34,2026-06-30,acc-chase,Chase,Current Account,0
+tx-053349,[debit] Amazon.com*9MTBGVJJPC,DEBIT AMAZON COM 9MTBGVJJPC,AMAZON,Shopping,debit,-9.99,2026-07-01,acc-capitalone,Capital One,Savings Account,0
+tx-059804,[debit] WHOLE FOODS 2746 PARK AVE INDIANAPOLIS 46201-0551IN USA,DEBIT WHOLE FOODS <NUM> PARK AVE INDIANAPOLIS <NUM> 0551IN USA,WHOLE,Groceries,debit,-18.98,2026-07-02,acc-applecard,Apple Card,Credit Card,0
+tx-035008,[debit] WINN-DIXIE*97TIET5WZO,DEBIT WINN DIXIE 97TIET5WZO,WINN,Groceries,debit,-39.23,2026-07-02,acc-applecard,Apple Card,Credit Card,0
+tx-067308,[debit] STATE DMV 6821 OAK WAY PHOENIX 85001-3747AZ USA,DEBIT STATE DMV <NUM> OAK WAY PHOENIX <NUM> 3747AZ USA,DMV,Transportation,debit,-200.62,2026-07-02,acc-applecard,Apple Card,Credit Card,0
+tx-042488,[debit] Orangetheory - Atlanta,DEBIT ORANGETHEORY ATLANTA,ORANGETHEORY,Personal Care,debit,-32.30,2026-07-02,acc-chase,Chase,Current Account,0
+tx-037640,[debit] JPMORGAN CHASE DDA TO DDA 0A8IM6IMDX WEB ID: B93XU9R3EB,DEBIT JPMORGAN CHASE DDA TO DDA 0A8IM6IMDX WEB ID B93XU9R3EB,JPMORGAN,Transfer,debit,-541.88,2026-07-02,acc-chase,Chase,Current Account,0
+tx-016839,[debit] CASH APP PAYMENT TO MICHELLE CHEN,DEBIT CASH APP PAYMENT TO MICHELLE CHEN,APP,Transfer,debit,-421.83,2026-07-02,acc-capitalone,Capital One,Savings Account,0
+tx-057090-m09,[debit] invitation homes rent pmt 28582933 web id: xg26tpe4,DEBIT INVITATION HOMES RENT PMT <NUM> WEB ID XG26TPE4,INVITATION,Rent,debit,-1315.28,2026-07-04,acc-chase,Chase,Current Account,1
+tx-026498,[debit] LYFT *TRIP AUSTIN 9IYQRE,DEBIT LYFT TRIP AUSTIN 9IYQRE,LYFT,Transportation,debit,-208.49,2026-07-05,acc-capitalone,Capital One,Savings Account,0
+tx-043968,[debit] DENTAL365 9037 UNIVERSITY WAY PORTLAND97201 OR USA,DEBIT DENTAL365 <NUM> UNIVERSITY WAY PORTLAND97201 OR USA,UNIVERSITY,Healthcare,debit,-163.29,2026-07-05,acc-applecard,Apple Card,Credit Card,0
+tx-065687-m09,[debit] NATIONWIDE 9777 INDUSTRIAL CT NEWARK07101 NJ USA,DEBIT NATIONWIDE <NUM> INDUSTRIAL CT NEWARK07101 NJ USA,NATIONWIDE,Insurance,debit,-97.67,2026-07-06,acc-applecard,Apple Card,Credit Card,1
+tx-044213,[debit] PAYPAL INST XFER AQUARIUM WEB ID: PAYPALSI17,DEBIT PAYPAL INST XFER AQUARIUM WEB ID PAYPALSI17,AQUARIUM,Entertainment,debit,-68.57,2026-07-06,acc-chase,Chase,Current Account,0
+tx-027670,[debit] PYPL*Kohl's,DEBIT PYPL KOHL S,KOHL,Shopping,debit,-42.84,2026-07-06,acc-applecard,Apple Card,Credit Card,0
+tx-062835,[debit] MERCARI 7460 PARK RD MINNEAPOLIS 55401-4149MN USA,DEBIT MERCARI <NUM> PARK RD MINNEAPOLIS <NUM> 4149MN USA,MERCARI,Shopping,debit,-33.52,2026-07-06,acc-applecard,Apple Card,Credit Card,0
+tx-009384,[debit] MARATHON,DEBIT MARATHON,MARATHON,Transportation,debit,-103.78,2026-07-07,acc-applecard,Apple Card,Credit Card,0
+tx-055264,[debit] AMZN DIGITAL*1KLAZGDAZX,DEBIT AMZN DIGITAL 1KLAZGDAZX,AMZN,Shopping,debit,-20.45,2026-07-07,acc-capitalone,Capital One,Savings Account,0
+tx-067284-m09,[debit] PARAMOUNT+* Monthly,DEBIT PARAMOUNT MONTHLY,PARAMOUNT,Subscription,debit,-23.18,2026-07-08,acc-chase,Chase,Current Account,1
+tx-002768,[debit] Zelle payment to RICHARD MILLER BROOKLYN NY 76803997631,DEBIT ZELLE PAYMENT TO RICHARD MILLER BROOKLYN NY <NUM>,ZELLE,Transfer,debit,-214.36,2026-07-08,acc-applecard,Apple Card,Credit Card,0
+tx-040686-m09,[debit] Ladder 4953 Broadway Ct Phoenix 85001-4410az Usa,DEBIT LADDER <NUM> BROADWAY CT PHOENIX <NUM> 4410AZ USA,LADDER,Insurance,debit,-113.34,2026-07-09,acc-applecard,Apple Card,Credit Card,1
+tx-006744-m09,[debit] Withdrawal from STARLINK CABLE,DEBIT WITHDRAWAL FROM STARLINK CABLE,STARLINK,Utilities,debit,-148.45,2026-07-09,acc-capitalone,Capital One,Savings Account,1
+tx-025042,[debit] PAYPAL *PYPL BURGER KING,DEBIT PAYPAL PYPL BURGER KING,BURGER,Restaurants,debit,-13.67,2026-07-09,acc-capitalone,Capital One,Savings Account,0
+tx-038238-m09,[debit] DISCORD NITRO* Credit Report,DEBIT DISCORD NITRO CREDIT REPORT,DISCORD,Subscription,debit,-23.27,2026-07-10,acc-capitalone,Capital One,Savings Account,1
+tx-015861,[debit] PAYPAL INST XFER DUTCH BROS WEB ID: PAYPALSI00,DEBIT PAYPAL INST XFER DUTCH BROS WEB ID PAYPALSI00,DUTCH,Restaurants,debit,-22.72,2026-07-10,acc-chase,Chase,Current Account,0
+tx-064455,[debit] Meijer #7345 Newark,DEBIT MEIJER <NUM> NEWARK,MEIJER,Groceries,debit,-34.09,2026-07-10,acc-chase,Chase,Current Account,0
+tx-009275,[debit] DRAFTKINGS 8856 BROADWAY WAY SEATTLE98101 WA USA,DEBIT DRAFTKINGS <NUM> BROADWAY WAY SEATTLE98101 WA USA,DRAFTKINGS,Entertainment,debit,-50.51,2026-07-10,acc-applecard,Apple Card,Credit Card,0
+tx-009207,[debit] AMAZON MARKTPLACE*UTMY6NZR,DEBIT AMAZON MARKTPLACE UTMY6NZR,MARKTPLACE,Shopping,debit,-22.37,2026-07-10,acc-chase,Chase,Current Account,0
+tx-009395,[debit] Lyft *trip Queens L28vps,DEBIT LYFT TRIP QUEENS L28VPS,LYFT,Transportation,debit,-101.31,2026-07-11,acc-applecard,Apple Card,Credit Card,0
+tx-027743,[debit] Steam,DEBIT STEAM,STEAM,Entertainment,debit,-27.41,2026-07-11,acc-capitalone,Capital One,Savings Account,0
+tx-004733-m09,[debit] APPLE.COM/BILL 8959 CENTER LN SEATTLE 98101 WA USA,DEBIT APPLE COM BILL <NUM> CENTER LN SEATTLE <NUM> WA USA,APPLE,Subscription,debit,-26.36,2026-07-12,acc-applecard,Apple Card,Credit Card,1
+tx-026114,[debit] JACKINTHEBOX HOUSTON,DEBIT JACKINTHEBOX HOUSTON,JACKINTHEBOX,Restaurants,debit,-10.37,2026-07-12,acc-capitalone,Capital One,Savings Account,0
+tx-026187,[debit] NAAN N CURRY*5BK4G5TTT,DEBIT NAAN N CURRY 5BK4G5TTT,NAAN,Restaurants,debit,-12.26,2026-07-12,acc-chase,Chase,Current Account,0
+tx-042150,[debit] INNOUT RALEIGH,DEBIT INNOUT RALEIGH,INNOUT,Restaurants,debit,-6.33,2026-07-12,acc-capitalone,Capital One,Savings Account,0
+tx-014092,[debit] 99 RANCH - SAN JOSE,DEBIT 99 RANCH SAN JOSE,RANCH,Groceries,debit,-55.43,2026-07-12,acc-capitalone,Capital One,Savings Account,0
+tx-000839-m18,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3752.43,2026-07-13,acc-chase,Chase,Current Account,1
+tx-053316-m09,[debit] PAYPAL INST XFER SENDGRID WEB ID: PAYPALSI36,DEBIT PAYPAL INST XFER SENDGRID WEB ID PAYPALSI36,SENDGRID,Subscription,debit,-28.19,2026-07-13,acc-chase,Chase,Current Account,1
+tx-040725,[debit] PAYPAL INST XFER CLIMBING GYM WEB ID: PAYPALSI23,DEBIT PAYPAL INST XFER CLIMBING GYM WEB ID PAYPALSI23,CLIMBING,Entertainment,debit,-15.68,2026-07-13,acc-chase,Chase,Current Account,0
+tx-002935,[debit] DAVE'S HOT CHICKEN CHICAGO 6414,DEBIT DAVE S HOT CHICKEN CHICAGO <NUM>,DAVE,Restaurants,debit,-16.40,2026-07-14,acc-chase,Chase,Current Account,0
+tx-066342,[debit] ATM SERVICE CHARGE - 20/59,DEBIT ATM SERVICE CHARGE 20 59,ATM,Fees,debit,-35.46,2026-07-14,acc-applecard,Apple Card,Credit Card,0
+tx-020469,[debit] DAZN 6184 MISSION CT BROOKLYN11201 NY USA,DEBIT DAZN <NUM> MISSION CT BROOKLYN11201 NY USA,DAZN,Entertainment,debit,-35.78,2026-07-15,acc-applecard,Apple Card,Credit Card,0
+tx-047915,[debit] FANDANGO #207 LOS ANGELES,DEBIT FANDANGO 207 LOS ANGELES,FANDANGO,Entertainment,debit,-60.80,2026-07-15,acc-chase,Chase,Current Account,0
+tx-056638,[debit] PAYPAL *7-ELEVEN 4HRLSA0EF8,DEBIT PAYPAL 7 ELEVEN 4HRLSA0EF8,ELEVEN,Shopping,debit,-20.45,2026-07-15,acc-applecard,Apple Card,Credit Card,0
+tx-045633,[debit] cardenas 9831 oak st hayward94541 ca usa,DEBIT CARDENAS <NUM> OAK ST HAYWARD94541 CA USA,CARDENAS,Groceries,debit,-76.56,2026-07-16,acc-applecard,Apple Card,Credit Card,0
+tx-064909,[debit] whole foods 2230 park ln hayward 94541-5638ca usa,DEBIT WHOLE FOODS <NUM> PARK LN HAYWARD <NUM> 5638CA USA,WHOLE,Groceries,debit,-46.27,2026-07-16,acc-applecard,Apple Card,Credit Card,0
+tx-044137,[debit] MOBIL*6EURG0JDBIC,DEBIT MOBIL 6EURG0JDBIC,MOBIL,Transportation,debit,-168.67,2026-07-16,acc-applecard,Apple Card,Credit Card,0
+tx-025557,[debit] PP*FIRESTONE,DEBIT PP FIRESTONE,FIRESTONE,Transportation,debit,-162.19,2026-07-16,acc-capitalone,Capital One,Savings Account,0
+tx-029240,[credit] fd *ca dmv vfc,CREDIT FD CA DMV VFC,DMV,Transportation,credit,69.54,2026-07-17,acc-chase,Chase,Current Account,0
+tx-012324,[debit] Speedway - Los Angeles,DEBIT SPEEDWAY LOS ANGELES,SPEEDWAY,Transportation,debit,-199.45,2026-07-17,acc-chase,Chase,Current Account,0
+tx-035961,[debit] DR. MARTINEZ CARDIOLOGY,DEBIT DR MARTINEZ CARDIOLOGY,MARTINEZ,Healthcare,debit,-69.62,2026-07-17,acc-applecard,Apple Card,Credit Card,0
+tx-008015,[debit] kroger - union city,DEBIT KROGER UNION CITY,KROGER,Groceries,debit,-24.31,2026-07-19,acc-chase,Chase,Current Account,0
+tx-042055,[debit] tesla supercharger 2986 elm ave nashville 37201 tn usa,DEBIT TESLA SUPERCHARGER <NUM> ELM AVE NASHVILLE <NUM> TN USA,TESLA,Transportation,debit,-104.49,2026-07-20,acc-applecard,Apple Card,Credit Card,0
+tx-058227,[debit] Preauthorized Withdrawal to VISIONWORKS,DEBIT PREAUTHORIZED WITHDRAWAL TO VISIONWORKS,VISIONWORKS,Healthcare,debit,-271.10,2026-07-20,acc-applecard,Apple Card,Credit Card,0
+tx-039284-m09,[debit] T-mobile 3197 Market Way Houston 77001-1108tx Usa,DEBIT T MOBILE <NUM> MARKET WAY HOUSTON <NUM> 1108TX USA,MOBILE,Utilities,debit,-122.51,2026-07-21,acc-applecard,Apple Card,Credit Card,1
+tx-064426,[debit] PAYPAL INST XFER REPAIRCLINIC.COMWEB ID: PAYPALSI43,DEBIT PAYPAL INST XFER REPAIRCLINIC COMWEB ID PAYPALSI43,COMWEB,Shopping,debit,-20.73,2026-07-21,acc-applecard,Apple Card,Credit Card,0
+tx-025239,[debit] KAISER PERMANENTEMEDICAL PMT WEB ID: PI58MTVI,DEBIT KAISER PERMANENTEMEDICAL PMT WEB ID PI58MTVI,KAISER,Healthcare,debit,-346.04,2026-07-22,acc-chase,Chase,Current Account,0
+tx-006939,[debit] FANDUEL 2439 CENTER AVE MIAMI33101 FL USA,DEBIT FANDUEL <NUM> CENTER AVE MIAMI33101 FL USA,FANDUEL,Entertainment,debit,-54.99,2026-07-22,acc-applecard,Apple Card,Credit Card,0
+tx-005976,[debit] MOHEGAN SUN ONLINE,DEBIT MOHEGAN SUN ONLINE,MOHEGAN,Entertainment,debit,-13.87,2026-07-23,acc-chase,Chase,Current Account,0
+tx-024692,[credit] valve corp game,CREDIT VALVE CORP GAME,VALVE,Entertainment,credit,33.29,2026-07-23,acc-applecard,Apple Card,Credit Card,0
+tx-013601,[debit] hard rock bet deposit,DEBIT HARD ROCK BET DEPOSIT,HARD,Entertainment,debit,-39.70,2026-07-24,acc-applecard,Apple Card,Credit Card,0
+tx-016789,[debit] ELEMENTS MASSAGE LLC,DEBIT ELEMENTS MASSAGE LLC,ELEMENTS,Personal Care,debit,-26.77,2026-07-25,acc-applecard,Apple Card,Credit Card,0
+tx-013591,[debit] CASH APP PAYMENT TO PAUL JONES,DEBIT CASH APP PAYMENT TO PAUL JONES,APP,Transfer,debit,-1419.47,2026-07-25,acc-capitalone,Capital One,Savings Account,0
+tx-000839-m19,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3644.77,2026-07-27,acc-chase,Chase,Current Account,1
+tx-036586,[debit] TST* PANDA EXPRESS - SALT LAKE CITY,DEBIT TST PANDA EXPRESS SALT LAKE CITY,PANDA,Restaurants,debit,-16.69,2026-07-27,acc-chase,Chase,Current Account,0
+tx-054039,[debit] Imax; Payment,DEBIT IMAX PAYMENT,IMAX,Entertainment,debit,-53.71,2026-07-27,acc-capitalone,Capital One,Savings Account,0
+tx-007619-m09,[debit] Withdrawal from VERIZON GAS,DEBIT WITHDRAWAL FROM VERIZON GAS,VERIZON,Utilities,debit,-125.05,2026-07-28,acc-capitalone,Capital One,Savings Account,1
+tx-045217,[debit] Parkwhiz 506 Center Way Philadelphia19101 Pa Usa,DEBIT PARKWHIZ 506 CENTER WAY PHILADELPHIA19101 PA USA,PARKWHIZ,Transportation,debit,-94.24,2026-07-28,acc-applecard,Apple Card,Credit Card,0
+tx-004863,[debit] EXCESS TRANSACTION FEE - 39/80,DEBIT EXCESS TRANSACTION FEE 39 80,EXCESS,Fees,debit,-71.04,2026-07-29,acc-applecard,Apple Card,Credit Card,0
+tx-003412,[debit] SMASHBURGER 7461 UNIVERSITY AVE AUSTIN 78701 TX USA,DEBIT SMASHBURGER <NUM> UNIVERSITY AVE AUSTIN <NUM> TX USA,SMASHBURGER,Restaurants,debit,-12.51,2026-07-31,acc-applecard,Apple Card,Credit Card,0
+tx-061380,[debit] Wholefds Fre #547 San Jose,DEBIT WHOLEFDS FRE 547 SAN JOSE,WHOLEFDS,Groceries,debit,-36.83,2026-07-31,acc-chase,Chase,Current Account,0
+tx-035873,[debit] SZECHUAN PALACE 2428,DEBIT SZECHUAN PALACE <NUM>,SZECHUAN,Restaurants,debit,-18.93,2026-08-01,acc-capitalone,Capital One,Savings Account,0
+tx-040899,[debit] KROGER #584 AUSTIN,DEBIT KROGER 584 AUSTIN,KROGER,Groceries,debit,-49.34,2026-08-01,acc-applecard,Apple Card,Credit Card,0
+tx-030733,[debit] SAN PEDRO MARKET 8024 UNIVERSITY PKWY COLUMBUS43201 OH USA,DEBIT SAN PEDRO MARKET <NUM> UNIVERSITY PKWY COLUMBUS43201 OH USA,PEDRO,Restaurants,debit,-16.55,2026-08-02,acc-applecard,Apple Card,Credit Card,0
+tx-016867,[debit] 99 RANCH #8726 PITTSBURGH,DEBIT 99 RANCH <NUM> PITTSBURGH,RANCH,Groceries,debit,-63.44,2026-08-03,acc-chase,Chase,Current Account,0
+tx-020324,[debit] PAYPAL *ALDI 8YVF6JU0H6,DEBIT PAYPAL ALDI 8YVF6JU0H6,ALDI,Groceries,debit,-24.16,2026-08-03,acc-capitalone,Capital One,Savings Account,0
+tx-025974,[credit] I-pass Replenish,CREDIT I PASS REPLENISH,PASS,Transportation,credit,88.07,2026-08-03,acc-capitalone,Capital One,Savings Account,0
+tx-059768,[debit] Express Checkout Payment: ESCAPE ROOM,DEBIT EXPRESS CHECKOUT PAYMENT ESCAPE ROOM,ESCAPE,Entertainment,debit,-96.76,2026-08-03,acc-chase,Chase,Current Account,0
+tx-018048,[debit] Kindle Unltd*EXM25YD0,DEBIT KINDLE UNLTD EXM25YD0,UNLTD,Shopping,debit,-40.36,2026-08-03,acc-chase,Chase,Current Account,0
+tx-057090-m10,[debit] invitation homes rent pmt 28582933 web id: xg26tpe4,DEBIT INVITATION HOMES RENT PMT <NUM> WEB ID XG26TPE4,INVITATION,Rent,debit,-1383.14,2026-08-04,acc-chase,Chase,Current Account,1
+tx-024046,[debit] Arby's,DEBIT ARBY S,ARBY,Restaurants,debit,-14.32,2026-08-04,acc-capitalone,Capital One,Savings Account,0
+tx-010820,[debit] RALPH'S - SAN DIEGO,DEBIT RALPH S SAN DIEGO,RALPH,Groceries,debit,-21.43,2026-08-04,acc-applecard,Apple Card,Credit Card,0
+tx-065687-m10,[debit] NATIONWIDE 9777 INDUSTRIAL CT NEWARK07101 NJ USA,DEBIT NATIONWIDE <NUM> INDUSTRIAL CT NEWARK07101 NJ USA,NATIONWIDE,Insurance,debit,-94.76,2026-08-06,acc-applecard,Apple Card,Credit Card,1
+tx-001478,[debit] Preauthorized Withdrawal To Jiffy Lube,DEBIT PREAUTHORIZED WITHDRAWAL TO JIFFY LUBE,JIFFY,Transportation,debit,-97.21,2026-08-06,acc-chase,Chase,Current Account,0
+tx-048196,[debit] PYPL *Mini Golf,DEBIT PYPL MINI GOLF,MINI,Entertainment,debit,-99.68,2026-08-06,acc-capitalone,Capital One,Savings Account,0
+tx-001624,[debit] THAI BASIL 7543,DEBIT THAI BASIL <NUM>,THAI,Restaurants,debit,-27.95,2026-08-07,acc-capitalone,Capital One,Savings Account,0
+tx-028042,[debit] STEAM 33798695,DEBIT STEAM <NUM>,STEAM,Entertainment,debit,-68.21,2026-08-07,acc-applecard,Apple Card,Credit Card,0
+tx-067284-m10,[debit] PARAMOUNT+* Monthly,DEBIT PARAMOUNT MONTHLY,PARAMOUNT,Subscription,debit,-23.32,2026-08-08,acc-chase,Chase,Current Account,1
+tx-061860,[debit] take 5 car wash 4113 park st nashville 37201-6515tn usa,DEBIT TAKE 5 CAR WASH <NUM> PARK ST NASHVILLE <NUM> 6515TN USA,TAKE,Transportation,debit,-78.19,2026-08-08,acc-applecard,Apple Card,Credit Card,0
+tx-040686-m10,[debit] Ladder 4953 Broadway Ct Phoenix 85001-4410az Usa,DEBIT LADDER <NUM> BROADWAY CT PHOENIX <NUM> 4410AZ USA,LADDER,Insurance,debit,-118.13,2026-08-09,acc-applecard,Apple Card,Credit Card,1
+tx-006744-m10,[debit] Withdrawal from STARLINK CABLE,DEBIT WITHDRAWAL FROM STARLINK CABLE,STARLINK,Utilities,debit,-149.07,2026-08-09,acc-capitalone,Capital One,Savings Account,1
+tx-038238-m10,[debit] DISCORD NITRO* Credit Report,DEBIT DISCORD NITRO CREDIT REPORT,DISCORD,Subscription,debit,-23.65,2026-08-10,acc-capitalone,Capital One,Savings Account,1
+tx-040182,[debit] DRIVING RANGE 2359 MARKET AVE BROOKLYN 11201-4730NY USA,DEBIT DRIVING RANGE <NUM> MARKET AVE BROOKLYN <NUM> 4730NY USA,DRIVING,Entertainment,debit,-30.70,2026-08-10,acc-applecard,Apple Card,Credit Card,0
+tx-004466,[debit] WITHDRAWAL FROM REGAL CINEMAS,DEBIT WITHDRAWAL FROM REGAL CINEMAS,REGAL,Entertainment,debit,-32.77,2026-08-10,acc-capitalone,Capital One,Savings Account,0
+tx-046249,[debit] LYFT *TRIP MINNEAPOLIS SN7I4Q,DEBIT LYFT TRIP MINNEAPOLIS SN7I4Q,LYFT,Transportation,debit,-39.04,2026-08-11,acc-capitalone,Capital One,Savings Account,0
+tx-004733-m10,[debit] APPLE.COM/BILL 8959 CENTER LN SEATTLE 98101 WA USA,DEBIT APPLE COM BILL <NUM> CENTER LN SEATTLE <NUM> WA USA,APPLE,Subscription,debit,-25.88,2026-08-12,acc-applecard,Apple Card,Credit Card,1
+tx-060980,[debit] Subscription Payment: HUNAN GARDEN,DEBIT SUBSCRIPTION PAYMENT HUNAN GARDEN,HUNAN,Restaurants,debit,-26.99,2026-08-12,acc-capitalone,Capital One,Savings Account,0
+tx-012607,[debit] SQ *POKE BOWL - NEW YORK,DEBIT SQ POKE BOWL NEW YORK,POKE,Restaurants,debit,-13.08,2026-08-12,acc-capitalone,Capital One,Savings Account,0
+tx-002641,[debit] COSTCO GAS*0CK0V007A8,DEBIT COSTCO GAS 0CK0V007A8,COSTCO,Transportation,debit,-116.85,2026-08-12,acc-capitalone,Capital One,Savings Account,0
+tx-003974,[debit] sport clips - denver,DEBIT SPORT CLIPS DENVER,SPORT,Personal Care,debit,-31.03,2026-08-12,acc-applecard,Apple Card,Credit Card,0
+tx-000839-m20,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3712.73,2026-08-13,acc-chase,Chase,Current Account,1
+tx-053316-m10,[debit] PAYPAL INST XFER SENDGRID WEB ID: PAYPALSI36,DEBIT PAYPAL INST XFER SENDGRID WEB ID PAYPALSI36,SENDGRID,Subscription,debit,-26.85,2026-08-13,acc-chase,Chase,Current Account,1
+tx-036141,[debit] WINGSTOP 2542 INDUSTRIAL RD SAN DIEGO 92101-0987CA USA,DEBIT WINGSTOP <NUM> INDUSTRIAL RD SAN DIEGO <NUM> 0987CA USA,WINGSTOP,Restaurants,debit,-52.60,2026-08-13,acc-applecard,Apple Card,Credit Card,0
+tx-014610,[debit] POSTMATES*TOO GOOD TO GO,DEBIT POSTMATES TOO GOOD TO GO,POSTMATES,Restaurants,debit,-16.13,2026-08-13,acc-applecard,Apple Card,Credit Card,0
+tx-019759,[debit] LYFT *TRIP PORTLAND LUJ27N,DEBIT LYFT TRIP PORTLAND LUJ27N,LYFT,Transportation,debit,-54.48,2026-08-13,acc-chase,Chase,Current Account,0
+tx-009024,[debit] QUICK SMOG,DEBIT QUICK SMOG,QUICK,Transportation,debit,-83.73,2026-08-14,acc-chase,Chase,Current Account,0
+tx-046738,[debit] BOWLING 6383 INDUSTRIAL LN PHILADELPHIA 19101-5353PA USA,DEBIT BOWLING <NUM> INDUSTRIAL LN PHILADELPHIA <NUM> 5353PA USA,BOWLING,Entertainment,debit,-32.43,2026-08-15,acc-applecard,Apple Card,Credit Card,0
+tx-060487,[debit] bluemercury - brooklyn,DEBIT BLUEMERCURY BROOKLYN,BLUEMERCURY,Personal Care,debit,-37.88,2026-08-15,acc-applecard,Apple Card,Credit Card,0
+tx-000593,[debit] costco online 41365,DEBIT COSTCO ONLINE <NUM>,COSTCO,Shopping,debit,-8.71,2026-08-15,acc-applecard,Apple Card,Credit Card,0
+tx-053662,[debit] TICKETMASTER 5555 OAK ST QUEENS 11101 NY USA,DEBIT TICKETMASTER <NUM> OAK ST QUEENS <NUM> NY USA,TICKETMASTER,Entertainment,debit,-39.44,2026-08-17,acc-applecard,Apple Card,Credit Card,0
+tx-045741,[debit] Taco Cabana 8474 Oak Rd Hayward 94541 Ca Usa,DEBIT TACO CABANA <NUM> OAK RD HAYWARD <NUM> CA USA,CABANA,Restaurants,debit,-22.04,2026-08-18,acc-applecard,Apple Card,Credit Card,0
+tx-033860,[debit] MUSEUM; Billing,DEBIT MUSEUM BILLING,MUSEUM,Entertainment,debit,-57.11,2026-08-18,acc-applecard,Apple Card,Credit Card,0
+tx-012030,[debit] ZIPS CAR WASH 5721 PARK ST UNION CITY94587 CA USA,DEBIT ZIPS CAR WASH <NUM> PARK ST UNION CITY94587 CA USA,ZIPS,Transportation,debit,-120.89,2026-08-19,acc-applecard,Apple Card,Credit Card,0
+tx-026005,[debit] peking duck house 8590 elm ln miami 33101-9293fl usa,DEBIT PEKING DUCK HOUSE <NUM> ELM LN MIAMI <NUM> 9293FL USA,PEKING,Restaurants,debit,-29.03,2026-08-20,acc-applecard,Apple Card,Credit Card,0
+tx-007597,[debit] MEIJER SAN #18790,DEBIT MEIJER SAN <NUM>,MEIJER,Groceries,debit,-36.06,2026-08-20,acc-capitalone,Capital One,Savings Account,0
+tx-039284-m10,[debit] T-mobile 3197 Market Way Houston 77001-1108tx Usa,DEBIT T MOBILE <NUM> MARKET WAY HOUSTON <NUM> 1108TX USA,MOBILE,Utilities,debit,-118.72,2026-08-21,acc-applecard,Apple Card,Credit Card,1
+tx-021951,[debit] EVGO SALT LAKE CITY,DEBIT EVGO SALT LAKE CITY,EVGO,Transportation,debit,-72.12,2026-08-21,acc-capitalone,Capital One,Savings Account,0
+tx-004740,[debit] college of indianapolis tuition,DEBIT COLLEGE OF INDIANAPOLIS TUITION,COLLEGE,Education,debit,-247.37,2026-08-21,acc-capitalone,Capital One,Savings Account,0
+tx-051499,[debit] Grocery Outlet 4055 Park Pkwy San Diego92101 Ca Usa,DEBIT GROCERY OUTLET <NUM> PARK PKWY SAN DIEGO92101 CA USA,GROCERY,Groceries,debit,-93.52,2026-08-22,acc-applecard,Apple Card,Credit Card,0
+tx-056644,[debit] CHILI'S 2022 ELM BLVD CHICAGO 60601-8341IL USA,DEBIT CHILI S <NUM> ELM BLVD CHICAGO <NUM> 8341IL USA,CHILI,Restaurants,debit,-39.45,2026-08-23,acc-applecard,Apple Card,Credit Card,0
+tx-000037,[debit] GYRO KING 5917 CENTER RD NEWARK 07101 NJ USA,DEBIT GYRO KING <NUM> CENTER RD NEWARK <NUM> NJ USA,GYRO,Restaurants,debit,-10.53,2026-08-23,acc-applecard,Apple Card,Credit Card,0
+tx-051872,[debit] MARKET BASKET*QU4B45JCJD,DEBIT MARKET BASKET QU4B45JCJD,BASKET,Groceries,debit,-137.46,2026-08-23,acc-capitalone,Capital One,Savings Account,0
+tx-026085,[debit] TST*JOLLIBEE - MIAMI,DEBIT TST JOLLIBEE MIAMI,JOLLIBEE,Restaurants,debit,-38.64,2026-08-25,acc-capitalone,Capital One,Savings Account,0
+tx-007554,[debit] GO KART*LGUQ6WK56,DEBIT GO KART LGUQ6WK56,KART,Entertainment,debit,-36.82,2026-08-26,acc-chase,Chase,Current Account,0
+tx-000839-m21,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3744.91,2026-08-27,acc-chase,Chase,Current Account,1
+tx-036402,[debit] PAYPAL INST XFER CARIBOU COFFEE WEB ID: PAYPALSI23,DEBIT PAYPAL INST XFER CARIBOU COFFEE WEB ID PAYPALSI23,CARIBOU,Restaurants,debit,-24.99,2026-08-27,acc-chase,Chase,Current Account,0
+tx-032227,[debit] FACEBOOK MARKETPLACE 2540 MAIN DR HAYWARD 94541-2676CA USA,DEBIT FACEBOOK MARKETPLACE <NUM> MAIN DR HAYWARD <NUM> 2676CA USA,MARKETPLACE,Shopping,debit,-16.98,2026-08-27,acc-applecard,Apple Card,Credit Card,0
+tx-040060,[debit] AMZN DIGITAL*G4XX7DDU,DEBIT AMZN DIGITAL G4XX7DDU,AMZN,Shopping,debit,-29.35,2026-08-27,acc-applecard,Apple Card,Credit Card,0
+tx-007619-m10,[debit] Withdrawal from VERIZON GAS,DEBIT WITHDRAWAL FROM VERIZON GAS,VERIZON,Utilities,debit,-123.06,2026-08-28,acc-capitalone,Capital One,Savings Account,1
+tx-000439,[debit] LYFT *TRIP DENVER EV0E0D,DEBIT LYFT TRIP DENVER EV0E0D,LYFT,Transportation,debit,-153.96,2026-08-28,acc-chase,Chase,Current Account,0
+tx-026783,[credit] FASTRAK TOLL PMT WEB ID: TPDJ0691,CREDIT FASTRAK TOLL PMT WEB ID TPDJ0691,FASTRAK,Transportation,credit,54.07,2026-08-28,acc-chase,Chase,Current Account,0
+tx-036831,[debit] PP*lowe's,DEBIT PP LOWE S,LOWE,Shopping,debit,-30.91,2026-08-28,acc-applecard,Apple Card,Credit Card,0
+tx-004071,[debit] IHOP 9436 MISSION WAY TAMPA 33601-2672FL USA,DEBIT IHOP <NUM> MISSION WAY TAMPA <NUM> 2672FL USA,IHOP,Restaurants,debit,-75.18,2026-08-29,acc-applecard,Apple Card,Credit Card,0
+tx-002477,[debit] MARATHON*HH2L64J2,DEBIT MARATHON HH2L64J2,MARATHON,Transportation,debit,-50.70,2026-08-29,acc-applecard,Apple Card,Credit Card,0
+tx-065348,[debit] Lyft *trip Pittsburgh M3j5ew,DEBIT LYFT TRIP PITTSBURGH M3J5EW,LYFT,Transportation,debit,-107.24,2026-08-29,acc-applecard,Apple Card,Credit Card,0
+tx-066892,[debit] BONCHON #163 PORTLAND,DEBIT BONCHON 163 PORTLAND,BONCHON,Restaurants,debit,-28.65,2026-09-01,acc-capitalone,Capital One,Savings Account,0
+tx-035904,[debit] IMAX 9728 INDUSTRIAL CT PHILADELPHIA19101 PA USA,DEBIT IMAX <NUM> INDUSTRIAL CT PHILADELPHIA19101 PA USA,IMAX,Entertainment,debit,-40.02,2026-09-01,acc-applecard,Apple Card,Credit Card,0
+tx-066465,[debit] wine.com*u6n01x9pvao1,DEBIT WINE COM U6N01X9PVAO1,WINE,Shopping,debit,-41.98,2026-09-01,acc-chase,Chase,Current Account,0
+tx-015748,[credit] BINANCE.US INVESTMENTS MONEYLINE,CREDIT BINANCE US INVESTMENTS MONEYLINE,BINANCE,Transfer,credit,464.65,2026-09-02,acc-capitalone,Capital One,Savings Account,0
+tx-001481,[credit] Payment Thank You - 2nd A,CREDIT PAYMENT THANK YOU 2ND A,YOU,Transfer,credit,786.64,2026-09-02,acc-capitalone,Capital One,Savings Account,0
+tx-001916,[debit] WEGMANS 0811713,DEBIT WEGMANS <NUM>,WEGMANS,Groceries,debit,-46.64,2026-09-03,acc-applecard,Apple Card,Credit Card,0
+tx-057090-m11,[debit] invitation homes rent pmt 28582933 web id: xg26tpe4,DEBIT INVITATION HOMES RENT PMT <NUM> WEB ID XG26TPE4,INVITATION,Rent,debit,-1366.46,2026-09-04,acc-chase,Chase,Current Account,1
+tx-044108,[debit] Vehicle Registration 6632 Main St Raleigh 27601-5612nc Usa,DEBIT VEHICLE REGISTRATION <NUM> MAIN ST RALEIGH <NUM> 5612NC USA,VEHICLE,Transportation,debit,-118.97,2026-09-04,acc-applecard,Apple Card,Credit Card,0
+tx-065687-m11,[debit] NATIONWIDE 9777 INDUSTRIAL CT NEWARK07101 NJ USA,DEBIT NATIONWIDE <NUM> INDUSTRIAL CT NEWARK07101 NJ USA,NATIONWIDE,Insurance,debit,-95.84,2026-09-06,acc-applecard,Apple Card,Credit Card,1
+tx-016340,[debit] RALPH'S 2775 ELM CT HAYWARD 94541 CA USA,DEBIT RALPH S <NUM> ELM CT HAYWARD <NUM> CA USA,RALPH,Groceries,debit,-28.58,2026-09-06,acc-applecard,Apple Card,Credit Card,0
+tx-009723,[debit] TST*SHAWARMA KING - NEW YORK,DEBIT TST SHAWARMA KING NEW YORK,SHAWARMA,Restaurants,debit,-11.61,2026-09-07,acc-applecard,Apple Card,Credit Card,0
+tx-067284-m11,[debit] PARAMOUNT+* Monthly,DEBIT PARAMOUNT MONTHLY,PARAMOUNT,Subscription,debit,-23.11,2026-09-08,acc-chase,Chase,Current Account,1
+tx-023096,[debit] FOODMAXX 8977 MISSION DR SALT LAKE CITY 84101-3409UT USA,DEBIT FOODMAXX <NUM> MISSION DR SALT LAKE CITY <NUM> 3409UT USA,FOODMAXX,Groceries,debit,-52.01,2026-09-08,acc-applecard,Apple Card,Credit Card,0
+tx-024388,[debit] PAYPAL *CALTRAIN 8I3YQWJEFI,DEBIT PAYPAL CALTRAIN 8I3YQWJEFI,CALTRAIN,Transportation,debit,-92.87,2026-09-08,acc-applecard,Apple Card,Credit Card,0
+tx-007859,[debit] wmata; billing,DEBIT WMATA BILLING,WMATA,Transportation,debit,-98.91,2026-09-08,acc-capitalone,Capital One,Savings Account,0
+tx-042321,[debit] CLARK OPTOMETRY,DEBIT CLARK OPTOMETRY,CLARK,Healthcare,debit,-151.79,2026-09-08,acc-chase,Chase,Current Account,0
+tx-040686-m11,[debit] Ladder 4953 Broadway Ct Phoenix 85001-4410az Usa,DEBIT LADDER <NUM> BROADWAY CT PHOENIX <NUM> 4410AZ USA,LADDER,Insurance,debit,-115.01,2026-09-09,acc-applecard,Apple Card,Credit Card,1
+tx-006744-m11,[debit] Withdrawal from STARLINK CABLE,DEBIT WITHDRAWAL FROM STARLINK CABLE,STARLINK,Utilities,debit,-151.31,2026-09-09,acc-capitalone,Capital One,Savings Account,1
+tx-037303,[debit] TST*intelligentsia - CHARLOTTE,DEBIT TST INTELLIGENTSIA CHARLOTTE,INTELLIGENTSIA,Restaurants,debit,-17.68,2026-09-09,acc-chase,Chase,Current Account,0
+tx-051068,[debit] GIANTEAGLE #9645,DEBIT GIANTEAGLE <NUM>,GIANTEAGLE,Groceries,debit,-84.02,2026-09-09,acc-capitalone,Capital One,Savings Account,0
+tx-035943,[debit] AMAZON MARKTPLACE*KURVH2HW,DEBIT AMAZON MARKTPLACE KURVH2HW,MARKTPLACE,Shopping,debit,-16.66,2026-09-09,acc-applecard,Apple Card,Credit Card,0
+tx-039810,[debit] PAYPAL INST XFER AMEX AUTOPAY WEB ID: PAYPALSI22,DEBIT PAYPAL INST XFER AMEX AUTOPAY WEB ID PAYPALSI22,AMEX,Transfer,debit,-731.41,2026-09-09,acc-chase,Chase,Current Account,0
+tx-038238-m11,[debit] DISCORD NITRO* Credit Report,DEBIT DISCORD NITRO CREDIT REPORT,DISCORD,Subscription,debit,-22.84,2026-09-10,acc-capitalone,Capital One,Savings Account,1
+tx-036167,[debit] TST*POKE BOWL #096,DEBIT TST POKE BOWL 096,POKE,Restaurants,debit,-18.25,2026-09-10,acc-applecard,Apple Card,Credit Card,0
+tx-011896,[debit] lyft *trip phoenix mkmczw,DEBIT LYFT TRIP PHOENIX MKMCZW,LYFT,Transportation,debit,-222.52,2026-09-11,acc-capitalone,Capital One,Savings Account,0
+tx-057812,[debit] VALVE CORP #586 FREMONT,DEBIT VALVE CORP 586 FREMONT,VALVE,Entertainment,debit,-26.75,2026-09-11,acc-applecard,Apple Card,Credit Card,0
+tx-037431,[debit] PYPL *ROOSTERS,DEBIT PYPL ROOSTERS,ROOSTERS,Personal Care,debit,-59.03,2026-09-11,acc-applecard,Apple Card,Credit Card,0
+tx-004733-m11,[debit] APPLE.COM/BILL 8959 CENTER LN SEATTLE 98101 WA USA,DEBIT APPLE COM BILL <NUM> CENTER LN SEATTLE <NUM> WA USA,APPLE,Subscription,debit,-26.25,2026-09-12,acc-applecard,Apple Card,Credit Card,1
+tx-035631,[debit] TRAMPOLINE PARK; CHARGE,DEBIT TRAMPOLINE PARK CHARGE,TRAMPOLINE,Entertainment,debit,-62.84,2026-09-12,acc-capitalone,Capital One,Savings Account,0
+tx-000839-m22,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3802.62,2026-09-13,acc-chase,Chase,Current Account,1
+tx-053316-m11,[debit] PAYPAL INST XFER SENDGRID WEB ID: PAYPALSI36,DEBIT PAYPAL INST XFER SENDGRID WEB ID PAYPALSI36,SENDGRID,Subscription,debit,-27.01,2026-09-13,acc-chase,Chase,Current Account,1
+tx-001974,[debit] Albertsons 9658 Oak Pkwy Columbus43201 Oh Usa,DEBIT ALBERTSONS <NUM> OAK PKWY COLUMBUS43201 OH USA,ALBERTSONS,Groceries,debit,-68.82,2026-09-13,acc-applecard,Apple Card,Credit Card,0
+tx-005356,[debit] MLB.TV*GHSCHYKH2AC,DEBIT MLB TV GHSCHYKH2AC,MLB,Entertainment,debit,-10.99,2026-09-13,acc-capitalone,Capital One,Savings Account,0
+tx-055824,[debit] dr lopez dermatology,DEBIT DR LOPEZ DERMATOLOGY,LOPEZ,Healthcare,debit,-133.13,2026-09-14,acc-applecard,Apple Card,Credit Card,0
+tx-057838,[debit] TST* instacart - UNION CITY,DEBIT TST INSTACART UNION CITY,INSTACART,Restaurants,debit,-9.54,2026-09-15,acc-applecard,Apple Card,Credit Card,0
+tx-044312,[debit] SUBSCRIPTION PAYMENT: BIG LOTS,DEBIT SUBSCRIPTION PAYMENT BIG LOTS,BIG,Shopping,debit,-19.10,2026-09-15,acc-chase,Chase,Current Account,0
+tx-001025,[debit] SKATING RINK 65072811,DEBIT SKATING RINK <NUM>,SKATING,Entertainment,debit,-35.55,2026-09-16,acc-chase,Chase,Current Account,0
+tx-055465,[debit] TST*FOOD FACTORY - UNION CITY,DEBIT TST FOOD FACTORY UNION CITY,FACTORY,Restaurants,debit,-26.98,2026-09-17,acc-capitalone,Capital One,Savings Account,0
+tx-051464,[debit] express checkout payment: peet's coffee,DEBIT EXPRESS CHECKOUT PAYMENT PEET S COFFEE,PEET,Restaurants,debit,-30.20,2026-09-18,acc-capitalone,Capital One,Savings Account,0
+tx-027086,[debit] Napa Auto #040 Charlotte,DEBIT NAPA AUTO 040 CHARLOTTE,NAPA,Transportation,debit,-14.28,2026-09-18,acc-chase,Chase,Current Account,0
+tx-001843,[debit] PreApproved Payment Bill User Payment: NFL SUNDAY TICKET,DEBIT PREAPPROVED PAYMENT BILL USER PAYMENT NFL SUNDAY TICKET,NFL,Entertainment,debit,-26.74,2026-09-19,acc-capitalone,Capital One,Savings Account,0
+tx-054861,[debit] SPORT CLIPS INC.,DEBIT SPORT CLIPS INC,SPORT,Personal Care,debit,-26.44,2026-09-19,acc-chase,Chase,Current Account,0
+tx-060130,[debit] SPORTS CLIPS 1004 OAK DR NASHVILLE 37201-4435TN USA,DEBIT SPORTS CLIPS <NUM> OAK DR NASHVILLE <NUM> 4435TN USA,SPORTS,Personal Care,debit,-19.67,2026-09-19,acc-applecard,Apple Card,Credit Card,0
+tx-039284-m11,[debit] T-mobile 3197 Market Way Houston 77001-1108tx Usa,DEBIT T MOBILE <NUM> MARKET WAY HOUSTON <NUM> 1108TX USA,MOBILE,Utilities,debit,-120.68,2026-09-21,acc-applecard,Apple Card,Credit Card,1
+tx-001909,[debit] SQ *BOMBAY SPICE - ORLANDO,DEBIT SQ BOMBAY SPICE ORLANDO,BOMBAY,Restaurants,debit,-14.67,2026-09-21,acc-capitalone,Capital One,Savings Account,0
+tx-049383,[debit] WAWA #65001 HOUSTON,DEBIT WAWA <NUM> HOUSTON,WAWA,Transportation,debit,-103.69,2026-09-21,acc-chase,Chase,Current Account,0
+tx-016874,[credit] IMAX CO,CREDIT IMAX CO,IMAX,Entertainment,credit,67.31,2026-09-21,acc-chase,Chase,Current Account,0
+tx-019156,[debit] Dutch Bros #61821 Minneapolis,DEBIT DUTCH BROS <NUM> MINNEAPOLIS,DUTCH,Restaurants,debit,-17.71,2026-09-22,acc-capitalone,Capital One,Savings Account,0
+tx-060293,[debit] QUIKTRIP - ATLANTA,DEBIT QUIKTRIP ATLANTA,QUIKTRIP,Transportation,debit,-207.30,2026-09-22,acc-capitalone,Capital One,Savings Account,0
+tx-028291,[debit] sams club online 665106,DEBIT SAMS CLUB ONLINE <NUM>,SAMS,Shopping,debit,-13.88,2026-09-23,acc-capitalone,Capital One,Savings Account,0
+tx-021134,[debit] WINGSTOP DENVER,DEBIT WINGSTOP DENVER,WINGSTOP,Restaurants,debit,-24.29,2026-09-24,acc-applecard,Apple Card,Credit Card,0
+tx-063883,[debit] SAVEMART 3660 MISSION CT SAN DIEGO 92101 CA USA,DEBIT SAVEMART <NUM> MISSION CT SAN DIEGO <NUM> CA USA,SAVEMART,Groceries,debit,-192.64,2026-09-24,acc-applecard,Apple Card,Credit Card,0
+tx-013510,[debit] PIKEPASS TOLL PMT WEB ID: 39UME4TG,DEBIT PIKEPASS TOLL PMT WEB ID 39UME4TG,PIKEPASS,Transportation,debit,-128.22,2026-09-24,acc-chase,Chase,Current Account,0
+tx-022927,[debit] chewy - union city,DEBIT CHEWY UNION CITY,CHEWY,Shopping,debit,-21.91,2026-09-24,acc-applecard,Apple Card,Credit Card,0
+tx-065903,[debit] GROCOUTLT #83 LOS ANGE,DEBIT GROCOUTLT 83 LOS ANGE,GROCOUTLT,Groceries,debit,-45.13,2026-09-25,acc-chase,Chase,Current Account,0
+tx-065406,[debit] SHELL*L4XEQKN8,DEBIT SHELL L4XEQKN8,SHELL,Transportation,debit,-27.07,2026-09-25,acc-chase,Chase,Current Account,0
+tx-039637,[debit] DR PEREZ PSYCHIATRY,DEBIT DR PEREZ PSYCHIATRY,PEREZ,Healthcare,debit,-164.23,2026-09-25,acc-applecard,Apple Card,Credit Card,0
+tx-002422,[credit] MASSAGE ENVY #7664 PHOENIX,CREDIT MASSAGE ENVY <NUM> PHOENIX,ENVY,Personal Care,credit,62.55,2026-09-25,acc-chase,Chase,Current Account,0
+tx-067926,[debit] PAYPAL *ATHLETA J89OH7QMZN,DEBIT PAYPAL ATHLETA J89OH7QMZN,ATHLETA,Shopping,debit,-40.01,2026-09-25,acc-applecard,Apple Card,Credit Card,0
+tx-022744,[credit] PAYPAL INST XFER AMEX AUTOPAY WEB ID: PAYPALSI90,CREDIT PAYPAL INST XFER AMEX AUTOPAY WEB ID PAYPALSI90,AMEX,Transfer,credit,345.98,2026-09-25,acc-chase,Chase,Current Account,0
+tx-055969,[credit] Preauthorized Withdrawal To Pacific Dental,CREDIT PREAUTHORIZED WITHDRAWAL TO PACIFIC DENTAL,PACIFIC,Healthcare,credit,130.83,2026-09-26,acc-applecard,Apple Card,Credit Card,0
+tx-041552,[debit] BOWLING 8679 OAK AVE SALT LAKE CITY 84101-5533UT USA,DEBIT BOWLING <NUM> OAK AVE SALT LAKE CITY <NUM> 5533UT USA,BOWLING,Entertainment,debit,-27.87,2026-09-26,acc-applecard,Apple Card,Credit Card,0
+tx-006460,[debit] Amazon.com*63BO8EU1MGE,DEBIT AMAZON COM 63BO8EU1MGE,AMAZON,Shopping,debit,-19.58,2026-09-26,acc-chase,Chase,Current Account,0
+tx-067832,[credit] HUNTINGTON DDA TO DDA CMUTKWV10V WEB ID: FF004GWQQF,CREDIT HUNTINGTON DDA TO DDA CMUTKWV10V WEB ID FF004GWQQF,HUNTINGTON,Transfer,credit,230.65,2026-09-26,acc-chase,Chase,Current Account,0
+tx-000839-m23,[credit] AMAZON PAYROLL PPD ID: 110476993,CREDIT AMAZON PAYROLL PPD ID <NUM>,AMAZON,Income,credit,3744.29,2026-09-27,acc-chase,Chase,Current Account,1
+tx-062971,[debit] seoul garden #00619 fremont,DEBIT SEOUL GARDEN <NUM> FREMONT,SEOUL,Restaurants,debit,-29.68,2026-09-27,acc-applecard,Apple Card,Credit Card,0
+tx-007619-m11,[debit] Withdrawal from VERIZON GAS,DEBIT WITHDRAWAL FROM VERIZON GAS,VERIZON,Utilities,debit,-124.47,2026-09-28,acc-capitalone,Capital One,Savings Account,1
+tx-029832,[debit] Traderjoes #84678 San Jose,DEBIT TRADERJOES <NUM> SAN JOSE,TRADERJOES,Groceries,debit,-53.72,2026-09-28,acc-chase,Chase,Current Account,0
+tx-019749,[debit] EL POLLO LOCO,DEBIT EL POLLO LOCO,POLLO,Restaurants,debit,-18.04,2026-09-30,acc-applecard,Apple Card,Credit Card,0
+tx-019060,[debit] bp*4jqledcaazl,DEBIT BP 4JQLEDCAAZL,UNKNOWN,Transportation,debit,-201.32,2026-09-30,acc-applecard,Apple Card,Credit Card,0

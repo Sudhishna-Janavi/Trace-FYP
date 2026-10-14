@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-theme="{{ theme|default('system') }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% block title %}Trace{% endblock %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/trace.css">
+<script>
+// Runs before the first paint. The server already renders the signed-in user's
+// saved preference, so this only matters for a signed-out visitor or a tab
+// whose local choice is newer than the account's.
+(function () {
+  try {
+    // The account preference is rendered server-side and wins: it is the one
+    // choice that follows the user between browsers. A value stored here is
+    // only consulted when the page did not arrive with a preference, which
+    // means a signed-out visitor.
+    const root = document.documentElement;
+    const served = root.getAttribute('data-theme');
+    if (served === 'light' || served === 'dark') return;
+    const stored = localStorage.getItem('trace-theme');
+    if (stored) root.setAttribute('data-theme', stored);
+  } catch (e) {}
+})();
+</script>
+</head>
+<body>
+{% block body %}{% endblock %}
+<script>
+// `system` follows the operating system, so the button has to name what the
+// click will do rather than assume the page is currently light.
+function resolvedTheme() {
+  const set = document.documentElement.getAttribute('data-theme');
+  if (set === 'dark' || set === 'light') return set;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function labelTheme() {
+  const offer = resolvedTheme() === 'dark' ? 'Light' : 'Dark';
+  document.querySelectorAll('[data-theme-label]').forEach(el => el.textContent = offer);
+}
+
+function toggleTheme() {
+  const next = resolvedTheme() === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  try { localStorage.setItem('trace-theme', next); } catch (e) {}
+  labelTheme();
+  // remember it on the account too, so the preference follows the user to
+  // another browser and the server can render it before the first paint
+  fetch('/theme', {
+    method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: 'theme=' + next,
+  }).catch(() => {});
+}
+
+labelTheme();
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', labelTheme);
+</script>
+</body>
+</html>

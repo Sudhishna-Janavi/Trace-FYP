@@ -1,0 +1,46 @@
+{
+  "note": "formats are modelled on publicly documented export layouts; exact headers vary by account type and are not exact replicas",
+  "canonical_sign_convention": "negative is money out, positive is money in",
+  "feeds": {
+    "chase_activity.csv": {
+      "bank": "Chase",
+      "account_id": "acc-chase",
+      "rows": 230,
+      "date_format": "MM/DD/YYYY",
+      "amount": "one signed column",
+      "discarded_by_adapter": [
+        "Category",
+        "Type",
+        "Memo"
+      ],
+      "source": "https://beancount.io/tools/csv-to-beancount/chase"
+    },
+    "capitalone_transactions.csv": {
+      "bank": "Capital One",
+      "account_id": "acc-capitalone",
+      "rows": 215,
+      "date_format": "YYYY-MM-DD",
+      "amount": "separate Debit and Credit columns",
+      "discarded_by_adapter": [
+        "Card No.",
+        "Category"
+      ],
+      "source": "https://tiller.com/export-capital-one-transactions/"
+    },
+    "applecard_YYYY_MM.csv": {
+      "bank": "Apple Card",
+      "account_id": "acc-applecard",
+      "rows": 327,
+      "files": 12,
+      "date_format": "MM/DD/YYYY",
+      "amount": "purchases POSITIVE, payments NEGATIVE: inverted relative to the other feeds",
+      "discarded_by_adapter": [
+        "Merchant",
+        "Category",
+        "Type"
+      ],
+      "source": "https://community.tiller.com/t/apple-card-statement-export-import/3025"
+    }
+  },
+  "bank_category_is_discarded": "every feed carries the bank's own Category column, as real exports do. The adapters discard it: using it would mean the bank had already performed the categorisation this project exists to perform."
+}

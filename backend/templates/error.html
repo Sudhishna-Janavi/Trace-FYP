@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} · Trace{% endblock %}
+{% block body %}
+<div class="auth-wrap">
+  <div class="auth">
+    <div class="brand"><i></i>Trace</div>
+    <h1>{{ title }}</h1>
+    <p class="lede">{{ message }}</p>
+    <div class="row">
+      <a href="{{ back }}" class="btnlink" style="flex:1;text-align:center">{{ back_label }}</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

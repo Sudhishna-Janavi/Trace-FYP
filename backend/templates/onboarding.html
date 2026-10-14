@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Connect your accounts · Trace{% endblock %}
+{% block body %}
+<div class="auth-wrap">
+  <div class="auth-card wide">
+    <div class="brand"><i></i>Trace</div>
+    <h1>Connect your accounts</h1>
+    <p class="sub">
+      Trace reads exported bank statements, normalises them into one format and
+      categorises every transaction — telling you why each decision was made.
+    </p>
+
+    {% if error %}<div class="alert">{{ error }}</div>{% endif %}
+
+    <form method="post" action="/connect">
+      <div class="option">
+        <div class="option-head">
+          <b>Connect bank data</b>
+          <span class="pill">Recommended</span>
+        </div>
+        <p>
+          Loads a demonstration set of three accounts — Chase, Capital One and
+          Apple Card — exported in three different formats, and runs them
+          through the full pipeline.
+        </p>
+        <button class="primary" type="submit">Connect bank data</button>
+      </div>
+    </form>
+
+    <div class="option muted-option">
+      <div class="option-head"><b>Upload your own statements</b></div>
+      <p>
+        CSV exports from your bank. Available once a statement format you use
+        has an adapter.
+      </p>
+      <button class="ghost" disabled>Upload statements</button>
+    </div>
+
+    <p class="footnote-inline">
+      Connecting a real account requires an agreement with each bank and your
+      explicit consent through an open-banking API. That access is not available
+      to a student project, so Trace demonstrates the same ingestion path using
+      exported statement files.
+    </p>
+  </div>
+</div>
+{% endblock %}

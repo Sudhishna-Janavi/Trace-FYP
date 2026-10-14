@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Trace · Signed in{% endblock %}
+{% block body %}
+<div class="auth-wrap">
+  <div class="auth-card">
+    <div class="brand"><i></i>Trace</div>
+    <h1>Signed in</h1>
+    <p class="sub">Hello {{ user.display_name }} — your account works.</p>
+    <div class="kv"><span>Email</span><b>{{ user.email }}</b></div>
+    <div class="kv"><span>Accounts linked</span><b>{{ accounts }}</b></div>
+    <div class="kv"><span>Transactions</span><b>{{ transactions }}</b></div>
+    <p class="sub" style="margin-top:18px">
+      Phase 1 of the build. The dashboard, transactions and explanations arrive
+      in later phases.
+    </p>
+    <div class="row">
+      <button class="ghost" onclick="toggleTheme()">
+        <span data-theme-label>Dark</span> theme</button>
+      <form method="post" action="/signout" style="flex:1">
+        <button class="ghost" type="submit" style="width:100%">Sign out</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

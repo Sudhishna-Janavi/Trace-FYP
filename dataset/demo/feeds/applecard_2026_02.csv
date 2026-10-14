@@ -1,0 +1,28 @@
+Transaction Date,Clearing Date,Description,Merchant,Category,Type,Amount (USD)
+02/04/2026,02/05/2026,[debit] LYFT *TRIP TAMPA FRTBYE,LYFT,Gas/Automotive,Purchase,90.18
+02/06/2026,02/07/2026,[debit] NATIONWIDE 9777 INDUSTRIAL CT NEWARK07101 NJ USA,NATIONWIDE,Insurance,Purchase,94.97
+02/06/2026,02/07/2026,[debit] WHOLE FOODS 178 BROADWAY BLVD CHICAGO 60601-2971IL USA,WHOLE,Groceries,Purchase,63.68
+02/06/2026,02/09/2026,[debit] MERCARI 5032 MARKET WAY SEATTLE 98101-1251WA USA,MERCARI,Merchandise,Purchase,85.33
+02/09/2026,02/11/2026,[debit] Ladder 4953 Broadway Ct Phoenix 85001-4410az Usa,LADDER,Insurance,Purchase,116.58
+02/10/2026,02/11/2026,[debit] TST* TACO SPOT #892,TACO,Dining,Purchase,38.69
+02/11/2026,02/13/2026,[debit] Payment To: Savemart,SAVEMART,Groceries,Purchase,173.60
+02/12/2026,02/12/2026,[debit] APPLE.COM/BILL 8959 CENTER LN SEATTLE 98101 WA USA,APPLE,Internet,Purchase,27.03
+02/15/2026,02/17/2026,[debit] AMAZON MKTPL*AM6CN44K,AMAZON,Merchandise,Purchase,14.87
+02/16/2026,02/19/2026,[debit] CASA OLE*TUCN5CVA1OJ,CASA,Dining,Purchase,132.09
+02/16/2026,02/17/2026,[debit] BUYER PAYMENT: 7-ELEVEN,BUYER,Merchandise,Purchase,18.76
+02/18/2026,02/20/2026,[debit] PANDA EXPRESS 046835,PANDA,Dining,Purchase,24.50
+02/19/2026,02/22/2026,[debit] discount tire 807 industrial blvd brooklyn11201 ny usa,DISCOUNT,Gas/Automotive,Purchase,161.30
+02/19/2026,02/20/2026,[debit] Liquor Store #40483 Atlanta,LIQUOR,Merchandise,Purchase,20.47
+02/20/2026,02/21/2026,[debit] LYFT *TRIP FREMONT SC7UAS,LYFT,Gas/Automotive,Purchase,129.65
+02/21/2026,02/21/2026,[debit] T-mobile 3197 Market Way Houston 77001-1108tx Usa,MOBILE,Utilities,Purchase,122.91
+02/22/2026,02/24/2026,[debit] CASA OLE 6502 OAK LN MIAMI 33101 FL USA,CASA,Dining,Purchase,36.19
+02/24/2026,02/25/2026,[debit] Express Checkout Payment: Grubhub,GRUBHUB,Dining,Purchase,14.73
+02/24/2026,02/27/2026,[debit] kroger 7984 park dr union city 94587-1922ca usa,KROGER,Groceries,Purchase,32.95
+02/24/2026,02/24/2026,[debit] UBER *TRIP RALEIGH BIBM81,UBER,Gas/Automotive,Purchase,124.83
+02/25/2026,02/28/2026,[debit] PREAPPROVED PAYMENT BILL USER PAYMENT: ONO HAWAIIAN BBQ,ONO,Dining,Purchase,51.14
+02/25/2026,02/27/2026,[debit] BART INC,BART,Gas/Automotive,Purchase,103.96
+02/25/2026,02/25/2026,[debit] Express Checkout Payment: SUPERCUTS,SUPERCUTS,Other Services,Purchase,40.69
+02/25/2026,02/25/2026,[credit] CARNIVAL CRUISE.COM,CARNIVAL,Travel,Payment,-779.29
+02/26/2026,03/01/2026,[debit] Jollibee - Portland,JOLLIBEE,Dining,Purchase,28.46
+02/26/2026,03/01/2026,[debit] NINTENDO 3064 INDUSTRIAL RD LOS ANGELES 90001 CA USA,NINTENDO,Entertainment,Purchase,60.16
+02/28/2026,03/01/2026,[debit] GO KART 6046 UNIVERSITY AVE SAN FRANCISCO94102 CA USA,KART,Entertainment,Purchase,30.37

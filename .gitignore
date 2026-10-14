@@ -1,0 +1,22 @@
+# --- never commit: holds bcrypt password hashes for real accounts
+trace.db
+*.db-journal
+
+# --- environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.cache/
+.DS_Store
+
+# --- third-party source data.
+# The Kaggle corpora this project trains on are not ours to redistribute, and
+# they are large. dataset/demo/ IS committed: the deployed application seeds
+# itself from those feeds.
+dataset/US/
+dataset/Indian/
+dataset/processed/
+
+# --- local environment
+.env

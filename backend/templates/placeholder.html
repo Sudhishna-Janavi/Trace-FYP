@@ -1,0 +1,12 @@
+{% extends "app.html" %}
+{% block title %}{{ title }} · Trace{% endblock %}
+{% block heading %}{{ title }}{% endblock %}
+{% block subheading %}{{ blurb }}{% endblock %}
+{% block content %}
+<div class="card">
+  <div class="empty">
+    <h3>{{ title }} <span class="soon">Phase {{ phase }}</span></h3>
+    <p>{{ detail }}</p>
+  </div>
+</div>
+{% endblock %}

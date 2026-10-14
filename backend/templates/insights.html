@@ -1,0 +1,269 @@
+{% extends "app.html" %}
+{% block title %}Insights · Trace{% endblock %}
+{% block heading %}Insights{% endblock %}
+{% block subheading %}Where your money goes, and what moved{% endblock %}
+{% block content %}
+
+{# ---------------------------------------------------- the wheel ---------- #}
+{% if segments %}
+<div class="card">
+  <h3>Spending by category</h3>
+  <p class="when">Select a segment for the detail. Transfers are excluded.</p>
+  <div class="wheel-wrap">
+    <div class="wheel">
+      {{ wheel | safe }}
+      <div class="hub" id="hub">
+        <div class="hub-cat" id="hub-cat">All spending</div>
+        <div class="hub-amt" id="hub-amt">{{ segments|sum(attribute='amount') | money0 }}</div>
+        <div class="hub-sub" id="hub-sub">{{ categories|length }} categories</div>
+      </div>
+    </div>
+    <ul class="legend-list">
+      {% for s in segments %}
+      <li data-seg="{{ loop.index0 }}" tabindex="0" role="button"
+          aria-label="{{ s.category }}, {{ s.share|round(1) }} percent">
+        <i style="background:{{ s.colour }}"></i>
+        <span class="n">{{ s.category }}</span>
+        <span class="p">{{ s.share|round(1) }}%</span>
+        <span class="a">{{ s.amount | money0 }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <p class="footnote-inline">
+    A ring shows how a whole divides but ranks poorly, because angles are hard
+    to compare. The eight largest categories get their own segment, the rest are
+    gathered into Other, and the exact figures sit in the list rather than in
+    the angles.
+  </p>
+</div>
+{% else %}
+<div class="card empty">
+  <h3>Nothing to chart yet</h3>
+  <p>Once you connect an account or upload a statement, your spending appears
+     here broken down by category.</p>
+  <div class="row"><a href="/connect" class="btnlink">Add your data</a></div>
+</div>
+{% endif %}
+
+{# ---------------------------------------------------- what changed ------- #}
+{% if change.available %}
+<div class="card">
+  <h3>What changed in {{ change.month | monthname }}</h3>
+  <p class="when">
+    Compared with your own {{ change.months }}-month average.
+    {% if change.months > 1 %}
+    <button class="link" id="basis-toggle" onclick="toggleBasis()">
+      Compare with {{ change.previous | monthname }} instead</button>
+    {% endif %}
+  </p>
+  <div id="chart-average">{{ change_chart | safe }}</div>
+  <div id="chart-previous" hidden>{{ change_chart_prev | safe }}</div>
+  <p class="footnote-inline">
+    Red is more spending than the baseline, green is less. An unfinished month
+    is never compared against a complete one, so the current month appears only
+    once it has ended.
+    {% if is_demo %}
+    In the demonstration data one-off purchases fall on random dates, so
+    month-to-month movement here is sampling noise rather than a change in
+    habit.
+    {% endif %}
+  </p>
+</div>
+{% endif %}
+
+{# ---------------------------------------------------- the signals -------- #}
+{% if signals %}
+<div class="card">
+  <h3>Your spending over {{ signals.months }} months</h3>
+  <div class="sig">
+    <div>
+      <div class="sig-v">{{ signals.average | money0 }}</div>
+      <div class="sig-l">a month on average</div>
+      <div class="when">between {{ signals.lowest | money0 }} and {{ signals.highest | money0 }}</div>
+    </div>
+    <div>
+      <div class="sig-v {{ 'neg' if signals.trend_per_month > 0 else 'pos' }}">
+        {{ '+' if signals.trend_per_month > 0 else '−' }}{{ signals.trend_per_month|abs|round|int }}
+      </div>
+      <div class="sig-l">dollars a month, trend</div>
+      <div class="when">
+        {% if signals.trend_per_month > 20 %}spending is rising
+        {% elif signals.trend_per_month < -20 %}spending is falling
+        {% else %}essentially flat{% endif %}
+      </div>
+    </div>
+    <div>
+      <div class="sig-v {{ 'neg' if signals.overspent_months else 'pos' }}">
+        {{ signals.overspent_months }} of {{ signals.months }}
+      </div>
+      <div class="sig-l">months spending exceeded income</div>
+      <div class="when">
+        {% if signals.overspent_list %}{{ signals.overspent_list | join(', ') }}
+        {% else %}income covered spending every month{% endif %}
+      </div>
+    </div>
+  </div>
+  <p class="footnote-inline">
+    These are descriptions of your own data, not a rating. Trace does not score
+    financial health or give financial advice: any such score would need a
+    threshold, and no threshold available here would be anything but invented.
+  </p>
+</div>
+{% endif %}
+
+{# ---------------------------------------------------- benchmark ---------- #}
+{% if benchmark %}
+<div class="card">
+  <h3>Against the average US household</h3>
+  <p class="when">
+    Shares of total spending, beside the US Bureau of Labor Statistics
+    Consumer Expenditure Survey 2024.
+  </p>
+  <table>
+    <thead><tr><th>Category</th><th class="amt">You</th>
+      <th class="amt">US average</th><th class="amt">Difference</th></tr></thead>
+    <tbody>
+    {% for b in benchmark %}
+      <tr>
+        <td>{{ b.category }}</td>
+        <td class="amt">{{ b.share|round(1) }}%</td>
+        <td class="amt when">{{ b.benchmark }}%</td>
+        <td class="amt {{ 'over' if b.gap > 0 else 'under' }}">
+          {{ '+' if b.gap > 0 else '−' }}{{ b.gap|abs|round(1) }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <p class="footnote-inline">
+    The survey describes what households do, not what they should do.
+    {% if is_demo %}
+    <b>These figures are circular for the demonstration data:</b> its amounts
+    were generated from these same survey lines, so close agreement is
+    arithmetic rather than evidence. What little difference appears comes from
+    the classifier placing a transaction in the wrong category. The comparison
+    becomes meaningful against real uploaded statements.
+    {% endif %}
+  </p>
+</div>
+{% endif %}
+
+{# ---------------------------------------------------- recurring ---------- #}
+<div class="card">
+  <h3>Recurring payments</h3>
+  <p class="when">
+    {{ recurring|length }} merchants charging a similar amount on a roughly
+    monthly cadence, costing {{ recurring|sum(attribute='annual') | money0 }} a year.
+  </p>
+  {% for row in recurring %}
+  <div class="item">
+    <div class="item-row">
+      <div><b>{{ row.merchant|title }}</b> <span class="tag">{{ row.category }}</span>
+        <div class="when">{{ row.occurrences }} payments, about every
+          {{ row.interval|round|int }} days</div></div>
+      <div class="amt">
+        <div><b>{{ row.annual | money0 }}</b> a year</div>
+        <div class="when">{{ row.average | money }} each</div>
+      </div>
+    </div>
+    <div class="track"><i style="width:{{ (row.annual / recurring[0].annual * 100)|round(1) }}%"></i></div>
+  </div>
+  {% else %}
+  <div class="empty"><h3>No recurring payments found</h3>
+    <p>A merchant needs at least three charges on separate dates before a
+       cadence can be observed rather than guessed.</p></div>
+  {% endfor %}
+</div>
+
+{# ---------------------------------------------------- unusual ------------ #}
+<div class="card">
+  <h3>Unusually large amounts</h3>
+  <p class="when">Measured against the median for the same category. Select a row to see why it was categorised that way.</p>
+  {% for row in unusual %}
+  <div class="odd" data-id="{{ row.id }}" onclick="explain({{ row.id }})"
+       tabindex="0" role="button"
+       onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();explain({{ row.id }})}">
+    <div class="odd-main">
+      <div class="mono">{{ row.description[:60] }}</div>
+      <div class="when">{{ row.date.strftime('%d %b %Y') }} ·
+        <span class="tag">{{ row.category }}</span></div>
+    </div>
+    <div class="odd-scale" aria-hidden="true">
+      <i class="base" style="left:{{ (row.baseline / row.amount * 100)|round(1) }}%"></i>
+      <i class="here"></i>
+    </div>
+    <div class="odd-amt">
+      <div class="amt"><b>{{ row.amount | money }}</b></div>
+      <div class="when">usually {{ row.baseline | money }}</div>
+    </div>
+  </div>
+  {% else %}
+  <div class="empty"><h3>Nothing stands out</h3>
+    <p>No transaction sits far enough above its category's median to flag.</p></div>
+  {% endfor %}
+</div>
+
+{# ---------------------------------------------------- methodology -------- #}
+<div class="card">
+  <h3>How these were worked out</h3>
+  <ul class="method">
+    {% for line in methodology %}<li>{{ line }}</li>{% endfor %}
+  </ul>
+</div>
+
+{% include "_panel.html" %}
+<script>
+const SEGMENTS = {{ segments | tojson }};
+const TOTAL = SEGMENTS.reduce((sum, s) => sum + s.amount, 0);
+const fmt0 = v => '$' + Math.round(v).toLocaleString('en-US');
+
+function showSegment(index) {
+  const s = SEGMENTS[index];
+  document.getElementById('hub-cat').textContent = s.category;
+  document.getElementById('hub-amt').textContent = fmt0(s.amount);
+  document.getElementById('hub-sub').textContent =
+    s.share.toFixed(1) + '% · ' + s.count + ' transaction' + (s.count === 1 ? '' : 's');
+  document.querySelectorAll('.seg').forEach(
+    el => el.classList.toggle('dim', el.dataset.seg !== String(index)));
+  document.querySelectorAll('.legend-list li').forEach(
+    el => el.classList.toggle('on', el.dataset.seg === String(index)));
+}
+
+function resetSegment() {
+  document.getElementById('hub-cat').textContent = 'All spending';
+  document.getElementById('hub-amt').textContent = fmt0(TOTAL);
+  document.getElementById('hub-sub').textContent = SEGMENTS.length + ' segments';
+  document.querySelectorAll('.seg').forEach(el => el.classList.remove('dim'));
+  document.querySelectorAll('.legend-list li').forEach(el => el.classList.remove('on'));
+}
+
+document.querySelectorAll('.seg, .legend-list li').forEach(el => {
+  const index = el.dataset.seg;
+  el.addEventListener('mouseenter', () => showSegment(index));
+  el.addEventListener('focus', () => showSegment(index));
+  el.addEventListener('click', () => {
+    // a segment is a question about one category, so send them to those rows
+    const name = SEGMENTS[index].category;
+    if (name !== 'Other') location.href = '/transactions?category=' + encodeURIComponent(name);
+  });
+});
+const wrap = document.querySelector('.wheel-wrap');
+if (wrap) wrap.addEventListener('mouseleave', resetSegment);
+
+{% if change.available %}
+// Guarded with the section it belongs to: a user in their first month has no
+// previous month to name, and rendering this unconditionally crashed the page
+// for every brand-new account.
+function toggleBasis() {
+  const average = document.getElementById('chart-average');
+  const previous = document.getElementById('chart-previous');
+  const showingAverage = !average.hidden;
+  average.hidden = showingAverage;
+  previous.hidden = !showingAverage;
+  document.getElementById('basis-toggle').textContent = showingAverage
+    ? 'Compare with your {{ change.months }}-month average instead'
+    : 'Compare with {{ change.previous | monthname }} instead';
+}
+{% endif %}
+</script>
+{% endblock %}
