@@ -1,0 +1,46 @@
+# Trace — Fly.io configuration.
+#
+# Written by hand rather than generated, so `fly launch` does not replace the
+# Dockerfile or guess at the memory this application needs.
+
+app = 'trace-fyp'
+primary_region = 'sin'          # Singapore, nearest to NTU
+
+[build]
+  dockerfile = 'Dockerfile'
+
+[env]
+  PORT = '8080'
+  TRACE_ENV = 'production'
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  # The encoder takes several seconds to load, so a cold start is expensive.
+  # Suspending keeps the machine's memory image rather than booting from
+  # scratch, which makes waking it far quicker than a full stop would.
+  auto_stop_machines = 'suspend'
+  auto_start_machines = true
+  min_machines_running = 0
+  # One machine. Each would load its own copy of the encoder, and memory is
+  # the binding constraint.
+  processes = ['app']
+
+[[vm]]
+  # Measured: 401 MB resident with the encoder loaded. 512 MB would leave
+  # roughly 110 MB for uvicorn, the Postgres driver and concurrent requests,
+  # which is close enough to the limit to risk the OOM killer mid-demonstration.
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
+
+[checks]
+  [checks.health]
+    type = 'http'
+    port = 8080
+    path = '/healthz'
+    interval = '30s'
+    timeout = '5s'
+    # The encoder loads on a background thread at boot; the machine must not be
+    # declared unhealthy while that is still happening.
+    grace_period = '60s'
