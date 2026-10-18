@@ -35,11 +35,11 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{
   background:var(--bg); color:var(--ink);
-  font:15px/1.5 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  /* Plex Sans sets slightly larger than Inter, hence the looser leading. */
+  font:15px/1.55 "IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   -webkit-font-smoothing:antialiased;
-  font-feature-settings:"cv05","ss01";
 }
-.mono{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,monospace;
+.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,monospace;
   font-size:12.5px;letter-spacing:-.2px}
 .num{font-variant-numeric:tabular-nums}
 a{color:var(--accent)}
@@ -241,7 +241,7 @@ tbody tr.sel{background:var(--accent-soft)}
 .quote{font-size:13.5px;line-height:1.6;background:var(--surface-2);
   border-radius:var(--r);padding:13px 15px;margin-top:10px}
 .tok{display:flex;align-items:center;gap:10px;margin-top:9px}
-.tok .t{font-family:"JetBrains Mono",monospace;font-size:12px;width:92px;
+.tok .t{font-family:"IBM Plex Mono",monospace;font-size:12px;width:92px;
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .tok .b{flex:1;height:7px;background:var(--surface-2);border-radius:4px;
   overflow:hidden}
