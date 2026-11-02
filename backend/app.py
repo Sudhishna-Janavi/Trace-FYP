@@ -69,6 +69,18 @@ LAYER_LABELS = {
     "memory": "Merchant memory", "model": "Model",
 }
 
+# The import summary bars each layer's share of the transactions it just
+# classified. Colour stays semantic, as everywhere else: the accent for the
+# three layers that answer exactly, amber for the model, the only one that can
+# be wrong. Giving the exact three one colour is the point, not an oversight.
+LAYERS = (
+    ("correction", "Your corrections", "checked before anything else",
+     "var(--accent)"),
+    ("rule", "Rules", "unambiguous banking phrases", "var(--accent)"),
+    ("memory", "Merchant memory", "merchants seen before", "var(--accent)"),
+    ("model", "The model", "everything else", "var(--review)"),
+)
+
 MIN_PASSWORD = 8
 
 # The sidebar, in order. Pages not yet built render a placeholder naming the
