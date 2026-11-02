@@ -20,3 +20,10 @@ dataset/processed/
 
 # --- local environment
 .env
+
+# --- report and its tooling are not part of the code deliverable.
+# The report is submitted to the supervisor and examiners directly; keeping
+# its prose out of a public repository also avoids a submission being matched
+# against itself by a similarity check.
+report/
+*.docx
