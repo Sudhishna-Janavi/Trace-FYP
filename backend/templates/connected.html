@@ -6,9 +6,24 @@
     <div class="brand"><i></i>Trace</div>
     <h1>Connected</h1>
     <p class="sub">
+      {% if uploaded %}
+      {{ result.files }} file{{ '' if result.files == 1 else 's' }} you uploaded, recognised as
+      {{ uploaded.banks_phrase }} by their columns, normalised into one
+      ledger and categorised.
+      {% else %}
       {{ result.files }} files from {{ result.accounts }} banks, in three
       different export formats, normalised and categorised.
+      {% endif %}
     </p>
+    {% if uploaded and uploaded.rejected %}
+    <div class="alert soft">
+      {% set n = uploaded.rejected | length %}
+      {{ n }} file{{ '' if n == 1 else 's' }}
+      {{ 'was' if n == 1 else 'were' }} not recognised and
+      {{ 'was' if n == 1 else 'were' }} skipped:
+      {{ uploaded.rejected | map(attribute=0) | join(', ') }}.
+    </div>
+    {% endif %}
 
     <div class="result">
       <h2>Which layer decided</h2>

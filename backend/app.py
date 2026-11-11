@@ -5,6 +5,7 @@ explanations and the review queue.
 """
 from __future__ import annotations
 
+import tempfile
 import threading
 import time
 from contextlib import asynccontextmanager
@@ -13,7 +14,7 @@ from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlencode
 
-from fastapi import Depends, FastAPI, Form, Request
+from fastapi import Depends, FastAPI, File, Form, Request, UploadFile
 from fastapi.responses import (FileResponse, HTMLResponse, JSONResponse,
                                RedirectResponse)
 from fastapi.staticfiles import StaticFiles
@@ -28,6 +29,7 @@ from backend.auth import (COOKIE_NAME, COOKIE_SECURE, current_user,
 from backend.database import (Account, Correction, Transaction, User,
                               create_all, get_session)
 from backend.ingest import ingest_for_user
+from backend.uploads import clear as clear_uploads, stage as stage_uploads
 from backend import analytics, charts, classifier, review
 
 ROOT = Path(__file__).resolve().parent
@@ -187,6 +189,62 @@ def connect(request: Request, user: User = Depends(require_user),
     return templates.TemplateResponse(request, "connected.html", {
         "user": user, "theme": user.theme, "result": result,
         "layers": [l for l in LAYERS if result.by_layer.get(l[0])],
+    })
+
+
+@app.post("/connect/upload", response_class=HTMLResponse)
+async def connect_upload(request: Request,
+                         statements: list[UploadFile] = File(default=[]),
+                         user: User = Depends(require_user),
+                         session: Session = Depends(get_session)):
+    """Import statement files the user chose themselves.
+
+    The files are recognised by their columns rather than their names, staged
+    under the names the adapters expect, and then handed to exactly the same
+    ingestion path the demonstration button uses. Staging happens in a
+    temporary directory that is removed whatever the outcome: an upload is
+    one user's data and has no business persisting on the server's disk.
+    """
+    payload = [(f.filename or "file.csv", await f.read()) for f in statements]
+    if not payload:
+        return templates.TemplateResponse(request, "onboarding.html", {
+            "user": user, "theme": user.theme,
+            "error": "No files were chosen.",
+        }, status_code=400)
+
+    staging = Path(tempfile.mkdtemp(prefix="trace-upload-"))
+    try:
+        staged = stage_uploads(payload, staging)
+        if not staged.files:
+            detail = "; ".join(f"{name} — {why}" for name, why in staged.rejected[:3])
+            return templates.TemplateResponse(request, "onboarding.html", {
+                "user": user, "theme": user.theme,
+                "error": ("None of those files looked like a supported bank "
+                          "export. " + detail),
+            }, status_code=400)
+        try:
+            result = ingest_for_user(session, user, staging)
+        except Exception as error:
+            # A malformed row should say which file and why, not present the
+            # generic failure page in the middle of someone's import.
+            session.rollback()
+            return templates.TemplateResponse(request, "onboarding.html", {
+                "user": user, "theme": user.theme,
+                "error": f"Those files could not be read: {error}",
+            }, status_code=400)
+    finally:
+        clear_uploads(staging)
+
+    if not result.transactions:
+        return templates.TemplateResponse(request, "onboarding.html", {
+            "user": user, "theme": user.theme,
+            "error": "Those files held no transactions.",
+        }, status_code=400)
+
+    return templates.TemplateResponse(request, "connected.html", {
+        "user": user, "theme": user.theme, "result": result,
+        "layers": [l for l in LAYERS if result.by_layer.get(l[0])],
+        "uploaded": staged,
     })
 
 

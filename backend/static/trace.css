@@ -702,3 +702,40 @@ tbody tr:focus-visible { outline-offset: -2px; }
   .toolbar select { flex: 1 1 calc(50% - 4px); min-width: 0; }
   .toolbar button { flex: 1 1 100%; }
 }
+
+/* ------------------------------------------------------ file uploading -- */
+.btnlike {
+  display: block; text-align: center; cursor: pointer;
+  font: inherit; font-size: 14px; font-weight: 600;
+  padding: 12px 16px; min-height: 46px;
+  border: 1px solid var(--line); border-radius: var(--r);
+  background: var(--surface); color: var(--ink);
+}
+.btnlike:hover { background: var(--surface-2); }
+.picked {
+  font-size: 12.5px; color: var(--muted); line-height: 1.5;
+  margin-top: 10px; word-break: break-word;
+}
+.alert.soft {
+  background: var(--review-soft); color: var(--review);
+  border: 0; font-size: 12.5px; margin-top: 12px;
+}
+#send { margin-top: 10px; width: 100%; }
+
+/* The import summary's layer bars sit in a three-column grid whose middle
+   column is whatever is left after a 132px label and a 92px count. On a phone
+   that leaves roughly 90px of track, which is too little to read a proportion
+   from — and this is the screen that makes the cascade's argument. The label
+   and count take the first row, the bar takes the full width of the second. */
+@media (max-width: 900px) {
+  .layer {
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "name count" "track track";
+    gap: 4px 10px; align-items: baseline;
+  }
+  .layer .name { grid-area: name; }
+  .layer .n { grid-area: count; }
+  .layer .track { grid-area: track; height: 8px; }
+  .layer .name small { display: inline; margin-left: 6px; }
+  .layers { gap: 16px; }
+}

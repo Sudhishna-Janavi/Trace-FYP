@@ -12,29 +12,40 @@
 
     {% if error %}<div class="alert">{{ error }}</div>{% endif %}
 
-    <form method="post" action="/connect">
+    <form method="post" action="/connect/upload" enctype="multipart/form-data"
+          id="upload-form" onsubmit="return sending()">
       <div class="option">
         <div class="option-head">
-          <b>Connect bank data</b>
+          <b>Upload your statements</b>
           <span class="pill">Recommended</span>
         </div>
         <p>
-          Loads a demonstration set of three accounts — Chase, Capital One and
-          Apple Card — exported in three different formats, and runs them
-          through the full pipeline.
+          CSV exports from Chase, Capital One or Apple Card. Choose as many as
+          you like, or a .zip containing them. Each file is recognised by its
+          columns rather than its name, so what your bank called it does not
+          matter.
         </p>
-        <button class="primary" type="submit">Connect bank data</button>
+        <input type="file" id="statements" name="statements" multiple hidden
+               accept=".csv,.zip,text/csv,text/comma-separated-values,application/zip"
+               onchange="chose(this)">
+        <label class="btnlike" for="statements">Choose files</label>
+        <div class="picked" id="picked" hidden></div>
+        <button class="primary" type="submit" id="send" hidden>
+          <span id="send-label">Upload and categorise</span>
+        </button>
       </div>
     </form>
 
-    <div class="option muted-option">
-      <div class="option-head"><b>Upload your own statements</b></div>
-      <p>
-        CSV exports from your bank. Available once a statement format you use
-        has an adapter.
-      </p>
-      <button class="ghost" disabled>Upload statements</button>
-    </div>
+    <form method="post" action="/connect" onsubmit="return sending()">
+      <div class="option muted-option">
+        <div class="option-head"><b>Use the demonstration set</b></div>
+        <p>
+          Loads three accounts — Chase, Capital One and Apple Card — exported in
+          three different formats, and runs them through the full pipeline.
+        </p>
+        <button class="ghost" type="submit">Load demonstration data</button>
+      </div>
+    </form>
 
     <p class="footnote-inline">
       Connecting a real account requires an agreement with each bank and your
@@ -44,4 +55,37 @@
     </p>
   </div>
 </div>
+<script>
+function chose(input) {
+  const files = Array.from(input.files || []);
+  const box = document.getElementById('picked');
+  const send = document.getElementById('send');
+  if (!files.length) { box.hidden = true; send.hidden = true; return; }
+  const bytes = files.reduce((sum, f) => sum + f.size, 0);
+  const size = bytes > 1048576 ? (bytes / 1048576).toFixed(1) + ' MB'
+                               : Math.max(1, Math.round(bytes / 1024)) + ' KB';
+  const names = files.slice(0, 4).map(f => f.name).join(', ');
+  box.textContent = files.length + (files.length === 1 ? ' file' : ' files')
+    + ' · ' + size + ' — ' + names + (files.length > 4 ? ', …' : '');
+  box.hidden = false;
+  document.getElementById('send-label').textContent =
+    'Upload and categorise ' + files.length
+    + (files.length === 1 ? ' file' : ' files');
+  send.hidden = false;
+}
+
+// Categorising several hundred transactions takes a few seconds. Without a
+// visible change the page looks frozen and invites a second submission.
+function sending() {
+  document.querySelectorAll('#upload-form button, form button').forEach(b => {
+    b.disabled = true;
+  });
+  const send = document.getElementById('send');
+  if (send) {
+    send.hidden = false;
+    document.getElementById('send-label').textContent = 'Reading and categorising…';
+  }
+  return true;
+}
+</script>
 {% endblock %}
