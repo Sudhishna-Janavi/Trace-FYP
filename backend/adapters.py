@@ -155,7 +155,15 @@ def ingest(feed_directory: Path) -> list[CanonicalTransaction]:
     rows: list[CanonicalTransaction] = []
     for name, adapter in ADAPTERS.items():
         source = feed_directory if name == "applecard" else feed_directory / name
-        if name != "applecard" and not source.exists():
+        if name == "applecard":
+            # the Apple Card adapter reads a directory and raises when it
+            # holds none of its monthly files. That is right for a feed
+            # directory that should contain them, and wrong for one assembled
+            # from whatever a user chose to upload, which may legitimately
+            # include no Apple Card at all.
+            if not any(source.glob("applecard_*.csv")):
+                continue
+        elif not source.exists():
             continue
         rows += adapter.parse(source)
     return sorted(rows, key=lambda r: r.booking_date)
