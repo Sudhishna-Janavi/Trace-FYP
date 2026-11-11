@@ -7,7 +7,6 @@ from __future__ import annotations
 
 import tempfile
 import threading
-import time
 from contextlib import asynccontextmanager
 from dataclasses import asdict
 from datetime import datetime
@@ -26,11 +25,15 @@ from backend.auth import (COOKIE_NAME, COOKIE_SECURE, current_user,
                           find_by_email,
                           hash_password, issue_session, require_user,
                           verify_password)
+from backend.common import (EXPLANATION_COST, LAYER_LABELS, LAYERS,
+                            MIN_PASSWORD, NAV, PROTOCOL_LABELS,
+                            PROTOCOL_MEANS, explanation_payload,
+                            is_demo)
 from backend.database import (Account, Correction, Transaction, User,
                               create_all, get_session)
 from backend.ingest import ingest_for_user
 from backend.uploads import clear as clear_uploads, stage as stage_uploads
-from backend import analytics, charts, classifier, review
+from backend import analytics, api, charts, classifier, review
 
 ROOT = Path(__file__).resolve().parent
 
@@ -52,6 +55,12 @@ app = FastAPI(title="Trace", docs_url=None, redoc_url=None,
 app.mount("/static", StaticFiles(directory=ROOT / "static"), name="static")
 templates = Jinja2Templates(directory=ROOT / "templates")
 
+# The mobile application is a second presentation of this system: same
+# analytics, same cascade, same explanations, returned as JSON instead of
+# HTML. It is mounted here rather than run as a separate service so that
+# there is one deployment, one database and one set of answers.
+app.include_router(api.router)
+
 # Money is shown to the reader, so formatting belongs in one place rather than
 # repeated across templates.
 templates.env.filters["money"] = lambda v: (
@@ -65,36 +74,6 @@ EFFECTIVE_CATEGORY = func.coalesce(Transaction.corrected_category,
                                    Transaction.predicted_category)
 
 templates.env.filters["monthname"] = lambda key: analytics._month_name(key)
-
-LAYER_LABELS = {
-    "correction": "Your correction", "rule": "Rule",
-    "memory": "Merchant memory", "model": "Model",
-}
-
-# The import summary bars each layer's share of the transactions it just
-# classified. Colour stays semantic, as everywhere else: the accent for the
-# three layers that answer exactly, amber for the model, the only one that can
-# be wrong. Giving the exact three one colour is the point, not an oversight.
-LAYERS = (
-    ("correction", "Your corrections", "checked before anything else",
-     "var(--accent)"),
-    ("rule", "Rules", "unambiguous banking phrases", "var(--accent)"),
-    ("memory", "Merchant memory", "merchants seen before", "var(--accent)"),
-    ("model", "The model", "everything else", "var(--review)"),
-)
-
-MIN_PASSWORD = 8
-
-# The sidebar, in order. Pages not yet built render a placeholder naming the
-# phase that will deliver them, so the navigation is never a dead end.
-NAV = [
-    ("/", "Dashboard", "dashboard"),
-    ("/transactions", "Transactions", "transactions"),
-    ("/review", "Review", "review"),
-    ("/insights", "Insights", "insights"),
-    ("/accounts", "Accounts", "accounts"),
-    ("/how-it-works", "How it works", "how"),
-]
 
 
 def page_context(request, user: User, session: Session, active: str) -> dict:
@@ -455,23 +434,6 @@ def _owned(session: Session, user: User, transaction_id: int):
     return row if row is not None and row.user_id == user.id else None
 
 
-PROTOCOL_LABELS = {
-    "in_distribution": "Merchant seen before",
-    "unseen_merchant": "Merchant held out",
-    "strictly_novel": "Cold start",
-}
-PROTOCOL_MEANS = {
-    "in_distribution": "The merchant appeared in training under a different "
-                       "transaction. This is the easiest case and the one most "
-                       "papers report.",
-    "unseen_merchant": "Every transaction for a merchant was held out "
-                       "together, so the merchant itself is new.",
-    "strictly_novel": "Neither the merchant nor anything resembling its "
-                      "wording was in training. This is a new user's first "
-                      "upload.",
-}
-
-
 @app.get("/insights", response_class=HTMLResponse)
 def insights_page(request: Request, user: User = Depends(require_user),
                   session: Session = Depends(get_session)):
@@ -491,7 +453,7 @@ def insights_page(request: Request, user: User = Depends(require_user),
         "signals": analytics.signals(rows),
         "benchmark": analytics.benchmark(rows),
         "methodology": analytics.METHODOLOGY,
-        "is_demo": _is_demo(session, user),
+        "is_demo": is_demo(session, user),
     })
 
 
@@ -542,38 +504,6 @@ def how_page(request: Request, user: User = Depends(require_user),
     })
 
 
-# Measured on the deployed cascade. The model row is re-measured against ONNX
-# Runtime rather than quoting the PyTorch figure from Unit 4.5 (31 ms median),
-# because the engine the application actually runs is the one a reader should
-# be told about. See results/unit4_5.log and scripts/verify_onnx.py.
-EXPLANATION_COST = [
-    {"layer": "Rule", "method": "The phrase that matched",
-     "exact": True, "cost": "under 1 ms"},
-    {"layer": "Merchant memory", "method": "Your own history at the merchant",
-     "exact": True, "cost": "under 1 ms"},
-    {"layer": "Model", "method": "Shapley values over the terms",
-     "exact": False, "cost": "51 ms median, 113 ms worst"},
-]
-
-
-def _is_demo(session: Session, user: User) -> bool:
-    """Whether this user's data is the generated demonstration set.
-
-    It matters for the benchmark comparison: the demonstration amounts were
-    calibrated to the same survey the comparison uses, so agreement there is
-    arithmetic rather than evidence.
-    """
-    # The demonstration feeds are the only source that assigns these ids.
-    # When real statement upload lands this becomes a column on the account
-    # rather than an inference from its identifier.
-    return bool(session.scalar(
-        select(Account).where(Account.user_id == user.id,
-                              Account.external_id.in_(DEMO_ACCOUNT_IDS))))
-
-
-DEMO_ACCOUNT_IDS = ("acc-chase", "acc-capitalone", "acc-applecard")
-
-
 @app.get("/api/transactions/{transaction_id}/explanation")
 def explanation(transaction_id: int, method: str = "shap",
                 user: User = Depends(require_user),
@@ -585,83 +515,12 @@ def explanation(transaction_id: int, method: str = "shap",
     to explain; only the model needs a post-hoc approximation, and only there
     is the encoder called at all.
     """
-    row = session.get(Transaction, transaction_id)
-    if row is None or row.user_id != user.id:
+    row = _owned(session, user, transaction_id)
+    if row is None:
         # the same answer either way, so a probe cannot tell a missing row
         # from one belonging to somebody else
         return JSONResponse({"error": "not found"}, status_code=404)
-
-    # loading the encoder is a one-off cost of the first request, not a cost
-    # of this explanation, so it happens before the clock starts
-    if row.decided_by == "model" and not row.corrected_category:
-        classifier.get_model()
-    started = time.perf_counter()
-    result = _explanation_for(row, method)
-    payload = {
-        "id": row.id,
-        "description": row.raw_description,
-        "amount": row.amount,
-        "date": row.booking_date.strftime("%d %b %Y"),
-        "bank": row.account.bank,
-        "category": result.category,
-        "confidence": result.confidence,
-        "layer": result.layer,
-        "layer_label": LAYER_LABELS.get(result.layer, result.layer),
-        "method": result.method,
-        "exact": result.exact,
-        "headline": result.headline,
-        "tokens": [[token, round(weight, 4)] for token, weight in result.tokens],
-        "note": EXPLANATION_NOTES[result.method],
-        "took_ms": round((time.perf_counter() - started) * 1000),
-    }
-    return JSONResponse(payload)
-
-
-EXPLANATION_NOTES = {
-    "user_correction": "You set this category yourself, so nothing was "
-                       "predicted here. Trace remembers it for this merchant.",
-    "matched_phrase": "A deterministic rule decided this. The reason above is "
-                      "the whole of the logic, not a summary of it.",
-    "merchant_history": "Your own history decided this, by looking the "
-                        "merchant up. No model was involved.",
-    "shap": "Shapley values, enumerated exactly over every combination of "
-            "terms in this description. The weights are the model's, but the "
-            "reasoning shown is reconstructed afterwards.",
-    "lime": "LIME fits a simple linear model to the predictions around this "
-            "description. The weights come from that stand-in, not from the "
-            "model itself.",
-}
-
-
-def _explanation_for(row: Transaction, method: str):
-    """Dispatch to the explanation the deciding layer can actually support."""
-    from backend import explainability as xai
-
-    if row.decided_by == "correction" or row.corrected_category:
-        return xai.Explanation(
-            layer="correction", category=row.category, confidence=1.0,
-            method="user_correction", exact=True,
-            headline=f"You told Trace that “{row.merchant_fingerprint}” is "
-                     f"{row.category}, so that is what it uses.",
-            tokens=[(row.merchant_fingerprint, 1.0)])
-
-    if row.decided_by == "rule":
-        from models.rule_baseline import predict as rule_predict
-        _, phrase = rule_predict(row.normalised_description)
-        return xai.explain_rule(row.predicted_category, phrase or "")
-
-    if row.decided_by == "memory":
-        memory = classifier.get_memory()
-        history = dict(memory._seen.get(row.merchant_fingerprint, {}))
-        return xai.explain_memory(row.predicted_category,
-                                  row.merchant_fingerprint, history)
-
-    model = classifier.get_model()
-    if method == "lime":
-        return xai.explain_lime(model, row.normalised_description,
-                                row.predicted_category)
-    return xai.explain_shap(model, row.normalised_description,
-                            row.predicted_category)
+    return JSONResponse(explanation_payload(row, method))
 
 
 @app.post("/theme")
