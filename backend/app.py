@@ -14,6 +14,7 @@ from pathlib import Path
 from urllib.parse import urlencode
 
 from fastapi import Depends, FastAPI, File, Form, Request, UploadFile
+from fastapi import Response
 from fastapi.responses import (FileResponse, HTMLResponse, JSONResponse,
                                RedirectResponse)
 from fastapi.staticfiles import StaticFiles
@@ -60,6 +61,34 @@ templates = Jinja2Templates(directory=ROOT / "templates")
 # HTML. It is mounted here rather than run as a separate service so that
 # there is one deployment, one database and one set of answers.
 app.include_router(api.router)
+
+
+@app.middleware("http")
+async def api_cors(request: Request, call_next):
+    """Allow a browser-based client to call the API, and nothing else.
+
+    A native application is not subject to the same-origin policy, so the
+    phone needs none of this. A client running in a browser does, and
+    without it every request from one is refused before it is sent.
+
+    The headers are added only under /api/v1, never to the pages, and
+    credentials are deliberately not allowed: this API authenticates with a
+    bearer token the caller must already hold, not with an ambient cookie, so
+    a page on another origin gains nothing by being able to call it. It
+    cannot read the token, and without the token every answer is a 401.
+    """
+    if not request.url.path.startswith("/api/v1"):
+        return await call_next(request)
+
+    if request.method == "OPTIONS":
+        response = Response(status_code=204)
+    else:
+        response = await call_next(request)
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
+    response.headers["Access-Control-Allow-Headers"] = "Authorization, Content-Type"
+    response.headers["Access-Control-Max-Age"] = "600"
+    return response
 
 # Money is shown to the reader, so formatting belongs in one place rather than
 # repeated across templates.
