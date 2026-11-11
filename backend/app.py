@@ -14,7 +14,7 @@ from pathlib import Path
 from urllib.parse import urlencode
 
 from fastapi import Depends, FastAPI, Form, Request
-from fastapi.responses import (HTMLResponse, JSONResponse,
+from fastapi.responses import (FileResponse, HTMLResponse, JSONResponse,
                                RedirectResponse)
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -644,6 +644,36 @@ def server_error(request: Request, exc):
                    "been changed. Trying again often works.",
         "back": "/", "back_label": "Back to your dashboard",
     }, status_code=500)
+
+
+# ----------------------------------------------- installing on a phone ---
+# The service worker and the manifest are served from the root rather than
+# from /static, because a worker's scope cannot rise above the path it was
+# served from: at /static/sw.js it could only control /static.
+
+@app.get("/sw.js", include_in_schema=False)
+def service_worker():
+    return FileResponse(ROOT / "static" / "sw.js", media_type="text/javascript",
+                        headers={"Cache-Control": "no-cache",
+                                 "Service-Worker-Allowed": "/"})
+
+
+@app.get("/manifest.webmanifest", include_in_schema=False)
+def manifest():
+    return FileResponse(ROOT / "static" / "manifest.webmanifest",
+                        media_type="application/manifest+json")
+
+
+@app.get("/offline", response_class=HTMLResponse, include_in_schema=False)
+def offline(request: Request):
+    """Precached at install, so there is something to show with no network."""
+    return templates.TemplateResponse(request, "error.html", {
+        "theme": "system", "title": "You are offline",
+        "message": "Trace needs a connection to read your transactions. "
+                   "This page was stored on your device so that something "
+                   "sensible appears until one returns.",
+        "back": "/", "back_label": "Try again",
+    })
 
 
 @app.get("/healthz")

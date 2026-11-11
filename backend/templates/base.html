@@ -8,6 +8,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/static/trace.css">
+
+{#- Installing on a phone. The manifest turns "Add to Home Screen" into a real
+    icon that launches without browser chrome; the apple-* tags do the same on
+    iOS, which does not read the manifest for that. theme-color tints the
+    status bar, and is given twice so it follows the system scheme. -#}
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#FBFBFA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0C0D0C" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Trace">
+<link rel="apple-touch-icon" href="/static/icons/apple-touch-icon.png">
+<link rel="icon" href="/static/icons/favicon-32.png" sizes="32x32" type="image/png">
 <script>
 // Runs before the first paint. The server already renders the signed-in user's
 // saved preference, so this only matters for a signed-out visitor or a tab
@@ -58,6 +71,15 @@ function toggleTheme() {
 
 labelTheme();
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', labelTheme);
+
+// The worker caches the shell so a launch from the home-screen icon paints
+// immediately. Registration is deferred to load so it never competes with the
+// first render, and a failure is silent: the application works without it.
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
+  });
+}
 </script>
 </body>
 </html>
