@@ -436,3 +436,187 @@ tbody tr:focus-visible { outline-offset: -2px; }
     animation-duration: .01ms !important; transition-duration: .01ms !important;
   }
 }
+
+/* ======================================================= phone layout ===
+   The desktop sidebar wrapped onto three lines at 390px and the ledger
+   table overflowed horizontally, so below 900px the application switches
+   to a bottom tab bar and card rows. A thumb reaches the bottom of a
+   phone, not the top, which is why navigation moves there rather than
+   simply shrinking.                                                     */
+
+.tabbar, .sheet, .sheet-back { display: none; }
+
+@media (max-width: 900px) {
+
+  /* ---------------------------------------------------------- shell -- */
+  nav.side { display: none; }
+  .shell { grid-template-columns: 1fr; }
+  main.page {
+    padding: 18px 16px calc(78px + env(safe-area-inset-bottom, 0px));
+  }
+  .page-head { margin-bottom: 18px; }
+  .page-head h1 { font-size: 22px; }
+  .card { padding: 16px 15px; margin-bottom: 14px; }
+
+  /* -------------------------------------------------------- tab bar -- */
+  .tabbar {
+    display: flex;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .tabbar a, .tabbar button {
+    flex: 1; min-width: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 3px;
+    min-height: 54px; padding: 8px 2px 7px;
+    border: 0; background: none; cursor: pointer;
+    font: inherit; font-size: 10.5px; font-weight: 500;
+    color: var(--muted); text-decoration: none;
+    position: relative; -webkit-tap-highlight-color: transparent;
+  }
+  .tabbar svg {
+    width: 23px; height: 23px; fill: none; stroke: currentColor;
+    stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round;
+  }
+  .tabbar [aria-current="page"] { color: var(--accent); }
+  .tabbar span {
+    max-width: 100%; overflow: hidden;
+    text-overflow: ellipsis; white-space: nowrap;
+  }
+  .tabbar .count {
+    position: absolute; top: 3px; left: 50%; margin-left: 5px;
+    background: var(--review); color: #fff;
+    font-size: 10px; font-weight: 700; font-style: normal;
+    line-height: 16px; min-width: 17px; padding: 0 5px;
+    border-radius: 20px; text-align: center;
+    font-variant-numeric: tabular-nums;
+  }
+  .tabbar .count[hidden] { display: none; }
+  :root[data-theme="dark"] .tabbar .count { color: #0C0D0C; }
+
+  /* ---------------------------------------------------- "More" sheet -- */
+  .sheet-back { display: block; position: fixed; inset: 0; z-index: 45;
+    background: rgba(10, 14, 13, .34); }
+  .sheet-back[hidden] { display: none; }
+  .sheet {
+    display: block;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+    border-radius: 18px 18px 0 0;
+    padding: 8px 16px calc(16px + env(safe-area-inset-bottom, 0px));
+    box-shadow: var(--shadow);
+    transform: translateY(100%);
+    transition: transform .22s ease;
+  }
+  .sheet.up { transform: translateY(0); }
+  .sheet[hidden] { display: none; }
+  .sheet-grip {
+    width: 38px; height: 4px; border-radius: 3px;
+    background: var(--line); margin: 4px auto 12px;
+  }
+  .sheet-who { padding: 0 6px 12px; line-height: 1.45;
+    border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+  .sheet-who b { display: block; font-size: 14px; }
+  .sheet-who span { font-size: 12.5px; color: var(--faint); word-break: break-all; }
+  .sheet a {
+    display: flex; align-items: center; gap: 12px;
+    min-height: 48px; padding: 0 6px;
+    color: var(--ink); text-decoration: none;
+    font-size: 15px; font-weight: 500;
+  }
+  .sheet a[aria-current="page"] { color: var(--accent); }
+  .sheet a svg {
+    width: 21px; height: 21px; fill: none; stroke: currentColor;
+    stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round;
+  }
+  .sheet-acts { display: flex; gap: 8px; margin-top: 10px; }
+  .sheet-acts > * { flex: 1; }
+  .sheet-acts button { width: 100%; min-height: 46px; }
+
+  /* ------------------------------------------- the ledger, as cards -- */
+  .ledger thead { display: none; }
+  .ledger, .ledger tbody, .ledger tr, .ledger td { display: block; }
+  .ledger tbody tr {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "desc amount" "date tag" "layer layer";
+    gap: 2px 12px; align-items: center;
+    border: 1px solid var(--line); border-radius: 12px;
+    padding: 12px 13px; margin-bottom: 9px;
+  }
+  .ledger tbody tr:hover { background: var(--surface); }
+  .ledger tbody tr.sel { background: var(--accent-soft); }
+  .ledger tbody td { border: 0; padding: 0; min-width: 0; }
+  .ledger tbody td:nth-child(1) { grid-area: date; }
+  .ledger tbody td:nth-child(2) { grid-area: desc; }
+  .ledger tbody td:nth-child(3) { grid-area: tag; justify-self: end; }
+  .ledger tbody td:nth-child(4) { grid-area: layer; }
+  .ledger tbody td:nth-child(5) { grid-area: amount; justify-self: end; }
+  .ledger tbody td .mono {
+    font-size: 12.5px; overflow: hidden;
+    text-overflow: ellipsis; white-space: nowrap;
+  }
+  .ledger tbody td:nth-child(2) .when { display: none; }
+  .ledger tbody td:nth-child(5) { font-size: 15px; font-weight: 600; }
+  .ledger tbody tr td:nth-child(4) .when { font-size: 11.5px; }
+  /* the empty-state row must not be forced into the grid */
+  .ledger tbody tr:has(td[colspan]) { display: block; padding: 0; border: 0; }
+
+  /* ------------------------------------- explanation: a bottom sheet -- */
+  /* A modal sheet covers the tab bar rather than sliding under it, or its
+     last control sits behind the navigation and cannot be tapped. */
+  .panel { z-index: 60; }
+  .backdrop { z-index: 55; }
+  .panel {
+    top: auto; right: 0; left: 0; bottom: 0;
+    width: auto; max-width: none;
+    height: auto; max-height: 88vh;
+    border-left: 0; border-top: 1px solid var(--line);
+    border-radius: 18px 18px 0 0;
+    padding: 10px 18px calc(22px + env(safe-area-inset-bottom, 0px));
+    overscroll-behavior: contain;
+  }
+  .panel::before {
+    content: ""; display: block;
+    width: 38px; height: 4px; border-radius: 3px;
+    background: var(--line); margin: 2px auto 14px;
+  }
+  .panel .close { position: relative; top: -4px; font-size: 24px; padding: 4px 6px; }
+
+  /* ----------------------------------- touch targets and form sizing -- */
+  .toolbar { gap: 8px; }
+  .toolbar input, .toolbar select, .toolbar button { min-height: 46px; }
+  .toolbar input { min-width: 100%; }
+  .toolbar select { flex: 1; min-width: 0; }
+  .fix select, .fix button, .panel .wide { min-height: 46px; }
+  .qact select, .qact button { min-height: 46px; }
+  button, .btnlink { min-height: 46px; }
+
+  /* ----------------------------------------------- charts and grids -- */
+  .kpis { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .hub-wrap, .donut-wrap { flex-direction: column; align-items: stretch; }
+  svg.chart { width: 100%; height: auto; }
+  .toast { bottom: calc(80px + env(safe-area-inset-bottom, 0px)); }
+}
+
+/* a phone in landscape, or a very short window: the tab bar still fits */
+@media (max-width: 900px) and (max-height: 420px) {
+  .tabbar a, .tabbar button { min-height: 44px; font-size: 0; gap: 0; }
+  .tabbar svg { width: 21px; height: 21px; }
+  main.page { padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px)); }
+}
+
+/* The dashboard's recent list has four columns, not five: no "decided by".
+   Its fourth cell is therefore the amount, and the layer row is unused. */
+@media (max-width: 900px) {
+  .ledger.lite tbody tr {
+    grid-template-areas: "desc amount" "date tag";
+  }
+  .ledger.lite tbody td:nth-child(4) {
+    grid-area: amount; justify-self: end;
+    font-size: 15px; font-weight: 600;
+  }
+}
