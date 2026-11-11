@@ -27,3 +27,6 @@ dataset/processed/
 # against itself by a similarity check.
 report/
 *.docx
+
+# local dev convenience, machine-specific absolute paths
+.claude/

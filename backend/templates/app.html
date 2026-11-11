@@ -1,8 +1,24 @@
-{#- The shell every signed-in page extends. -#}
+{#- The shell every signed-in page extends.
+
+    Two navigations are rendered, and exactly one is visible at a time. The
+    sidebar is the desktop layout; the bottom tab bar is the phone layout,
+    because a thumb reaches the bottom of a phone and not the top of it.
+    Contorting one element into both produced a nav that wrapped onto three
+    lines at 390px, so they are separate elements switched by media query.
+-#}
 {% extends "base.html" %}
+
+{%- set ICONS = {
+  'dashboard': 'M3 10.5 12 3l9 7.5M5.5 9.5V20h13V9.5',
+  'transactions': 'M4 7h16M4 12h16M4 17h10',
+  'review': 'M12 8v5M12 16.5v.5M10.3 3.6 2.6 17a2 2 0 0 0 1.7 3h15.4a2 2 0 0 0 1.7-3L13.7 3.6a2 2 0 0 0-3.4 0Z',
+  'insights': 'M4 20V10M10 20V4M16 20v-7M22 20H2',
+  'accounts': 'M3 9.5 12 4l9 5.5M4.5 9.5V19h15V9.5M3 19h18',
+  'how': 'M12 17v.5M9.8 9.2a2.3 2.3 0 1 1 3.2 2.1c-.7.3-1 .9-1 1.6v.6M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z',
+  'more': 'M5 12h.01M12 12h.01M19 12h.01',
+} -%}
+
 {% block body %}
-{#- Six navigation links sit before the content on every page; a keyboard or
-    screen-reader user should be able to step over them. -#}
 <a class="skip" href="#main">Skip to content</a>
 <div class="shell">
   <nav class="side">
@@ -33,4 +49,58 @@
     {% block content %}{% endblock %}
   </main>
 </div>
+
+{#- ------------------------------------------------ phone navigation ----- -#}
+{%- set TABS = ['dashboard', 'transactions', 'review', 'insights'] -%}
+<nav class="tabbar" aria-label="Main">
+  {% for href, label, key in nav_items %}{% if key in TABS %}
+  <a href="{{ href }}" {% if key == active %}aria-current="page"{% endif %}>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="{{ ICONS[key] }}"/></svg>
+    <span>{{ label }}</span>
+    {% if key == 'review' %}<i class="count" data-review-count
+      {{ 'hidden' if not review_count }}>{{ review_count }}</i>{% endif %}
+  </a>
+  {% endif %}{% endfor %}
+  <button type="button" onclick="openMore()"
+          {% if active in ('accounts', 'how') %}aria-current="page"{% endif %}>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="{{ ICONS['more'] }}"/></svg>
+    <span>More</span>
+  </button>
+</nav>
+
+<div class="sheet-back" id="more-back" hidden onclick="closeMore()"></div>
+<div class="sheet" id="more-sheet" hidden role="dialog" aria-modal="true"
+     aria-label="More">
+  <div class="sheet-grip"></div>
+  <div class="sheet-who">
+    <b>{{ user.display_name }}</b>
+    <span>{{ user.email }}</span>
+  </div>
+  {% for href, label, key in nav_items %}{% if key not in TABS %}
+  <a href="{{ href }}" {% if key == active %}aria-current="page"{% endif %}>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="{{ ICONS[key] }}"/></svg>
+    {{ label }}
+  </a>
+  {% endif %}{% endfor %}
+  <div class="sheet-acts">
+    <button class="ghost" onclick="toggleTheme()"><span data-theme-label>Dark</span> theme</button>
+    <form method="post" action="/signout"><button class="ghost" type="submit">Sign out</button></form>
+  </div>
+</div>
+<script>
+function openMore() {
+  document.getElementById('more-sheet').hidden = false;
+  document.getElementById('more-back').hidden = false;
+  requestAnimationFrame(() => document.getElementById('more-sheet').classList.add('up'));
+}
+function closeMore() {
+  const sheet = document.getElementById('more-sheet');
+  sheet.classList.remove('up');
+  document.getElementById('more-back').hidden = true;
+  setTimeout(() => { sheet.hidden = true; }, 220);
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && !document.getElementById('more-sheet').hidden) closeMore();
+});
+</script>
 {% endblock %}
