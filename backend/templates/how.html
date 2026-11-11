@@ -62,10 +62,10 @@
     {% for key, block in performance.items() %}
       <tr>
         <td><b>{{ labels[key] }}</b></td>
-        <td class="amt num">{{ '%.3f' % block.macro_f1 }}</td>
-        <td class="amt num">{{ '%.3f' % block.accuracy }}</td>
-        <td class="amt num">{{ '%.1f' % (block.review_rate * 100) }}%</td>
-        <td class="amt num">{{ '%.3f' % block.accepted_accuracy }}</td>
+        <td class="amt num" data-label="Macro F1">{{ '%.3f' % block.macro_f1 }}</td>
+        <td class="amt num" data-label="Accuracy">{{ '%.3f' % block.accuracy }}</td>
+        <td class="amt num" data-label="Review">{{ '%.1f' % (block.review_rate * 100) }}%</td>
+        <td class="amt num" data-label="Once accepted">{{ '%.3f' % block.accepted_accuracy }}</td>
       </tr>
     {% endfor %}
     </tbody>

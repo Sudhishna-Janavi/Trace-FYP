@@ -620,3 +620,85 @@ tbody tr:focus-visible { outline-offset: -2px; }
     font-size: 15px; font-weight: 600;
   }
 }
+
+/* ============================================ phone layout, corrections ===
+   Four problems the first phone pass left behind, found by reviewing the
+   rendered pages at 390px rather than by reasoning about the rules.        */
+
+@media (max-width: 900px) {
+
+  /* 1. The queue row's meta line and its amount shared a flex line and
+        collided: "decided by model" ran into "26% confident". A grid gives
+        the amount its own column, which text in the first column cannot
+        enter however long it gets. */
+  .qmain {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2px 12px;
+    align-items: start;
+  }
+  .qwho { grid-column: 1; min-width: 0; }
+  .qamt { grid-column: 2; white-space: nowrap; }
+  .qwho .mono {
+    font-size: 12.5px; overflow: hidden;
+    text-overflow: ellipsis; white-space: nowrap;
+  }
+  .qwho .when { font-size: 11.5px; line-height: 1.45; }
+
+  /* 2. The action row wrapped so that Confirm fell onto its own line while
+        the dropdown was squeezed to "Enterta". Placed explicitly instead:
+        category and reason on the first row, correction on the second,
+        confirmation across the third. */
+  .qact {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    align-items: center;
+  }
+  .qact > :nth-child(1) { grid-area: 1 / 1 / 2 / 2; justify-self: start; }
+  .qact > :nth-child(2) { grid-area: 1 / 2 / 2 / 3; }
+  .qact > .grow         { display: none; }
+  .qact > :nth-child(4) { grid-area: 2 / 1 / 3 / 2; min-width: 0; }
+  .qact > :nth-child(5) { grid-area: 2 / 2 / 3 / 3; }
+  .qact > :nth-child(6) { grid-area: 3 / 1 / 4 / 3; }
+  .qact select { width: 100%; min-width: 0; }
+
+  /* The queue explainer is a wall of text on a phone; it earns its place on
+     a desktop but costs the whole first screen here. */
+  .explainer p { font-size: 13px; }
+
+  /* 3. The protocol table is five numeric columns. Horizontal scrolling hid
+        the last two with nothing to say they were there, and this is the
+        table the whole report turns on. Each protocol becomes a block with
+        its figures labelled, so nothing is off-screen. */
+  .protocols thead { display: none; }
+  .protocols, .protocols tbody, .protocols tr, .protocols td { display: block; }
+  .protocols tbody tr {
+    border: 1px solid var(--line); border-radius: 12px;
+    padding: 12px 14px; margin-bottom: 10px;
+  }
+  .protocols tbody td { border: 0; padding: 0; }
+  .protocols tbody td:first-child {
+    font-size: 14px; margin-bottom: 8px;
+    padding-bottom: 8px; border-bottom: 1px solid var(--line);
+  }
+  .protocols tbody td[data-label] {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; padding: 3px 0; text-align: left;
+  }
+  .protocols tbody td[data-label]::before {
+    content: attr(data-label);
+    font-size: 12px; color: var(--muted); font-weight: 400;
+  }
+  /* .scroll-x table carries min-width:520px so the table can scroll on a
+     desktop. Once the table is laid out as blocks that minimum is what
+     pushed the figures off the screen entirely. */
+  .scroll-x { overflow: visible; }
+  .scroll-x .protocols { min-width: 0; width: 100%; }
+
+  /* 4. Three dropdowns across 390px read "All ca", "All ac", "Any s". Two to
+        a row leaves each one wide enough to show its value. */
+  .toolbar input { flex: 1 1 100%; min-width: 0; }
+  .toolbar select { flex: 1 1 calc(50% - 4px); min-width: 0; }
+  .toolbar button { flex: 1 1 100%; }
+}
