@@ -14,9 +14,9 @@ from pathlib import Path
 from urllib.parse import urlencode
 
 from fastapi import Depends, FastAPI, File, Form, Request, UploadFile
-from fastapi import Response
 from fastapi.responses import (FileResponse, HTMLResponse, JSONResponse,
                                RedirectResponse)
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from sqlalchemy import func, select
@@ -63,32 +63,47 @@ templates = Jinja2Templates(directory=ROOT / "templates")
 app.include_router(api.router)
 
 
-@app.middleware("http")
-async def api_cors(request: Request, call_next):
+class ApiCors:
     """Allow a browser-based client to call the API, and nothing else.
 
     A native application is not subject to the same-origin policy, so the
-    phone needs none of this. A client running in a browser does, and
-    without it every request from one is refused before it is sent.
+    phone needs none of this. A client running in a browser does, and without
+    it every request from one is refused before it is sent.
 
-    The headers are added only under /api/v1, never to the pages, and
-    credentials are deliberately not allowed: this API authenticates with a
-    bearer token the caller must already hold, not with an ambient cookie, so
-    a page on another origin gains nothing by being able to call it. It
-    cannot read the token, and without the token every answer is a 401.
+    This is a plain ASGI wrapper rather than an `@app.middleware("http")`
+    function for a specific reason: that decorator builds a
+    BaseHTTPMiddleware, and answering a preflight from inside one without
+    calling the rest of the stack leaves the request's receive stream unread.
+    The connection then waits for a body that will never be sent, and the
+    server stops answering. Starlette's own CORSMiddleware is pure ASGI and
+    handles a preflight correctly, so it is used as-is and simply not
+    consulted for anything outside the API.
+
+    Credentials are deliberately not allowed. This API authenticates with a
+    bearer token the caller must already hold rather than an ambient cookie,
+    so a page on another origin gains nothing by being able to call it: it
+    cannot read the token, and without one every answer is a 401.
     """
-    if not request.url.path.startswith("/api/v1"):
-        return await call_next(request)
 
-    if request.method == "OPTIONS":
-        response = Response(status_code=204)
-    else:
-        response = await call_next(request)
-    response.headers["Access-Control-Allow-Origin"] = "*"
-    response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
-    response.headers["Access-Control-Allow-Headers"] = "Authorization, Content-Type"
-    response.headers["Access-Control-Max-Age"] = "600"
-    return response
+    def __init__(self, app):
+        self.app = app
+        self.cors = CORSMiddleware(
+            app,
+            allow_origins=["*"],
+            allow_credentials=False,
+            allow_methods=["GET", "POST", "OPTIONS"],
+            allow_headers=["Authorization", "Content-Type"],
+            max_age=600,
+        )
+
+    async def __call__(self, scope, receive, send):
+        if scope["type"] == "http" and scope["path"].startswith("/api/v1"):
+            await self.cors(scope, receive, send)
+        else:
+            await self.app(scope, receive, send)
+
+
+app.add_middleware(ApiCors)
 
 # Money is shown to the reader, so formatting belongs in one place rather than
 # repeated across templates.
