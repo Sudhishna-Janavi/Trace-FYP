@@ -117,12 +117,25 @@ def explanation_for(row: Transaction, method: str):
     from backend import explainability as xai
 
     if row.decided_by == "correction" or row.corrected_category:
+        # Six transactions in the demonstration set — 0.8% — have no merchant
+        # fingerprint at all, because every token in the description is bank
+        # noise or a reference code. Naming the merchant in that case produces
+        # an empty pair of quotation marks, which reads as a fault rather than
+        # as the limitation it is, so the sentence says what actually happened.
+        if row.merchant_fingerprint:
+            headline = (f"You told Trace that “{row.merchant_fingerprint}” is "
+                        f"{row.category}, so that is what it uses.")
+            tokens = [(row.merchant_fingerprint, 1.0)]
+        else:
+            headline = (f"You set this to {row.category} yourself, so that is "
+                        f"what it uses. This description has no recognisable "
+                        f"merchant, so the correction applies to this "
+                        f"transaction alone.")
+            tokens = []
         return xai.Explanation(
             layer="correction", category=row.category, confidence=1.0,
             method="user_correction", exact=True,
-            headline=f"You told Trace that “{row.merchant_fingerprint}” is "
-                     f"{row.category}, so that is what it uses.",
-            tokens=[(row.merchant_fingerprint, 1.0)])
+            headline=headline, tokens=tokens)
 
     if row.decided_by == "rule":
         from models.rule_baseline import predict as rule_predict
