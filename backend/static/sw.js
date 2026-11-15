@@ -14,7 +14,7 @@
  * The version string is what retires an old cache. Bump it on release; the
  * activate handler then deletes every cache that is not the current one.
  */
-const VERSION = 'trace-v2';
+const VERSION = 'trace-v3';
 const SHELL = [
   '/static/trace.css',
   '/static/icons/icon-192.png',

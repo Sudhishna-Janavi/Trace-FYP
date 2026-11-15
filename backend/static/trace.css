@@ -261,7 +261,7 @@ tbody tr.sel{background:var(--accent-soft)}
 
 /* ---------------------------------------------------------------- review -- */
 .explainer h3 { margin: 0 0 8px; font-size: 15px; }
-.explainer p { margin: 0 0 8px; color: var(--muted); line-height: 1.6; max-width: 62ch; }
+.explainer p { margin: 0 0 8px; color: var(--muted); line-height: 1.6; }
 .explainer p:last-child { margin-bottom: 0; }
 
 .qrow { padding: 16px 18px; transition: opacity .3s, transform .3s; }
