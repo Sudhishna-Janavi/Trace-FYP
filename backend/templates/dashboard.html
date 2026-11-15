@@ -16,7 +16,7 @@
     <div class="d">{{ (t.spending / months|length) | money0 }} / month</div></div>
   <div class="kpi"><div class="k">Total income</div>
     <div class="v num">{{ t.income | money0 }}</div>
-    <div class="d">transfers excluded</div></div>
+    <div class="d">credits only</div></div>
   <div class="kpi"><div class="k">Needs review</div>
     <div class="v num">{{ t.needs_review }}</div>
     <div class="d">{{ 'low confidence' if t.needs_review else 'all confirmed' }}</div></div>
@@ -26,7 +26,6 @@
 <div>
   <div class="card">
     <h2>Monthly cash flow</h2>
-    <div class="hint">Transfers between your own accounts are excluded.</div>
     <div class="legend">
       <span><i style="background:var(--income)"></i>Income</span>
       <span><i style="background:var(--spend)"></i>Spending</span>
@@ -62,7 +61,6 @@
 <div>
   <div class="card">
     <h2>Spending by category</h2>
-    <div class="hint">Transfers are neutral and excluded.</div>
     {% for row in categories[:8] %}
     <div>
       <div class="brk"><span>{{ row.category }}<span class="pc">{{ row.share|round(1) }}%</span></span>

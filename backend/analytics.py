@@ -3,9 +3,9 @@
 Spending is the sum of signed amounts, not a count of rows. Counting rows would
 make a hundred coffees look larger than a year of rent.
 
-Transfers between a user's own accounts are excluded throughout: moving money
-from current to savings is not spending, and counting it would inflate every
-total. Income is reported separately rather than netted into categories.
+A transfer is counted by the sign of its amount, like any other category:
+money arriving adds to income, money leaving adds to spending. Income is
+reported separately rather than netted into categories.
 
 Every query is scoped by user_id. Scoping lives here rather than in the routes,
 so a missing filter is a visible omission in one place.
@@ -24,11 +24,19 @@ from backend.database import Account, Transaction, User
 
 # How each of the 17 categories affects a spending total.
 INCOME = {"Income"}
-NEUTRAL = {"Transfer"}
+# Counted by the sign of the amount rather than left out: money arriving is
+# income, money leaving is spending. A transfer therefore lands on whichever
+# side it actually fell, instead of being absent from both.
+BY_SIGN = {"Transfer"}
+NEUTRAL: set[str] = set()
 
 
 def is_spend(category: str) -> bool:
     return category not in INCOME and category not in NEUTRAL
+
+
+def counts_as_income(category: str) -> bool:
+    return category in INCOME or category in BY_SIGN
 
 
 @dataclass
@@ -51,7 +59,8 @@ def load_transactions(session: Session, user: User) -> list[Transaction]:
 
 def totals(rows: list[Transaction], accounts: int) -> Totals:
     spending = sum(-r.amount for r in rows if is_spend(r.category) and r.amount < 0)
-    income = sum(r.amount for r in rows if r.category in INCOME and r.amount > 0)
+    income = sum(r.amount for r in rows
+                 if counts_as_income(r.category) and r.amount > 0)
     dates = sorted(r.booking_date for r in rows) if rows else []
     return Totals(
         spending=spending, income=income, net=income - spending,
@@ -68,7 +77,7 @@ def monthly(rows: list[Transaction]) -> list[dict]:
         lambda: {"spending": 0.0, "income": 0.0})
     for row in rows:
         key = row.booking_date.strftime("%Y-%m")
-        if row.category in INCOME and row.amount > 0:
+        if counts_as_income(row.category) and row.amount > 0:
             buckets[key]["income"] += row.amount
         elif is_spend(row.category) and row.amount < 0:
             buckets[key]["spending"] += -row.amount
@@ -208,8 +217,6 @@ def unusual(rows: list[Transaction], recurring_merchants: set[str],
 METHODOLOGY = [
     "Spending totals the money that left your accounts, not the number of "
     "transactions.",
-    "Transfers between your own accounts are movements rather than spending, "
-    "and are excluded from every total.",
     "Predictions the system was not confident about are held for your review "
     "and are shown separately.",
     "A recurring payment repeats at a merchant on at least three distinct "
@@ -307,7 +314,7 @@ def signals(rows: list[Transaction], today: date | None = None) -> Signals | Non
     spend = [sum(per_month[m].values()) for m in months]
     income: dict[str, float] = collections.defaultdict(float)
     for row in rows:
-        if row.category in INCOME and row.amount > 0:
+        if counts_as_income(row.category) and row.amount > 0:
             income[row.booking_date.strftime("%Y-%m")] += row.amount
 
     # least squares on (index, spend): the slope is dollars per month
