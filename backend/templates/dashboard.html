@@ -69,21 +69,6 @@
     </div>
     {% endfor %}
   </div>
-
-  <div class="card">
-    <h2>Recurring</h2>
-    <div class="hint">{{ recurring|length }} merchants charging a similar amount about once a month.</div>
-    {% for row in recurring[:6] %}
-    <div class="item">
-      <div class="t"><span>{{ row.merchant|title }}
-        <span class="tag" style="margin-left:5px">{{ row.category }}</span></span>
-        <span class="v">{{ row.average | money }}</span></div>
-      <div class="d">{{ row.occurrences }} payments · about {{ row.annual | money0 }} a year</div>
-    </div>
-    {% else %}
-    <div class="note">No recurring merchants detected yet.</div>
-    {% endfor %}
-  </div>
 </div>
 </div>
 
