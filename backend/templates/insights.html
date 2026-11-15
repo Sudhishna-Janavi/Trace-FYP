@@ -45,7 +45,7 @@
 <div class="card">
   <h3>What changed in {{ change.month | monthname }}</h3>
   <p class="when">
-    Compared with your own {{ change.months }}-month average.
+    <span id="basis-label">Compared with your own {{ change.months }}-month average.</span>
     {% if change.months > 1 %}
     <button class="link" id="basis-toggle" onclick="toggleBasis()">
       Compare with {{ change.previous | monthname }} instead</button>
@@ -129,33 +129,6 @@
 </div>
 {% endif %}
 
-{# ---------------------------------------------------- recurring ---------- #}
-<div class="card">
-  <h3>Recurring payments</h3>
-  <p class="when">
-    {{ recurring|length }} merchants charging a similar amount about once a
-    month, costing {{ recurring|sum(attribute='annual') | money0 }} a year.
-  </p>
-  {% for row in recurring %}
-  <div class="item">
-    <div class="item-row">
-      <div><b>{{ row.merchant|title }}</b> <span class="tag">{{ row.category }}</span>
-        <div class="when">{{ row.occurrences }} payments, about every
-          {{ row.interval|round|int }} days</div></div>
-      <div class="amt">
-        <div><b>{{ row.annual | money0 }}</b> a year</div>
-        <div class="when">{{ row.average | money }} each</div>
-      </div>
-    </div>
-    <div class="track"><i style="width:{{ (row.annual / recurring[0].annual * 100)|round(1) }}%"></i></div>
-  </div>
-  {% else %}
-  <div class="empty"><h3>No recurring payments found</h3>
-    <p>A merchant needs at least three charges on separate dates before a
-       cadence can be observed rather than guessed.</p></div>
-  {% endfor %}
-</div>
-
 {# ---------------------------------------------------- unusual ------------ #}
 <div class="card">
   <h3>Unusually large amounts</h3>
@@ -182,14 +155,6 @@
   <div class="empty"><h3>Nothing stands out</h3>
     <p>No transaction sits far enough above its category's median to flag.</p></div>
   {% endfor %}
-</div>
-
-{# ---------------------------------------------------- methodology -------- #}
-<div class="card">
-  <h3>How these are calculated</h3>
-  <ul class="method">
-    {% for line in methodology %}<li>{{ line }}</li>{% endfor %}
-  </ul>
 </div>
 
 {% include "_panel.html" %}
@@ -244,6 +209,10 @@ function toggleBasis() {
   document.getElementById('basis-toggle').textContent = showingAverage
     ? 'Compare with your {{ change.months }}-month average instead'
     : 'Compare with {{ change.previous | monthname }} instead';
+  // the sentence has to follow the chart, or the screen contradicts itself
+  document.getElementById('basis-label').textContent = showingAverage
+    ? 'Compared with {{ change.previous | monthname }}.'
+    : 'Compared with your own {{ change.months }}-month average.';
 }
 {% endif %}
 </script>
