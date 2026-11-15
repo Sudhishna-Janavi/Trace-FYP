@@ -30,12 +30,6 @@
       {% endfor %}
     </ul>
   </div>
-  <p class="footnote-inline">
-    A ring shows how a whole divides but ranks poorly, because angles are hard
-    to compare. The eight largest categories get their own segment, the rest are
-    gathered into Other, and the exact figures sit in the list rather than in
-    the angles.
-  </p>
 </div>
 {% else %}
 <div class="card empty">
@@ -63,11 +57,6 @@
     Red is more spending than the baseline, green is less. An unfinished month
     is never compared against a complete one, so the current month appears only
     once it has ended.
-    {% if is_demo %}
-    In the demonstration data one-off purchases fall on random dates, so
-    month-to-month movement here is sampling noise rather than a change in
-    habit.
-    {% endif %}
   </p>
 </div>
 {% endif %}
@@ -105,9 +94,8 @@
     </div>
   </div>
   <p class="footnote-inline">
-    These are descriptions of your own data, not a rating. Trace does not score
-    financial health or give financial advice: any such score would need a
-    threshold, and no threshold available here would be anything but invented.
+    Trace describes your spending. It does not score your financial health or
+    give financial advice.
   </p>
 </div>
 {% endif %}
@@ -117,8 +105,7 @@
 <div class="card">
   <h3>Against the average US household</h3>
   <p class="when">
-    Shares of total spending, beside the US Bureau of Labor Statistics
-    Consumer Expenditure Survey 2024.
+    How your spending compares with the average US household.
   </p>
   <table>
     <thead><tr><th>Category</th><th class="amt">You</th>
@@ -136,14 +123,8 @@
     </tbody>
   </table>
   <p class="footnote-inline">
-    The survey describes what households do, not what they should do.
-    {% if is_demo %}
-    <b>These figures are circular for the demonstration data:</b> its amounts
-    were generated from these same survey lines, so close agreement is
-    arithmetic rather than evidence. What little difference appears comes from
-    the classifier placing a transaction in the wrong category. The comparison
-    becomes meaningful against real uploaded statements.
-    {% endif %}
+    National averages describe what households do, not what they should do.
+    Source: US Bureau of Labor Statistics Consumer Expenditure Survey, 2024.
   </p>
 </div>
 {% endif %}
@@ -152,8 +133,8 @@
 <div class="card">
   <h3>Recurring payments</h3>
   <p class="when">
-    {{ recurring|length }} merchants charging a similar amount on a roughly
-    monthly cadence, costing {{ recurring|sum(attribute='annual') | money0 }} a year.
+    {{ recurring|length }} merchants charging a similar amount about once a
+    month, costing {{ recurring|sum(attribute='annual') | money0 }} a year.
   </p>
   {% for row in recurring %}
   <div class="item">
@@ -178,7 +159,7 @@
 {# ---------------------------------------------------- unusual ------------ #}
 <div class="card">
   <h3>Unusually large amounts</h3>
-  <p class="when">Measured against the median for the same category. Select a row to see why it was categorised that way.</p>
+  <p class="when">Far above your usual for that category. Select a row to see why it was categorised that way.</p>
   {% for row in unusual %}
   <div class="odd" data-id="{{ row.id }}" onclick="explain({{ row.id }})"
        tabindex="0" role="button"
@@ -205,7 +186,7 @@
 
 {# ---------------------------------------------------- methodology -------- #}
 <div class="card">
-  <h3>How these were worked out</h3>
+  <h3>How these are calculated</h3>
   <ul class="method">
     {% for line in methodology %}<li>{{ line }}</li>{% endfor %}
   </ul>

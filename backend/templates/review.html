@@ -13,8 +13,7 @@
     Trace categorises a transaction only when it is at least
     <b>{{ (threshold * 100)|round|int }}%</b> confident. Below that it declines
     and asks you, rather than filing the transaction somewhere plausible and
-    leaving you to find out later. A model that knows when it does not know is
-    more useful than one that is confident all the time.
+    leaving you to find out later.
   </p>
   <p class="when">
     You have reviewed {{ reviewed }} transaction{{ '' if reviewed == 1 else 's' }}

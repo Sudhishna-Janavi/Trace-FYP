@@ -206,18 +206,16 @@ def unusual(rows: list[Transaction], recurring_merchants: set[str],
 
 
 METHODOLOGY = [
-    "Spending is the sum of signed amounts, not a count of transactions.",
+    "Spending totals the money that left your accounts, not the number of "
+    "transactions.",
     "Transfers between your own accounts are movements rather than spending, "
     "and are excluded from every total.",
     "Predictions the system was not confident about are held for your review "
     "and are shown separately.",
     "A recurring payment repeats at a merchant on at least three distinct "
     "dates, roughly monthly, with every amount within 25% of the median.",
-    "An unusual amount is measured against the median and median absolute "
-    "deviation for its category, excluding recurring merchants.",
-    "Amounts and dates are generated values calibrated to the US Bureau of "
-    "Labor Statistics Consumer Expenditure Survey 2024. They are never used to "
-    "categorise anything.",
+    "An unusual amount is one far above what you usually spend in that "
+    "category, not counting recurring payments.",
 ]
 
 
