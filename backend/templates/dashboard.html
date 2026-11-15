@@ -72,7 +72,7 @@
 
   <div class="card">
     <h2>Recurring</h2>
-    <div class="hint">{{ recurring|length }} merchants on a monthly cadence.</div>
+    <div class="hint">{{ recurring|length }} merchants charging a similar amount about once a month.</div>
     {% for row in recurring[:6] %}
     <div class="item">
       <div class="t"><span>{{ row.merchant|title }}
