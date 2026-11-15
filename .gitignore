@@ -11,9 +11,7 @@ __pycache__/
 .DS_Store
 
 # --- third-party source data.
-# The Kaggle corpora this project trains on are not ours to redistribute, and
-# they are large. dataset/demo/ IS committed: the deployed application seeds
-# itself from those feeds.
+
 dataset/US/
 dataset/Indian/
 dataset/processed/
@@ -21,19 +19,10 @@ dataset/processed/
 # --- local environment
 .env
 
-# --- generated documents and experiment output.
-# Written by scripts/ rather than hand-authored, and submitted to the
-# supervisor directly. The .docx files share prose with the report, so a
-# public copy risks the submission being matched against itself.
 docs/
 results/
 
-# --- report and its tooling are not part of the code deliverable.
-# The report is submitted to the supervisor and examiners directly; keeping
-# its prose out of a public repository also avoids a submission being matched
-# against itself by a similarity check.
 report/
 *.docx
 
-# local dev convenience, machine-specific absolute paths
 .claude/
