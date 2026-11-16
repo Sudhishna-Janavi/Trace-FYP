@@ -5,6 +5,8 @@ categorises can tell you why.
 
 **Live application — <https://trace-fyp.onrender.com/>**
 
+**React Native client:** the [`mobile` branch](https://github.com/Sudhishna-Janavi/Trace-FYP/tree/mobile). A second presentation of this system, consuming the same JSON API.
+
 NTU College of Computing and Data Science, Final Year Project CCDS25-1131.
 
 ---
