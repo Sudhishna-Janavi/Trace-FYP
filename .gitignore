@@ -33,6 +33,9 @@ yarn-error.*
 # local env files
 .env*.local
 
+# local tooling config, never on the public repository
+.claude/
+
 # typescript
 *.tsbuildinfo
 
