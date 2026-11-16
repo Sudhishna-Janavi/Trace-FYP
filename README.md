@@ -106,15 +106,16 @@ models/         the classifiers compared in the report
   logistic_regression.py  linear_svm.py  minilm_embeddings.py
   onnx_encoder.py   the encoder, reimplemented for ONNX Runtime
 scripts/        data preparation, evaluation, verification
-results/        every number quoted below, as JSON
 dataset/demo/   the statement feeds the deployed app seeds itself from
-docs/           design decisions, model documentation, research log
 ```
+
+The project report and the raw experiment output are held separately and are
+not published in this repository.
 
 ## Results
 
 Test sets were used exactly once, after all selection and tuning. Cascade with
-MiniLM at threshold 0.60. Source: `results/unit2_final_test.json`.
+MiniLM at threshold 0.60.
 
 | Protocol | n | Accuracy | Macro-F1 | Sent to review | Accuracy on what it accepted |
 |---|---|---|---|---|---|
@@ -127,7 +128,7 @@ are familiar; merchant-held-out measures a new user whose merchants are not;
 strictly novel measures text sharing no brand token with training. A single
 split would have reported only the first number.
 
-Model comparison, macro-F1 on validation — `results/unit2_comparison.json`:
+Model comparison, macro-F1 on validation:
 
 | Model | Stratified | Merchant held out | Strictly novel | Merchant ECE |
 |---|---|---|---|---|
@@ -145,11 +146,11 @@ familiar merchants, first on unfamiliar ones, and the best calibrated.
 
 ## Reproducing the evaluation
 
-`results/` contains the output of every experiment, so the numbers above can be
-checked against this repository as it stands.
+Every experiment writes its results as JSON. Those files are held with the
+project report rather than published here.
 
 **Re-running the experiments needs data this repository does not contain.** The
-corpus is a third-party public benchmark of synthetic US bank descriptions, and
+dataset is a third-party public benchmark of synthetic US bank descriptions, and
 redistributing it here is neither necessary nor ours to do. To regenerate:
 
 ```bash
@@ -203,7 +204,5 @@ Stated in full in the report; the ones that affect anyone reading this code:
 
 ## Further reading
 
-- `docs/RESEARCH_LOG.md` — the unit-by-unit development record, including a
-  leakage error found and corrected mid-project
-- `docs/design_decisions.docx` — decisions and their justifications
 - `DEPLOY.md` — deployment procedure
+- `HANDOFF.md` — repository tour and operational notes

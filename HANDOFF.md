@@ -91,16 +91,16 @@ oct14/
 │   ├── run_unit4_5_explainability.py
 │   └── write_*_doc.py              document generators
 ├── dataset/
-│   ├── US/transactions-synthetic.csv       raw, 68,000 rows
-│   ├── Indian/                             second source, unused so far
-│   ├── processed/                          6 split CSVs + dataset_meta.json
+│   ├── US/transactions-synthetic.csv       raw, 68,000 rows (not published)
+│   ├── Indian/                             second source, unused so far (not published)
+│   ├── processed/                          6 split CSVs + meta (not published)
 │   └── demo/
 │       ├── demo_transactions.csv           772 rows, the app's data
 │       ├── amount_model.json               BLS figures + provenance
 │       ├── ground_truth.csv                labels, never read by adapters
 │       └── feeds/                          14 files in 3 formats + manifest
-├── results/                        JSON per unit + figures/ (30+ PNGs)
-└── docs/                           9 .docx deliverables + mockup/
+├── results/                        experiment output (not published)
+└── docs/                           project documents (not published)
 ```
 
 **Embeddings cache lives OUTSIDE the project** at `~/.cache/oct14-embeddings`
